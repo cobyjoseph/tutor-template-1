@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-image: radial-gradient(
+			at 60% 60%,
+			transparent 60%,
+			#a5b4f4,
+			transparent 60%,
+			#cacceb,
+			transparent 60%,
+			#bab5eb
+		),
+		radial-gradient(at 30% 30%, #bac4f3, #cfd1f7, #bab5eb);
+	width: 100vw;
+	height: 100vh;
+}
