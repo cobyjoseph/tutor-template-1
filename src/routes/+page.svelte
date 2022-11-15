@@ -2,11 +2,15 @@
 	import Menu from '../lib/components/Menu.svelte';
 </script>
 
-<div class="absolute transform top-1/2 -translate-y-1/2 ml-16">
+<div class="absolute transform top-1/2 -translate-y-1/2 ml-16 overflow-hidden">
 	<div class="font-extrabold text-transparent text-5xl bg-clip-text gradient">
 		<div>Build confidence.</div>
 		<div>Get results.</div>
 	</div>
+</div>
+
+<div>
+	<img src="studentPhoto.png" />
 </div>
 
 <style>

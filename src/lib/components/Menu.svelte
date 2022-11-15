@@ -1,5 +1,5 @@
 <div
-	class=" relative flex justify-between text-2xl  bg-third bg-opacity-80 rounded-lg py-1 px-14 text-white"
+	class=" relative flex justify-between text-xl  bg-opacity-20 rounded-lg py-1 px-14 text-primary mt-6 overflow-hidden"
 >
 	<div class=" relative  ">Company Name / Logo</div>
 	<div class=" relative flex   gap-14   ">

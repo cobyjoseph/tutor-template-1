@@ -6,13 +6,14 @@ body {
 	background-image: radial-gradient(
 			at 60% 60%,
 			transparent 60%,
-			#a5b4f4,
+			#8fa0ed,
 			transparent 60%,
-			#cacceb,
+			#d9dbf2,
 			transparent 60%,
 			#bab5eb
 		),
-		radial-gradient(at 30% 30%, #bac4f3, #cfd1f7, #bab5eb);
+		radial-gradient(at 30% 30%, #acbaf7, #dadbf3, #aba4e5);
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 }
