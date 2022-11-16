@@ -1,5 +1,5 @@
 <div
-	class=" relative flex justify-between text-xl  bg-opacity-20 rounded-lg py-1 px-14 text-primary mt-6 overflow-hidden"
+	class=" font-Heebo  relative flex justify-between text-xl bg-white bg-opacity-20 rounded-lg px-14 text-primary py-2  overflow-hidden"
 >
 	<div class="flex gap-2">
 		<svg

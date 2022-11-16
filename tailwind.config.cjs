@@ -10,6 +10,9 @@ module.exports = {
 				background1: '#CBC8F0',
 				background2: '#DFE0FF',
 				background3: '#CAD3FF'
+			},
+			fontFamily: {
+				Heebo: ['Heebo']
 			}
 		}
 	},
