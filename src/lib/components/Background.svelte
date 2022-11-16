@@ -45,7 +45,7 @@
 		xmlns="http://www.w3.org/2000/svg"
 		xmlns:xlink="http://www.w3.org/1999/xlink"
 		version="1.1"
-		class="absolute  h-[100vh] transform -translate-x-52 -translate-y-32"
+		class="absolute  h-[100vh] transform -translate-x-40 -translate-y-36"
 		><g transform="translate(468.87738654784494 302.28971940269895)"
 			><path
 				id="blob1"

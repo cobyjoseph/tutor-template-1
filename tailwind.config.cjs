@@ -13,6 +13,14 @@ module.exports = {
 			},
 			fontFamily: {
 				Heebo: ['Heebo']
+			},
+			animation: {
+				blinking: 'blink 1s step-start infinite'
+			},
+			keyframes: {
+				blink: {
+					'50%': { opacity: '0' }
+				}
 			}
 		}
 	},

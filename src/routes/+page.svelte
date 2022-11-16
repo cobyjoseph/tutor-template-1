@@ -2,6 +2,7 @@
 	import Menu from '../lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 	import Background from '$lib/components/Background.svelte';
+	import TypingAnimation from '$lib/components/TypingAnimation.svelte';
 </script>
 
 <Background />
@@ -15,8 +16,7 @@
 			<div class="flex items-center">
 				<div class=" ">
 					<div class="text-5xl font-extrabold text-transparent  bg-clip-text gradient">
-						<div>Build confidence.</div>
-						<div>Get results.</div>
+						<TypingAnimation />
 					</div>
 					<div class="mt-3  text-xl text-[#544E4E]">
 						Tutoring for a wide range of subjects and ages.
