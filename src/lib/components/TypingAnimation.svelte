@@ -5,21 +5,53 @@
 	let typedChars = '';
 	let index = 0;
 
+	let phrase2 = 'Get results.';
+	let typedChars2 = '';
+	let index2 = 0;
+	let pause = true;
+	let noTypeDiv = false;
+
+	setTimeout(() => {
+		pause = false;
+		noTypeDiv = true;
+	}, 2000);
+
 	const addChars = () => {
 		if (index < phrase1.length) typedChars += phrase1[index];
 		index++;
 	};
 
+	const addChars2 = () => {
+		if (index2 < phrase2.length) typedChars2 += phrase2[index2];
+		index2++;
+	};
+
 	const typing = () => setInterval(addChars, 100);
 
+	const typing2 = () => {
+		setTimeout(() => {
+			setInterval(addChars2, 100);
+		}, 2000);
+	};
+
 	typing();
+	typing2();
 </script>
 
-<div
-	class="after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
->
+{#if pause}
+	<div class="after:content-['|'] after:text-5xl after:font-medium after:pl-1 after:text-[#544E4E]">
+		{typedChars}
+	</div>
+{/if}
+{#if noTypeDiv}
 	{typedChars}
-</div>
+
+	<div
+		class="after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
+	>
+		{typedChars2}
+	</div>
+{/if}
 
 <!-- <script lang="ts">
 	import { onMount } from 'svelte';
