@@ -1,4 +1,4 @@
-<div class="bg-white bg-opacity-40 flex justify-center">
+<div class="bg-white bg-opacity-0 flex justify-center mt-3">
 	<div
 		class=" font-Heebo  w-full max-w-[1400px] relative flex justify-between text-xl rounded-lg px-[3%] text-primary py-2  overflow-hidden"
 	>
@@ -22,7 +22,6 @@
 		<div class=" relative flex   gap-14   ">
 			<div class=" font-medium  ">Who we are</div>
 			<div class=" font-medium  ">Our services</div>
-			<div class=" font-medium ">Pricing</div>
 			<div class=" font-medium ">Contact us</div>
 		</div>
 	</div>

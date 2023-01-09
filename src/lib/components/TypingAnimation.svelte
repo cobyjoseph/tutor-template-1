@@ -38,35 +38,42 @@
 	typing2();
 </script>
 
-{#if pause}
-	<div class="after:content-['|'] after:text-5xl after:font-medium after:pl-1 after:text-[#544E4E]">
+<div>
+	{#if pause}
+		<div
+			class="after:content-['|'] after:text-5xl after:font-medium after:pl-1 after:text-[#544E4E]"
+		>
+			{typedChars}
+		</div>
+		<div>
+			<div class="text-5xl opacity-0">{phrase2}</div>
+		</div>
+	{/if}
+	{#if noTypeDiv}
 		{typedChars}
-	</div>
-{/if}
-{#if noTypeDiv}
-	{typedChars}
 
-	<div
-		class="after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
-	>
-		{typedChars2}
-	</div>
-{/if}
+		<div
+			class=" min-h-full after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
+		>
+			{typedChars2}
+		</div>
+	{/if}
+</div>
 
 <!-- <script lang="ts">
-	import { onMount } from 'svelte';
-	import { current_component, text } from 'svelte/internal';
+		import { onMount } from 'svelte';
+		import { current_component, text } from 'svelte/internal';
 
 	let sentence1 = 'Build confidence.';
 	let sentence2 = 'Get results.';
 	let i = 0;
-
+	
 	$: typedSentence1 = [];
-
+	
 	let typedToIndex = 0;
-
+	
 	// $: typedSentence1 = sentence1.slice(0, typedToIndex);
-
+	
 	function typeWriter() {
 		if (i < sentence1.length) {
 			typedSentence1 = [...typedSentence1, sentence1.charAt(i)];
@@ -74,16 +81,16 @@
 			setTimeout(typeWriter, 300);
 		}
 	}
-
+	
 	// const handleTyping = () => {
-	// 	if (typedToIndex + 1 <= typedSentence1.length) {
-	// 		typedToIndex++;
-	// 		typedSentence1 = [...typedSentence1, typedSentence1[typedToIndex]];
-	// 	}
-	// };
-
-	onMount(() => {
-		typeWriter();
+		// 	if (typedToIndex + 1 <= typedSentence1.length) {
+			// 		typedToIndex++;
+			// 		typedSentence1 = [...typedSentence1, typedSentence1[typedToIndex]];
+			// 	}
+			// };
+			
+			onMount(() => {
+				typeWriter();
 	});
 </script>
 

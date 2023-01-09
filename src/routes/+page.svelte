@@ -13,8 +13,12 @@
 	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10">
 		<div class="grid grid-cols-2  ">
 			<!-- LEFT COLUMN -->
-			<div class="flex items-center">
-				<div class=" ">
+			<div class="flex items-center outline-green-400 outline-4 outline">
+				<div>
+					<div class="absolute outline outline-4 outline-red-500 top-1/2 -translate-y-1/2">
+						<div class="text-5xl absolute bg-green-500">|||</div>
+						<div class="text-5xl absolute bottom-0 bg-red-400">|||</div>
+					</div>
 					<div class="text-5xl font-extrabold text-transparent  bg-clip-text gradient">
 						<TypingAnimation />
 					</div>
