@@ -3,6 +3,14 @@
 	import { onMount } from 'svelte';
 	import Background from '$lib/components/Background.svelte';
 	import TypingAnimation from '$lib/components/TypingAnimation.svelte';
+	import { fly } from 'svelte/transition';
+	import { sineIn, backIn, backOut } from 'svelte/easing';
+
+	let mountAnimations = false;
+
+	onMount(async () => {
+		mountAnimations = true;
+	});
 </script>
 
 <Background />
@@ -13,23 +21,25 @@
 	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10">
 		<div class="grid grid-cols-2  ">
 			<!-- LEFT COLUMN -->
-			<div class="flex items-center outline-green-400 outline-4 outline">
+			<div class="flex items-center">
 				<div>
-					<div class="absolute outline outline-4 outline-red-500 top-1/2 -translate-y-1/2">
-						<div class="text-5xl absolute bg-green-500">|||</div>
-						<div class="text-5xl absolute bottom-0 bg-red-400">|||</div>
-					</div>
 					<div class="text-5xl font-extrabold text-transparent  bg-clip-text gradient">
 						<TypingAnimation />
 					</div>
-					<div class="mt-3  text-xl text-[#544E4E]">
-						Tutoring for a wide range of subjects and ages.
-					</div>
-					<div
-						class=" rounded-full mt-4 inline-block bg-primary px-7 text-xl text-white font-semibold py-2 "
-					>
-						See services
-					</div>
+					{#if mountAnimations}
+						<div
+							transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
+							class="mt-3  text-xl text-[#544E4E]"
+						>
+							Tutoring for a wide range of subjects and ages.
+						</div>
+						<div
+							transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
+							class=" rounded-full mt-4 inline-block bg-primary px-7 text-xl text-white font-semibold py-2 "
+						>
+							See services
+						</div>
+					{/if}
 				</div>
 			</div>
 			<!-- LEFT COLUMN END -->

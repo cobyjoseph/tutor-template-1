@@ -31,7 +31,7 @@
 	const typing2 = () => {
 		setTimeout(() => {
 			setInterval(addChars2, 100);
-		}, 2000);
+		}, 2500);
 	};
 
 	typing();
