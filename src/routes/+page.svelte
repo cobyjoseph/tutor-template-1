@@ -5,6 +5,7 @@
 	import TypingAnimation from '$lib/components/TypingAnimation.svelte';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
+	import Serivces from '$lib/components/Serivces.svelte';
 
 	let mountAnimations = false;
 
@@ -13,12 +14,12 @@
 	});
 </script>
 
-<Background />
-
 <!-- TODO  - ON LARGE SCREEN MAKE EVERYTHING CLOSER TO THE TOP BY INCREASING THE NEGATIVE MARGIN TOP OR SOMETHING -->
 
-<div class="-mt-16 flex justify-center items-center h-[100vh]">
-	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10">
+<Background />
+
+<div class=" flex justify-center items-center min-h-screen">
+	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10 -translate-y-10">
 		<div class="grid grid-cols-2  ">
 			<!-- LEFT COLUMN -->
 			<div class="flex items-center">
@@ -48,6 +49,15 @@
 		</div>
 	</div>
 </div>
+
+<div class=" text-5xl">dfdf</div>
+<div class=" text-5xl">dfdf</div>
+<div class=" text-5xl">dfdf</div>
+<div class=" text-5xl">dfdf</div>
+<div class=" text-5xl">dfdf</div>
+<div class=" text-5xl">dfdf</div>
+
+<Serivces />
 
 <style>
 	.gradient {
