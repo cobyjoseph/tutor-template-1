@@ -35,7 +35,7 @@
 						</div>
 						<div
 							transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-							class=" rounded-full mt-4 inline-block bg-primary px-7 text-xl text-white font-semibold py-2"
+							class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
 						>
 							See services
 						</div>
@@ -51,6 +51,36 @@
 
 <style>
 	.gradient {
-		background-image: linear-gradient(120deg, #3709ee, #0284da 35% 100%);
+		background-image: linear-gradient(120deg, #3709ee, #0284da 55% 100%);
+	}
+
+	.buttonUnderline {
+		position: relative;
+	}
+
+	.buttonUnderline:hover {
+		color: transparent;
+		background-clip: text;
+		background-image: linear-gradient(90deg, #3709ee, #0284da 55% 100%);
+	}
+
+	.buttonUnderline:after {
+		content: '';
+		width: 100%;
+		height: 8px;
+		opacity: 40%;
+		position: absolute;
+		background: #0284da;
+		display: block;
+		transform: translate(-4px, -8px) scaleX(0.42) skew(-50deg);
+		transform-origin: left;
+		transition: transform 250ms ease-in;
+		z-index: -1;
+	}
+
+	.buttonUnderline:hover::after {
+		background: linear-gradient(90deg, #3709ee, #0284da 65% 100%);
+		transform: translate(-4px, -3px) skew(-40deg);
+		opacity: 70%;
 	}
 </style>
