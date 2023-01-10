@@ -5,7 +5,8 @@
 
 
 
-<Menu />
-
+<div class=" relative z-50">
+	<Menu />
+</div>
 
 <slot />

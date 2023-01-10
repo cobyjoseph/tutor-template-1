@@ -12,14 +12,8 @@
 		mountAnimations = true;
 	});
 </script>
-<!-- 
-<div class=" z-50">
-	<Menu />
-</div> -->
 
-<div class="z-0">
-	<Background />
-</div>
+<Background />
 
 <!-- TODO  - ON LARGE SCREEN MAKE EVERYTHING CLOSER TO THE TOP BY INCREASING THE NEGATIVE MARGIN TOP OR SOMETHING -->
 
@@ -54,8 +48,6 @@
 		</div>
 	</div>
 </div>
-
-
 
 <style>
 	.gradient {
