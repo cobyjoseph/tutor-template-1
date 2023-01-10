@@ -12,8 +12,14 @@
 		mountAnimations = true;
 	});
 </script>
+<!-- 
+<div class=" z-50">
+	<Menu />
+</div> -->
 
-<Background />
+<div class="z-0">
+	<Background />
+</div>
 
 <!-- TODO  - ON LARGE SCREEN MAKE EVERYTHING CLOSER TO THE TOP BY INCREASING THE NEGATIVE MARGIN TOP OR SOMETHING -->
 
@@ -35,7 +41,7 @@
 						</div>
 						<div
 							transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-							class=" rounded-full mt-4 inline-block bg-primary px-7 text-xl text-white font-semibold py-2 "
+							class=" rounded-full mt-4 inline-block bg-primary px-7 text-xl text-white font-semibold py-2"
 						>
 							See services
 						</div>
@@ -48,6 +54,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 <style>
 	.gradient {
