@@ -21,13 +21,11 @@
 	<Background />
 
 	<!-- <div class=" flex justify-center items-center min-h-screen"> -->
-	<div
-		class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10 outline-6 outline-green-500 p-2 outline ml-auto mr-auto min-h-screen "
-	>
-		<div class="grid grid-cols-2 outline outline-6 outline-blue-500 p-2 ">
+	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10 ml-auto mr-auto min-h-screen ">
+		<div class="grid grid-cols-2  p-2 ">
 			<!-- LEFT COLUMN -->
 
-			<div class="outline outline-4 outline-red-500 mt-auto mb-auto -translate-y-12">
+			<div class=" mt-auto mb-auto -translate-y-12">
 				<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
 					<TypingAnimation />
 				</div>
@@ -56,21 +54,24 @@
 		<!-- both columns end -->
 	</div>
 	<!-- end of container holding 2 columns with graphic and hero text-->
-	
 </div>
 
-<div class="grid-col-1 max-w-[1400px] outline outline-4 outline-black ml-auto mr-auto">
-	<div class=" text-5xl block m-3 max-w-md">dfdflongtextlongdfdfl</div>
-	<div class=" text-5xl block">dfdf</div>
-	<div class=" text-5xl w-full">dfdf</div>
-	<div class=" text-5xl w-full">dfdf</div>
-	<div class=" text-5xl w-full">dfdf</div>
-	<div class=" text-5xl inline-block">dfdf</div>
+<!-- PAGE 2 --------------------------------------------------------------------------------->
 
-	<!-- <Serivces /> -->
+<!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
+<div class="min-h-screen relative bg-[#fca7a4]">
+	<Serivces />
 </div>
 
+<div class="min-h-screen relative bg-[#40C9A5]">
+	<Serivces />
+</div>
 
+<div class="min-h-screen relative bg-[#56A6F9]">
+	<Serivces />
+</div>
+
+<!-- STYLE------------------------------------------------------------------------------ -->
 <style>
 	.gradient {
 		background-image: linear-gradient(120deg, #3709ee, #0284da 55% 100%);

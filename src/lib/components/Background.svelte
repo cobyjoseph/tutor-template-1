@@ -136,7 +136,7 @@
 	</div>
 	<!-- END OF SQUIGGLES -->
 
-	<div class="absolute layeredWave waveStyle bottom-0    z-0" />
+	<div class="absolute layeredWave waveStyle bottom-0 z-0" />
 
 	<!-- <div class="absolute layeredWave waveStyle bottom-0 z-0 flip" /> -->
 </div>
