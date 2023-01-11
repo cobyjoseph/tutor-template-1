@@ -16,48 +16,60 @@
 
 <!-- TODO  - ON LARGE SCREEN MAKE EVERYTHING CLOSER TO THE TOP BY INCREASING THE NEGATIVE MARGIN TOP OR SOMETHING -->
 
-<Background />
+<!-- the RELATIVE creates a reference point for the background item, which is absolute. Otherwise it would absolutely position relative to the page itself. And flex is used for the different pages/sections to be one after the other. flex necessary? -->
+<div class="flex relative ">
+	<Background />
 
-<div class=" flex justify-center items-center min-h-screen">
-	<div class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10 -translate-y-10">
-		<div class="grid grid-cols-2  ">
+	<!-- <div class=" flex justify-center items-center min-h-screen"> -->
+	<div
+		class="px-[3%] grid grid-cols-1 max-w-[1400px] z-10 outline-6 outline-green-500 p-2 outline ml-auto mr-auto min-h-screen "
+	>
+		<div class="grid grid-cols-2 outline outline-6 outline-blue-500 p-2 ">
 			<!-- LEFT COLUMN -->
-			<div class="flex items-center">
-				<div>
-					<div class="text-5xl font-extrabold text-transparent  bg-clip-text gradient">
-						<TypingAnimation />
-					</div>
-					{#if mountAnimations}
-						<div
-							transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-							class="mt-3  text-xl text-[#544E4E]"
-						>
-							Tutoring for a wide range of subjects and ages.
-						</div>
-						<div
-							transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-							class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
-						>
-							See services
-						</div>
-					{/if}
+
+			<div class="outline outline-4 outline-red-500 mt-auto mb-auto -translate-y-12">
+				<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
+					<TypingAnimation />
 				</div>
+				{#if mountAnimations}
+					<div
+						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
+						class="mt-3  text-xl text-[#544E4E]"
+					>
+						Tutoring for a wide range of subjects and ages.
+					</div>
+					<div
+						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
+						class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
+					>
+						See services
+					</div>
+				{/if}
 			</div>
+
 			<!-- LEFT COLUMN END -->
 
-			<img src="tutor-graphic-1.svg" alt="Student working at computer" />
+			<div class="mt-auto mb-auto -translate-y-12">
+				<img src="tutor-graphic-1.svg" alt="Student working at computer" />
+			</div>
 		</div>
+		<!-- both columns end -->
 	</div>
+	<!-- end of container holding 2 columns with graphic and hero text-->
+	
 </div>
 
-<div class=" text-5xl">dfdf</div>
-<div class=" text-5xl">dfdf</div>
-<div class=" text-5xl">dfdf</div>
-<div class=" text-5xl">dfdf</div>
-<div class=" text-5xl">dfdf</div>
-<div class=" text-5xl">dfdf</div>
+<div class="grid-col-1 max-w-[1400px] outline outline-4 outline-black ml-auto mr-auto">
+	<div class=" text-5xl block m-3 max-w-md">dfdflongtextlongdfdfl</div>
+	<div class=" text-5xl block">dfdf</div>
+	<div class=" text-5xl w-full">dfdf</div>
+	<div class=" text-5xl w-full">dfdf</div>
+	<div class=" text-5xl w-full">dfdf</div>
+	<div class=" text-5xl inline-block">dfdf</div>
 
-<Serivces />
+	<!-- <Serivces /> -->
+</div>
+
 
 <style>
 	.gradient {
@@ -79,7 +91,7 @@
 		width: 100%;
 		height: 8px;
 		opacity: 40%;
-		position: absolute;
+		position: relative;
 		background: #0284da;
 		display: block;
 		transform: translate(-4px, -8px) scaleX(0.42) skew(-50deg);

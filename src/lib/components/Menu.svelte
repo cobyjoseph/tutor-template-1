@@ -44,7 +44,7 @@
 		width: 100%;
 		height: 4px;
 		opacity: 30%;
-		position: absolute;
+		position: relative;
 		background: #0284da;
 		display: block;
 		transform: translate(-2px, -8px) scaleX(0.42) skew(-50deg);

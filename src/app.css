@@ -5,17 +5,34 @@
 @tailwind utilities;
 
 body {
+	/* background-color: #cfeaff */
 	background-image: radial-gradient(
 			at 60% 60%,
 			transparent 60%,
-			#8fa0ed,
+			#9dacf0,
 			transparent 60%,
-			#d9dbf2,
+			#d3d6f5,
 			transparent 60%,
 			#bab5eb
 		),
-		radial-gradient(at 30% 30%, #acbaf7, #dadbf3, #aba4e5);
+		radial-gradient(at 30% 30%, #b6c1f5, #cccef0, #bab5eb);
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
+	/* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #9491cb;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #504d87;
+	border-radius: 100vw;
+	border: 1.5px solid #9491cb;
 }
