@@ -37,7 +37,7 @@
 <!--ANIMATED BLOB  -->
 
 <div class=" z-0  ">
-	<div class="absolute transform -translate-x-[160%] -translate-y-[150%] top-1/2 left-1/2  ">
+	<div class="absolute transform -translate-x-[160%] -translate-y-[190%] top-1/2 left-1/2  ">
 		<svg
 			id="visual"
 			viewBox="400 150 100 340"
