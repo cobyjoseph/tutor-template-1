@@ -3,7 +3,7 @@
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
 	<div class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto relative">
-		<div class=" inline-block text-3xl font-bold mb-[0.5] text-[#3A53B8] relative z-30 title">
+		<div class=" inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title">
 			Services
 		</div>
 
