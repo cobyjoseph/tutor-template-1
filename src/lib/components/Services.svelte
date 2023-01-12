@@ -3,7 +3,7 @@
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
 	<div class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto relative">
-		<div class=" inline-block text-3xl font-bold mb-4 text-[#ab2c27] relative z-30 title">
+		<div class=" inline-block text-3xl font-bold mb-1 text-[#ab2c27] relative z-30 title">
 			Services
 		</div>
 
@@ -13,11 +13,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-xl flex font-medium">
+			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
 				Private, in-person or online sessions
 			</div>
 		</div>
@@ -26,11 +26,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-xl flex font-medium">
+			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
 				Middle school and high school courses
 			</div>
 		</div>
@@ -39,38 +39,38 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-xl flex font-medium">
-				Speciality subjects include:
+			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
+				Specialty subjects include:
 			</div>
 		</div>
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
-		<div class="grid grid-cols-6 z-20 relative gap-x-28 gap-y-2">
+		<div class="grid grid-cols-6 z-20 relative gap-x-36  ">
 			<div class="mx-auto col-span-2 math ">
-				<img class="h-[115px] w-[115px]" src="math-icon.svg" alt="Student studying math" />
+				<img class="h-[100px] w-[100px]" src="math-icon.svg" alt="Student studying math" />
 			</div>
 
 			<div class=" mx-auto col-span-2 economics ">
 				<img
-					class="h-[115px] w-[115px]"
+					class="h-[100px] w-[100px]"
 					src="economics-icon.svg"
 					alt="Student studying economics"
 				/>
 			</div>
 
 			<div class="mx-auto col-span-2 history">
-				<img class="h-[115px] w-[115px]" src="history-icon.svg" alt="Student studying history" />
+				<img class="h-[100px] w-[100px]" src="history-icon.svg" alt="Student studying history" />
 			</div>
 			<div class="mx-auto col-span-3 translate-x-14 english">
-				<img class="h-[115px] w-[115px]" src="english-icon.svg" alt="Student studying english" />
+				<img class="h-[100px] w-[100px]" src="english-icon.svg" alt="Student studying english" />
 			</div>
 			<div class="mx-auto col-span-3 -translate-x-14 science">
-				<img class="h-[115px] w-[115px]" src="science-icon.svg" alt="Student studying science" />
+				<img class="h-[100px] w-[100px]" src="science-icon.svg" alt="Student studying science" />
 			</div>
 		</div>
 	</div>
@@ -110,7 +110,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #ab2c27;
+		color: #3A53B8;
 	}
 
 	.economics::before {
@@ -120,7 +120,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #ab2c27;
+		color: #3A53B8;
 	}
 
 	.history::before {
@@ -130,7 +130,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #ab2c27;
+		color: #3A53B8;
 	}
 
 	.english::before {
@@ -140,7 +140,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #ab2c27;
+		color: #3A53B8;
 	}
 
 	.science::before {
@@ -150,6 +150,6 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #ab2c27;
+		color: #3A53B8;
 	}
 </style>
