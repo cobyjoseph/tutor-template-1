@@ -12,7 +12,8 @@ module.exports = {
 				background3: '#CAD3FF'
 			},
 			fontFamily: {
-				Heebo: ['Heebo']
+				Heebo: ['Heebo'],
+				Caveat: ['Caveat']
 			},
 			animation: {
 				blinking: 'blink 1s step-start infinite'

@@ -2,30 +2,75 @@
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
-	<div
-		class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto outline outline-green-500 outline-4 relative"
-	>
-		<div
-			class="grid grid-cols-6 z-20 relative   outline-dotted outline-blue-500 ml-auto mr-auto mt-auto mb-auto"
-		>
-			<div class="mx-auto col-span-2 ">
-				<img class="h-[150px] w-[150px]" src="math-icon.svg" alt="Student working at computer" />
+	<div class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto relative">
+		<div class=" inline-block text-3xl font-bold mb-4 text-[#ab2c27] relative z-30 title">
+			Services
+		</div>
+
+		<!-- BULLETS ------------------------------------------------ -->
+
+		<div class="flex">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+			>
+				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+			</svg>
+			<div class="text-[#ab2c27] text-xl flex font-medium">
+				Private, in-person or online sessions
 			</div>
-			<div class=" mx-auto col-span-2 ">
+		</div>
+
+		<div class="flex">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+			>
+				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+			</svg>
+			<div class="text-[#ab2c27] text-xl flex font-medium">
+				Middle school and high school courses
+			</div>
+		</div>
+
+		<div class="flex">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				class="w-6 h-6 flex stroke-[#ab2c27] fill-none stroke-2"
+			>
+				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+			</svg>
+			<div class="text-[#ab2c27] text-xl flex font-medium">
+				Speciality subjects include:
+			</div>
+		</div>
+
+		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
+
+		<div class="grid grid-cols-6 z-20 relative gap-x-28 gap-y-2">
+			<div class="mx-auto col-span-2 math ">
+				<img class="h-[115px] w-[115px]" src="math-icon.svg" alt="Student studying math" />
+			</div>
+
+			<div class=" mx-auto col-span-2 economics ">
 				<img
-					class="h-[150px] w-[150px]"
+					class="h-[115px] w-[115px]"
 					src="economics-icon.svg"
-					alt="Student working at computer"
+					alt="Student studying economics"
 				/>
 			</div>
-			<div class="mx-auto col-span-2">
-				<img class="h-[150px] w-[150px]" src="history-icon.svg" alt="Student working at computer" />
+
+			<div class="mx-auto col-span-2 history">
+				<img class="h-[115px] w-[115px]" src="history-icon.svg" alt="Student studying history" />
 			</div>
-			<div class="mx-auto col-span-3">
-				<img class="h-[150px] w-[150px]" src="english-icon.svg" alt="Student working at computer" />
+			<div class="mx-auto col-span-3 translate-x-14 english">
+				<img class="h-[115px] w-[115px]" src="english-icon.svg" alt="Student studying english" />
 			</div>
-			<div class="mx-auto col-span-3">
-				<img class="h-[150px] w-[150px]" src="science-icon.svg" alt="Student working at computer" />
+			<div class="mx-auto col-span-3 -translate-x-14 science">
+				<img class="h-[115px] w-[115px]" src="science-icon.svg" alt="Student studying science" />
 			</div>
 		</div>
 	</div>
@@ -43,5 +88,68 @@
 
 	.layeredWaveRed {
 		background-image: url('./layered-waves-orange.svg');
+	}
+
+	.title::after {
+		content: '';
+		width: 100%;
+		height: 8px;
+		opacity: 35%;
+		position: relative;
+		background: #f71912;
+		display: block;
+		transform: translate(-4px, -8px) scaleX(1) skew(-50deg);
+		transform-origin: left;
+		z-index: -1;
+	}
+
+	.math::before {
+		content: 'Math';
+		display: flex;
+		justify-content: center;
+		font-size: x-large;
+		font-weight: 700;
+		font-family: 'Caveat', cursive;
+		color: #ab2c27;
+	}
+
+	.economics::before {
+		content: 'Economics';
+		display: flex;
+		justify-content: center;
+		font-size: x-large;
+		font-weight: 700;
+		font-family: 'Caveat', cursive;
+		color: #ab2c27;
+	}
+
+	.history::before {
+		content: 'History';
+		display: flex;
+		justify-content: center;
+		font-size: x-large;
+		font-weight: 700;
+		font-family: 'Caveat', cursive;
+		color: #ab2c27;
+	}
+
+	.english::before {
+		content: 'English';
+		display: flex;
+		justify-content: center;
+		font-size: x-large;
+		font-weight: 700;
+		font-family: 'Caveat', cursive;
+		color: #ab2c27;
+	}
+
+	.science::before {
+		content: 'Science';
+		display: flex;
+		justify-content: center;
+		font-size: x-large;
+		font-weight: 700;
+		font-family: 'Caveat', cursive;
+		color: #ab2c27;
 	}
 </style>

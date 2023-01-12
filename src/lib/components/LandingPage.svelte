@@ -23,7 +23,7 @@
 				transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
 				class="mt-3  text-xl text-[#544E4E]"
 			>
-				Tutoring for a wide range of subjects and ages.
+				Personalized high-school tutoring for a range of subjects.
 			</div>
 			<div
 				transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
