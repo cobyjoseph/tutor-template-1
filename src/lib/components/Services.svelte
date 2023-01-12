@@ -1,9 +1,9 @@
-<div class="min-h-screen relative flex bg-[#fdd1d0]">
+<div class="min-h-screen relative flex bg-[#fad9d8]">
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
 	<div class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto relative">
-		<div class=" inline-block text-3xl font-bold mb-1 text-[#ab2c27] relative z-30 title">
+		<div class=" inline-block text-3xl font-bold mb-[0.5] text-[#3A53B8] relative z-30 title">
 			Services
 		</div>
 
@@ -13,11 +13,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
+			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
 				Private, in-person or online sessions
 			</div>
 		</div>
@@ -26,11 +26,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
+			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
 				Middle school and high school courses
 			</div>
 		</div>
@@ -39,11 +39,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#ab2c27] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#ab2c27] text-l flex font-medium mb-1">
+			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
 				Specialty subjects include:
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 <!-- style --------------------------------------------------------------------- -->
 <style>
 	.waveStyleRed {
-		aspect-ratio: 960/300;
+		aspect-ratio: 960/250;
 		width: 100%;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -87,7 +87,7 @@
 	}
 
 	.layeredWaveRed {
-		background-image: url('./layered-waves-orange.svg');
+		background-image: url('./layered-waves-orange-med.svg');
 	}
 
 	.title::after {

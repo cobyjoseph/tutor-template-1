@@ -9,13 +9,13 @@ body {
 	background-image: radial-gradient(
 			at 60% 60%,
 			transparent 60%,
-			#9dacf0,
+			#a9b6f1,
 			transparent 60%,
 			#d3d6f5,
 			transparent 60%,
-			#bab5eb
+			#cec9f3
 		),
-		radial-gradient(at 30% 30%, #b6c1f5, #cccef0, #bab5eb);
+		radial-gradient(at 30% 30%, #bac3ef, #cccef0, #c8c3ef);
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;

@@ -2,10 +2,10 @@
 	import Menu from '../lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 	import LandingBackground from '$lib/components/LandingBackground.svelte';
-
 	import Services from '$lib/components/Services.svelte';
 	import AboutMe from '$lib/components/AboutMe.svelte';
 	import LandingPage from '$lib/components/LandingPage.svelte';
+	import Schedule from '$lib/components/Schedule.svelte';
 </script>
 
 <!-- TODO  - ON LARGE SCREEN MAKE EVERYTHING CLOSER TO THE TOP BY INCREASING THE NEGATIVE MARGIN TOP OR SOMETHING -->
@@ -27,12 +27,10 @@
 
 <Services />
 
-<div class="min-h-screen relative bg-[#95e2ce]">
+<div class="min-h-screen relative bg-[#c3f2e5]">
 	<AboutMe />
 </div>
 
-<div class="min-h-screen relative bg-[#56A6F9]">
-	<Services />
+<div class="min-h-screen relative bg-[#aad3ff]">
+	<Schedule />
 </div>
-
-

@@ -20,8 +20,8 @@
 			<div class=" relative font-semibold text-2xl  ">Company Name</div>
 		</div>
 		<div class=" relative flex   gap-14   ">
-			<div class=" font-semibold  customUnderline">About me</div>
 			<div class=" font-semibold  customUnderline">My services</div>
+			<div class=" font-semibold  customUnderline">About me</div>
 			<div class=" font-semibold  customUnderline">Schedule</div>
 			<div class=" font-semibold customUnderline ">Contact</div>
 		</div>
