@@ -15,19 +15,17 @@
 	<LandingBackground />
 
 	<!-- <div class=" flex justify-center items-center min-h-screen"> -->
-	<div class=" grid grid-cols-1 max-w-[1400px] z-10 min-h-screen px-[3%]  ml-auto mr-auto" >
+	<div class=" grid grid-cols-1 max-w-[1400px] z-10 min-h-screen px-[3%]  ml-auto mr-auto">
 		<LandingPage />
 	</div>
-
 </div>
 <!-- end of container holding 2 columns with graphic and hero text-->
 
 <!-- PAGE 2 --------------------------------------------------------------------------------->
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
-<div class="min-h-screen relative bg-[#fdd1d0]">
-	<Services />
-</div>
+
+<Services />
 
 <div class="min-h-screen relative bg-[#95e2ce]">
 	<AboutMe />
@@ -37,4 +35,4 @@
 	<Services />
 </div>
 
-<!-- STYLE------------------------------------------------------------------------------ -->
+

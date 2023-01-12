@@ -1,26 +1,37 @@
-<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
-<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
+<div class="min-h-screen relative flex bg-[#fdd1d0]">
+	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
+	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
-<div
-	class="grid grid-col-3 grid-row-2 items-center min-h-screen outline outline-4 outline-blue-400 z-20 relative"
->
-	<div class="max-w-[10%] max-h-[10%] items-center grid">
-		<img src="math-icon.svg" alt="Student working at computer" />
-	</div>
-	<div class="max-w-[10%] max-h-[10%] items-center grid">
-		<img src="economics-icon.svg" alt="Student working at computer" />
-	</div>
-	<div class="max-w-[10%] max-h-[10%] items-center grid">
-		<img src="history-icon.svg" alt="Student working at computer" />
-	</div>
-	<div class="max-w-[10%] max-h-[10%] items-center grid">
-		<img src="english-icon.svg" alt="Student working at computer" />
-	</div>
-	<div class="max-w-[10%] max-h-[10%] items-center grid">
-		<img src="science-icon.svg" alt="Student working at computer" />
+	<div
+		class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto outline outline-green-500 outline-4 relative"
+	>
+		<div
+			class="grid grid-cols-6 z-20 relative   outline-dotted outline-blue-500 ml-auto mr-auto mt-auto mb-auto"
+		>
+			<div class="mx-auto col-span-2 ">
+				<img class="h-[150px] w-[150px]" src="math-icon.svg" alt="Student working at computer" />
+			</div>
+			<div class=" mx-auto col-span-2 ">
+				<img
+					class="h-[150px] w-[150px]"
+					src="economics-icon.svg"
+					alt="Student working at computer"
+				/>
+			</div>
+			<div class="mx-auto col-span-2">
+				<img class="h-[150px] w-[150px]" src="history-icon.svg" alt="Student working at computer" />
+			</div>
+			<div class="mx-auto col-span-3">
+				<img class="h-[150px] w-[150px]" src="english-icon.svg" alt="Student working at computer" />
+			</div>
+			<div class="mx-auto col-span-3">
+				<img class="h-[150px] w-[150px]" src="science-icon.svg" alt="Student working at computer" />
+			</div>
+		</div>
 	</div>
 </div>
 
+<!-- style --------------------------------------------------------------------- -->
 <style>
 	.waveStyleRed {
 		aspect-ratio: 960/300;
