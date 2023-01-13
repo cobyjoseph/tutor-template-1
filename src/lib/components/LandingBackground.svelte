@@ -122,26 +122,10 @@
 	</div> -->
 	<!-- END OF SQUIGGLES -->
 
-	<div class="absolute layeredWave waveStyle bottom-0 z-0" />
-
 	<!-- <div class="absolute layeredWave waveStyle bottom-0 z-0 flip" /> -->
 </div>
 
 <!--STYLE -------------------------------------------------------------------------------------------------------- -->
 <style>
-	.gradient {
-		background-image: linear-gradient(120deg, #3709ee, #0284da 35% 100%);
-	}
 
-	.waveStyle {
-		aspect-ratio: 960/250;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-	}
-
-	.layeredWave {
-		background-image: url('./layered-waves-purple-lg.svg');
-	}
 </style>

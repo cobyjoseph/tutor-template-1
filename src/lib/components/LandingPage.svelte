@@ -10,11 +10,21 @@
 	onMount(async () => {
 		mountAnimations = true;
 	});
+
+	function scrollIntoView({ target }) {
+		const element = document.querySelector(target.getAttribute('href'));
+		if (!element) return;
+		element.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <!-- the RELATIVE creates a reference point for the background item, which is absolute. Otherwise it would absolutely position relative to the page itself. And flex is used for the different pages/sections to be one after the other. flex necessary? -->
-<div class="flex relative ">
+<div class="flex relative  ">
 	<LandingBackground />
+
+	<div class="absolute layeredWave waveStyle bottom-0 z-0" />
 
 	<div class=" grid grid-cols-1 max-w-[1400px] z-10 min-h-screen px-[3%]  ml-auto mr-auto">
 		<div class="grid grid-cols-2 ">
@@ -31,12 +41,14 @@
 					>
 						Personalized high-school tutoring for a range of subjects.
 					</div>
-					<div
+					<a
+						href={'#section2'}
+						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
+						class="  inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
 					>
 						See services
-					</div>
+					</a>
 				{/if}
 			</div>
 
@@ -83,5 +95,21 @@
 		background: linear-gradient(90deg, #3709ee, #0284da 65% 100%);
 		transform: translate(-4px, -3px) skew(-40deg);
 		opacity: 70%;
+	}
+
+	.gradient {
+		background-image: linear-gradient(120deg, #3709ee, #0284da 35% 100%);
+	}
+
+	.waveStyle {
+		aspect-ratio: 960/250;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.layeredWave {
+		background-image: url('./layered-waves-purple-lg.svg');
 	}
 </style>
