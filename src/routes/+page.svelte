@@ -6,19 +6,18 @@
 	import Menu from '$lib/components/Menu.svelte';
 </script>
 
-
 <div class="snap-container">
 	<div class="snap-item">
 		<Menu />
 		<LandingPage />
 	</div>
-	<div class="snap-item">
+	<div id="section2" class="snap-item">
 		<Services />
 	</div>
-	<div class="snap-item">
+	<div id="section3" class="snap-item">
 		<AboutMe />
 	</div>
-	<div class="snap-item">
+	<div id="section4" class="snap-item">
 		<Schedule />
 	</div>
 </div>
@@ -31,7 +30,7 @@
 		scroll-snap-type: y mandatory; /* enable vertical snap scrolling and make it mandatory */
 	}
 	.snap-item {
-		scroll-snap-align: start; /* align each item to the start of the container when snapped */
+		scroll-snap-align: center; /* align each item to the start of the container when snapped */
 		height: 100vh; /* set the height of each item to the viewport height */
 	}
 </style>

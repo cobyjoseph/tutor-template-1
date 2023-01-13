@@ -1,3 +1,13 @@
+<script>
+	function scrollIntoView({ target }) {
+		const element = document.querySelector(target.getAttribute('href'));
+		if (!element) return;
+		element.scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
+</script>
+
 <div class="bg-white bg-opacity-0 flex justify-center mt-3 z-0 relative">
 	<div
 		class=" font-Heebo w-full max-w-[1400px] relative flex justify-between text-xl rounded-lg px-[3%] text-[#2b217a] py-2 "
@@ -20,10 +30,26 @@
 			<div class=" relative font-semibold text-2xl  ">Company Name</div>
 		</div>
 		<div class=" relative flex   gap-14   ">
-			<div class=" font-semibold  customUnderline">My services</div>
-			<div class=" font-semibold  customUnderline">About me</div>
-			<div class=" font-semibold  customUnderline">Schedule</div>
-			<div class=" font-semibold customUnderline ">Contact</div>
+			<a
+				href={'#section2'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>My services</a
+			>
+			<a
+				href={'#section3'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>About me</a
+			>
+			<a
+				href={'#section4'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>Schedule</a
+			>
+			<a
+				href={'#section5'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>Contact</a
+			>
 		</div>
 	</div>
 </div>
