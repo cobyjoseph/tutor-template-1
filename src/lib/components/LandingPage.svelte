@@ -3,6 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import LandingBackground from './LandingBackground.svelte';
 
 	let mountAnimations = false;
 
@@ -11,33 +12,40 @@
 	});
 </script>
 
-<div class="grid grid-cols-2 ">
-	<!-- LEFT COLUMN -->
+<!-- the RELATIVE creates a reference point for the background item, which is absolute. Otherwise it would absolutely position relative to the page itself. And flex is used for the different pages/sections to be one after the other. flex necessary? -->
+<div class="flex relative ">
+	<LandingBackground />
 
-	<div class=" mt-auto mb-auto -translate-y-12">
-		<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
-			<TypingAnimation />
+	<div class=" grid grid-cols-1 max-w-[1400px] z-10 min-h-screen px-[3%]  ml-auto mr-auto">
+		<div class="grid grid-cols-2 ">
+			<!-- LEFT COLUMN -->
+
+			<div class=" mt-auto mb-auto -translate-y-12">
+				<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
+					<TypingAnimation />
+				</div>
+				{#if mountAnimations}
+					<div
+						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
+						class="mt-3  text-xl text-[#544E4E]"
+					>
+						Personalized high-school tutoring for a range of subjects.
+					</div>
+					<div
+						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
+						class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
+					>
+						See services
+					</div>
+				{/if}
+			</div>
+
+			<!-- LEFT COLUMN END -->
+
+			<div class="mt-auto mb-auto -translate-y-12">
+				<img src="tutor-graphic-1.svg" alt="Student working at computer" />
+			</div>
 		</div>
-		{#if mountAnimations}
-			<div
-				transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-				class="mt-3  text-xl text-[#544E4E]"
-			>
-				Personalized high-school tutoring for a range of subjects.
-			</div>
-			<div
-				transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-				class=" inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
-			>
-				See services
-			</div>
-		{/if}
-	</div>
-
-	<!-- LEFT COLUMN END -->
-
-	<div class="mt-auto mb-auto -translate-y-12">
-		<img src="tutor-graphic-1.svg" alt="Student working at computer" />
 	</div>
 </div>
 

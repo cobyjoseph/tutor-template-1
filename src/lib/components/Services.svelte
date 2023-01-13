@@ -1,3 +1,5 @@
+<!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
+
 <div class="min-h-screen relative flex bg-[#fad9d8]">
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
@@ -43,9 +45,7 @@
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
-				Specialty subjects include:
-			</div>
+			<div class="text-[#3A53B8] text-l flex font-medium mb-1">Specialty subjects include:</div>
 		</div>
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
@@ -110,7 +110,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3A53B8;
+		color: #3a53b8;
 	}
 
 	.economics::before {
@@ -120,7 +120,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3A53B8;
+		color: #3a53b8;
 	}
 
 	.history::before {
@@ -130,7 +130,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3A53B8;
+		color: #3a53b8;
 	}
 
 	.english::before {
@@ -140,7 +140,7 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3A53B8;
+		color: #3a53b8;
 	}
 
 	.science::before {
@@ -150,6 +150,6 @@
 		font-size: x-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3A53B8;
+		color: #3a53b8;
 	}
 </style>

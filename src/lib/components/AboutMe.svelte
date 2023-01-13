@@ -1,6 +1,7 @@
-<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
-<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
-
+<div class=" min-h-screen relative bg-[#c3f2e5]">
+	<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
+	<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
+</div>
 
 <style>
 	.waveStyleRed {
