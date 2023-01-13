@@ -36,19 +36,19 @@
 				on:click|preventDefault={scrollIntoView}>My services</a
 			>
 			<a
-			href={'#section3'}
-			class=" font-semibold  customUnderline"
-			on:click|preventDefault={scrollIntoView}>About me</a
+				href={'#section3'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>About me</a
 			>
 			<a
-			href={'#section4'}
+				href={'#section4'}
 				class=" font-semibold  customUnderline"
 				on:click|preventDefault={scrollIntoView}>Schedule</a
 			>
 			<a
-			href={'#section5'}
-			class=" font-semibold  customUnderline"
-			on:click|preventDefault={scrollIntoView}>Contact</a
+				href={'#section5'}
+				class=" font-semibold  customUnderline"
+				on:click|preventDefault={scrollIntoView}>Contact</a
 			>
 		</div>
 	</div>

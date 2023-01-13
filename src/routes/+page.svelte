@@ -4,7 +4,26 @@
 	import LandingPage from '$lib/components/LandingPage.svelte';
 	import Schedule from '$lib/components/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
+
+	$: scroll = 0;
+
+	const scrollDelayLog = () => {
+		setTimeout(() => {
+			console.log(scroll);
+		}, 200);
+	};
+	scrollDelayLog();
+
+	const typing2 = () => {
+		setTimeout(() => {
+			setInterval(addChars2, 100);
+		}, 2500);
+	};
+
+	console.log(scroll);
 </script>
+
+<svelte:window bind:scrollY={scroll} />
 
 <div class="snap-container">
 	<div class="snap-item">

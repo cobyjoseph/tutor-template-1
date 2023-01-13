@@ -1,6 +1,15 @@
 <script>
 	import ServicesBackground from './ServicesBackground.svelte';
-	
+	import { fly } from 'svelte/transition';
+	import { sineIn, backIn, backOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
+
+	let mountAnimations2 = false;
+
+
+	onMount(async () => {
+		mountAnimations2 = true;
+	});
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
@@ -8,11 +17,16 @@
 <div class="min-h-screen relative flex bg-[#fad9d8]">
 	<ServicesBackground />
 
+	
+
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
 	<div class="grid-cols-1 max-w-[1400px] ml-auto mr-auto  mt-auto mb-auto relative">
-		<div class=" inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title">
+		<div
+			transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
+			class=" inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
+		>
 			Services
 		</div>
 

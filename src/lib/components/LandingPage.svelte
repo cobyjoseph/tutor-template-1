@@ -39,7 +39,7 @@
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
 						class="mt-3  text-xl text-[#544E4E]"
 					>
-						Personalized high-school tutoring for a range of subjects.
+						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
 					<a
 						href={'#section2'}
