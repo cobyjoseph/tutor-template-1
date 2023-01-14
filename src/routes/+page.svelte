@@ -5,33 +5,18 @@
 	import Schedule from '$lib/components/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 
-	$: scroll = 0;
-
-	const scrollDelayLog = () => {
-		setTimeout(() => {
-			console.log(scroll);
-		}, 200);
-	};
-	scrollDelayLog();
-
-	const typing2 = () => {
-		setTimeout(() => {
-			setInterval(addChars2, 100);
-		}, 2500);
-	};
-
-	console.log(scroll);
+	let scroll;
 </script>
 
 <svelte:window bind:scrollY={scroll} />
 
-<div class="snap-container">
+<div class="">
 	<div class="snap-item">
 		<Menu />
 		<LandingPage />
 	</div>
 	<div id="section2" class="snap-item">
-		<Services />
+		<Services text={scroll} />
 	</div>
 	<div id="section3" class="snap-item">
 		<AboutMe />
@@ -41,6 +26,9 @@
 	</div>
 </div>
 
+<!-- adding the div below messes up the scroll bar. and doesn't appear. not sure why -->
+
+<!-- <div class="h-10">TEst</div> -->
 <style>
 	/* Add scroll snap styles */
 	.snap-container {

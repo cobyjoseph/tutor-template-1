@@ -1,10 +1,16 @@
 <script>
+	import { fly } from 'svelte/transition';
+
+	let animate = false;
+
 	function scrollIntoView({ target }) {
 		const element = document.querySelector(target.getAttribute('href'));
 		if (!element) return;
 		element.scrollIntoView({
 			behavior: 'smooth'
 		});
+
+		animate = true;
 	}
 </script>
 
@@ -35,6 +41,7 @@
 				class=" font-semibold  customUnderline"
 				on:click|preventDefault={scrollIntoView}>My services</a
 			>
+
 			<a
 				href={'#section3'}
 				class=" font-semibold  customUnderline"
