@@ -1,7 +1,5 @@
 <script>
-	import { fly } from 'svelte/transition';
 
-	let animate = false;
 
 	function scrollIntoView({ target }) {
 		const element = document.querySelector(target.getAttribute('href'));

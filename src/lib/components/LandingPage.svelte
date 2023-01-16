@@ -1,15 +1,11 @@
-<script>
+<script lang="ts">
 	import TypingAnimation from './TypingAnimation.svelte';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import LandingBackground from './LandingBackground.svelte';
 
-	let mountAnimations = false;
-
-	onMount(async () => {
-		mountAnimations = true;
-	});
+	export let mountLandingAnimation: Boolean;
 
 	function scrollIntoView({ target }) {
 		const element = document.querySelector(target.getAttribute('href'));
@@ -34,7 +30,7 @@
 				<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
 					<TypingAnimation />
 				</div>
-				{#if mountAnimations}
+				{#if mountLandingAnimation}
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
 						class="mt-3  text-xl text-[#544E4E]"

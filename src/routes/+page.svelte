@@ -16,10 +16,10 @@
 <div class="snap-container">
 	<div class="snap-item">
 		<Menu />
-		<LandingPage />
+		<LandingPage mountLandingAnimation={mountPassThrough} />
 	</div>
 	<div id="section2" class="snap-item">
-		<Services mountComponentAnimations={mountPassThrough} />
+		<Services />
 	</div>
 	<div id="section3" class="snap-item">
 		<AboutMe />
