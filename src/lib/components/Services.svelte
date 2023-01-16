@@ -1,34 +1,30 @@
-<script>
+<script lang="ts">
 	import ServicesBackground from './ServicesBackground.svelte';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
-	// let mountAnimations2 = false;
-
-	// onMount(async () => {
-	// 	mountAnimations2 = true;
-	// });
-
-	export let text
+	let visible: Boolean;
+	export let mountComponentAnimations: Boolean;
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
 
-<div class="min-h-screen relative flex bg-[#fad9d8]">
+<div class:visible class="min-h-screen relative flex bg-[#fad9d8]">
 	<ServicesBackground />
 
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
 	<div class="grid-cols-1 max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto relative ">
-		<div
-			transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-			class=" inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
-		>
-			Services
-			{text}
-		</div>
+		{#if mountComponentAnimations}
+			<div
+				transition:fly={{ duration: 400, delay: 6500, easing: sineIn, x: -30 }}
+				class=" inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
+			>
+				Services
+			</div>
+		{/if}
 
 		<!-- BULLETS ------------------------------------------------ -->
 

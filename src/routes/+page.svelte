@@ -4,19 +4,22 @@
 	import LandingPage from '$lib/components/LandingPage.svelte';
 	import Schedule from '$lib/components/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
+	import { onMount } from 'svelte';
 
-	let scroll;
+	let mountPassThrough = false;
+
+	onMount(async () => {
+		mountPassThrough = true;
+	});
 </script>
 
-<svelte:window bind:scrollY={scroll} />
-
-<div class="">
+<div class="snap-container">
 	<div class="snap-item">
 		<Menu />
 		<LandingPage />
 	</div>
 	<div id="section2" class="snap-item">
-		<Services text={scroll} />
+		<Services mountComponentAnimations={mountPassThrough} />
 	</div>
 	<div id="section3" class="snap-item">
 		<AboutMe />
