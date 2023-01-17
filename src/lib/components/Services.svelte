@@ -6,6 +6,10 @@
 	import { onMount } from 'svelte';
 
 	let visible = false;
+
+	let delay1 = 500;
+	let delay2 = 30;
+	let delay3 = 30;
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
@@ -24,17 +28,16 @@
 		}}
 	>
 		<div
+			bind:this={delayConnection}
 			class="{visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} 
-				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
+				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title "
 		>
 			Services
 		</div>
 
 		<!-- BULLETS ------------------------------------------------ -->
 
-		<div
-			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-[2000] "
-		>
+		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'}  ">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -47,9 +50,7 @@
 			</div>
 		</div>
 
-		<div
-			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-[4000ms]"
-		>
+		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} ">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -62,7 +63,7 @@
 			</div>
 		</div>
 
-		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-1000">
+		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} ">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -107,11 +108,16 @@
 
 <!-- style --------------------------------------------------------------------- -->
 <style>
+	:root {
+		--delayVariable: inherit;
+	}
+
 	.hiddenPreTransition {
 		opacity: 0.3;
 		filter: blur(5px);
 		transform: translateX(-100%);
 		transition: all 1s;
+		transition-delay: calc(100ms * var(--delayVariable));
 	}
 
 	.visible {
