@@ -1,11 +1,11 @@
-<script lang="ts">
+<script>
 	import ServicesBackground from './ServicesBackground.svelte';
 	import OnPage from '$lib/actions/OnPage';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
-	let visible;
+	let visible = false;
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
@@ -16,20 +16,25 @@
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
-	<div class="grid-cols-1 max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto relative ">
+	<div
+		class="grid-cols-1 max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto relative "
+		use:OnPage
+		on:customOnKeyword={({ detail }) => {
+			visible = detail;
+		}}
+	>
 		<div
-			class="{(visible = '2')
-				? 'bg-blue-500 transition:fly={{ duration: 400, delay: 1000, easing: sineIn, x: -30 }}'
-				: ''} inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
-			use:OnPage
-			on:customOnKeyword={() => console.log('test action')}
+			class="{visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} 
+				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title"
 		>
 			Services
 		</div>
 
 		<!-- BULLETS ------------------------------------------------ -->
 
-		<div class="flex">
+		<div
+			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-[2000] "
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -42,7 +47,9 @@
 			</div>
 		</div>
 
-		<div class="flex">
+		<div
+			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-[4000ms]"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -55,7 +62,7 @@
 			</div>
 		</div>
 
-		<div class="flex">
+		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} delay-1000">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -68,7 +75,11 @@
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
-		<div class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto  ">
+		<div
+			class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto {visible
+				? 'visible hiddenPreTransition'
+				: 'hiddenPreTransition'} delay-[8000] "
+		>
 			<div class="mx-auto col-span-2 math ">
 				<img class="h-[100px] w-[100px]" src="math-icon.svg" alt="Student studying math" />
 			</div>
@@ -96,6 +107,19 @@
 
 <!-- style --------------------------------------------------------------------- -->
 <style>
+	.hiddenPreTransition {
+		opacity: 0.3;
+		filter: blur(5px);
+		transform: translateX(-100%);
+		transition: all 1s;
+	}
+
+	.visible {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+
 	.waveStyleRed {
 		aspect-ratio: 960/250;
 		width: 100%;
