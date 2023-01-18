@@ -41,7 +41,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  inline-block buttonUnderline mt-2 text-4xl text-[#2b217a] font-bold bg-clip   "
+						class="  inline-block buttonUnderline mt-2 text-4xl text-titles font-bold bg-clip   "
 					>
 						See services
 					</a>

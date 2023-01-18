@@ -5,7 +5,7 @@
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 
-	let visible = false;
+	let visible;
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
@@ -25,7 +25,7 @@
 	>
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title "
+				inline-block text-5xl font-bold mb-1 text-[#2b217a] relative z-30 title "
 			style="transition-delay: 100ms;"
 		>
 			Services
@@ -37,11 +37,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-title fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
+			<div class="text-titles text-l flex font-medium mb-1">
 				Private, in-person or online sessions
 			</div>
 		</div>
@@ -50,11 +50,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-title fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#3A53B8] text-l flex font-medium mb-1">
+			<div class="text-titles text-l flex font-medium mb-1">
 				Middle school and high school courses
 			</div>
 		</div>
@@ -63,11 +63,11 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-6 h-6 p-1  stroke-[#3A53B8] fill-none stroke-2"
+				class="w-6 h-6 p-1  stroke-title fill-none stroke-2"
 			>
 				<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 			</svg>
-			<div class="text-[#3A53B8] text-l flex font-medium mb-1">Specialty subjects include:</div>
+			<div class="text-titles text-l flex font-medium mb-1">Specialty subjects include:</div>
 		</div>
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
