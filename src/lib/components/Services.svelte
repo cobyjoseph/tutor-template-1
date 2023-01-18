@@ -6,10 +6,6 @@
 	import { onMount } from 'svelte';
 
 	let visible = false;
-
-	let delay1 = 500;
-	let delay2 = 30;
-	let delay3 = 30;
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
@@ -28,16 +24,19 @@
 		}}
 	>
 		<div
-			bind:this={delayConnection}
 			class="{visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} 
 				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title "
+			style="transition-delay: 100ms;"
 		>
 			Services
 		</div>
 
 		<!-- BULLETS ------------------------------------------------ -->
 
-		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'}  ">
+		<div
+			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
+			style="transition-delay: 200ms;"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -50,7 +49,10 @@
 			</div>
 		</div>
 
-		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} ">
+		<div
+			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
+			style="transition-delay: 1600ms;"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -63,7 +65,10 @@
 			</div>
 		</div>
 
-		<div class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} ">
+		<div
+			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
+			style="transition-delay: 3000ms;"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -79,7 +84,7 @@
 		<div
 			class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto {visible
 				? 'visible hiddenPreTransition'
-				: 'hiddenPreTransition'} delay-[8000] "
+				: 'hiddenPreTransition'}  "
 		>
 			<div class="mx-auto col-span-2 math ">
 				<img class="h-[100px] w-[100px]" src="math-icon.svg" alt="Student studying math" />
@@ -108,16 +113,12 @@
 
 <!-- style --------------------------------------------------------------------- -->
 <style>
-	:root {
-		--delayVariable: inherit;
-	}
-
 	.hiddenPreTransition {
 		opacity: 0.3;
 		filter: blur(5px);
 		transform: translateX(-100%);
 		transition: all 1s;
-		transition-delay: calc(100ms * var(--delayVariable));
+		/* transition-delay: calc(100ms * var(--delayVariable)); */
 	}
 
 	.visible {
