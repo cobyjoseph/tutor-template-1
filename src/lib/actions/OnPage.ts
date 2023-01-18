@@ -26,8 +26,6 @@ export default function onPage(node) {
 	};
 }
 
-
-
 // export const actions: Actions = {
 // 	onPage: async (node) => {
 // 	const handleIntersect = (e) => {

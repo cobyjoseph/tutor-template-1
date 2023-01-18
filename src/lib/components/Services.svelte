@@ -24,7 +24,7 @@
 		}}
 	>
 		<div
-			class="{visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} 
+			class="{visible ? 'visible blurIn' : 'blurIn'} 
 				inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title "
 			style="transition-delay: 100ms;"
 		>
@@ -33,10 +33,7 @@
 
 		<!-- BULLETS ------------------------------------------------ -->
 
-		<div
-			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
-			style="transition-delay: 200ms;"
-		>
+		<div class="flex {visible ? 'visible blurIn' : 'blurIn'} " style="transition-delay: 200ms;">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -49,10 +46,7 @@
 			</div>
 		</div>
 
-		<div
-			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
-			style="transition-delay: 1600ms;"
-		>
+		<div class="flex {visible ? 'visible blurIn' : 'blurIn'} " style="transition-delay: 1600ms;">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -65,10 +59,7 @@
 			</div>
 		</div>
 
-		<div
-			class="flex {visible ? 'visible hiddenPreTransition' : 'hiddenPreTransition'} "
-			style="transition-delay: 3000ms;"
-		>
+		<div class="flex {visible ? 'visible blurIn' : 'blurIn'} " style="transition-delay: 3000ms;">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
@@ -81,16 +72,22 @@
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
-		<div
-			class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto {visible
-				? 'visible hiddenPreTransition'
-				: 'hiddenPreTransition'}  "
-		>
-			<div class="mx-auto col-span-2 math ">
+		<div class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto ">
+			<div
+				class="mx-auto col-span-2 math {visible
+					? 'visible hiddenPreTransition'
+					: 'hiddenPreTransition'}"
+				style="transition-delay: 4000ms"
+			>
 				<img class="h-[100px] w-[100px]" src="math-icon.svg" alt="Student studying math" />
 			</div>
 
-			<div class=" mx-auto col-span-2 economics ">
+			<div
+				class=" mx-auto col-span-2 economics {visible
+					? 'visible hiddenPreTransition'
+					: 'hiddenPreTransition'}"
+				style="transition-delay: 4500ms"
+			>
 				<img
 					class="h-[100px] w-[100px]"
 					src="economics-icon.svg"
@@ -98,13 +95,28 @@
 				/>
 			</div>
 
-			<div class="mx-auto col-span-2 history">
+			<div
+				class="mx-auto col-span-2 history  {visible
+					? 'visible hiddenPreTransition'
+					: 'hiddenPreTransition'}"
+				style="transition-delay: 5000ms"
+			>
 				<img class="h-[100px] w-[100px]" src="history-icon.svg" alt="Student studying history" />
 			</div>
-			<div class="mx-auto col-span-3 translate-x-14 english">
+			<div
+				class="mx-auto col-span-3 translate-x-14 english  {visible
+					? 'visible hiddenPreTransition'
+					: 'hiddenPreTransition'}"
+				style="transition-delay: 5500ms"
+			>
 				<img class="h-[100px] w-[100px]" src="english-icon.svg" alt="Student studying english" />
 			</div>
-			<div class="mx-auto col-span-3 -translate-x-14 science">
+			<div
+				class="mx-auto col-span-3 -translate-x-14 science  {visible
+					? 'visible hiddenPreTransition'
+					: 'hiddenPreTransition'}"
+				style="transition-delay: 6000ms"
+			>
 				<img class="h-[100px] w-[100px]" src="science-icon.svg" alt="Student studying science" />
 			</div>
 		</div>
@@ -116,9 +128,15 @@
 	.hiddenPreTransition {
 		opacity: 0.3;
 		filter: blur(5px);
-		transform: translateX(-100%);
+		transform: translateX(-100vw);
 		transition: all 1s;
 		/* transition-delay: calc(100ms * var(--delayVariable)); */
+	}
+
+	.blurIn {
+		opacity: 0.3;
+		filter: blur(5px);
+		transition: all 1s;
 	}
 
 	.visible {
