@@ -72,9 +72,9 @@
 
 		<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
-		<div class="grid grid-cols-6 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto ">
+		<div class="grid grid-cols-12 z-20 relative gap-x-36max-w-[800px] ml-auto mr-auto ">
 			<div
-				class="mx-auto col-span-2 math {visible
+				class="mx-auto col-span-4 math {visible
 					? 'visible hiddenPreTransition'
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 4000ms"
@@ -83,7 +83,7 @@
 			</div>
 
 			<div
-				class=" mx-auto col-span-2 economics {visible
+				class=" mx-auto col-span-4 economics {visible
 					? 'visible hiddenPreTransition'
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 4500ms"
@@ -96,7 +96,7 @@
 			</div>
 
 			<div
-				class="mx-auto col-span-2 history  {visible
+				class="mx-auto col-span-4 history  {visible
 					? 'visible hiddenPreTransition'
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 5000ms"
@@ -104,7 +104,7 @@
 				<img class="h-[100px] w-[100px]" src="history-icon.svg" alt="Student studying history" />
 			</div>
 			<div
-				class="mx-auto col-span-3 translate-x-14 english  {visible
+				class="mx-auto col-span-7  english  {visible
 					? 'visible hiddenPreTransition'
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 5500ms"
@@ -112,7 +112,7 @@
 				<img class="h-[100px] w-[100px]" src="english-icon.svg" alt="Student studying english" />
 			</div>
 			<div
-				class="mx-auto col-span-3 -translate-x-14 science  {visible
+				class="mx-auto col-span-5  science  {visible
 					? 'visible hiddenPreTransition'
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 6000ms"

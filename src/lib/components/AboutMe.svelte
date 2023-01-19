@@ -5,12 +5,12 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-screen relative bg-[#c3f2e5]">
+<div class=" min-h-screen relative bg-[#c3f2e5] outline outline-black flow-root   ">
 	<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
 
 	<div
-		class="grid-cols-1 max-w-[1400px]  px-[3%] ml-auto mr-auto  mt-auto mb-auto relative outline outline-4 outline-green-500"
+		class="grid-cols-1 max-w-[1400px]  px-[3%] max-h-[800px] mt-[100px] mb-auto ml-auto mr-auto outline outline-slate-400  "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
@@ -18,13 +18,13 @@
 	>
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block text-5xl font-bold mb-1 text-[#3A53B8] relative z-30 title "
+			inline-block text-5xl font-bold mb-1 text-titles relative z-30 title outline outline-blue-400 "
 			style="transition-delay: 100ms;"
 		>
 			About me
 		</div>
 
-		<div>
+		<div class="outline outline-purple-400 ">
 			<div>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
