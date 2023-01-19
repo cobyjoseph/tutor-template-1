@@ -10,14 +10,14 @@
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
 
-<div class="min-h-screen relative flex bg-[#fad9d8]">
+<div class="max-h-screen relative  bg-[#fad9d8]">
 	<ServicesBackground />
+	<div class="relative layeredWaveRed waveStyleRed mt-auto z-0 rotate-180 outline outline-blue-500 mb-4 max-h-full object-contain p-1" />
 
-	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
-	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
+	<!-- old classes for div below grid-cols-1 max-h-full max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
 	<div
-		class="grid-cols-1 max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto relative "
+		class=""
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
@@ -121,6 +121,8 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="relative layeredWaveRed waveStyleRed mb-10 z-10  " />
 </div>
 
 <!-- style --------------------------------------------------------------------- -->

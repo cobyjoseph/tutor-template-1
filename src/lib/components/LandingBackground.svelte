@@ -11,26 +11,6 @@
 			{ repeat: 999, duration: 3000, yoyo: true }
 		);
 		tweenBlob.start();
-
-		const tweenWave = KUTE.fromTo(
-			'#wave1.1',
-			{ path: '#wave1.1' },
-			{ path: '#wave2.1' },
-			{ repeat: 999, duration: 3000, yoyo: true },
-			'#wave1.2',
-			{ path: '#wave1.2' },
-			{ path: '#wave2.2' },
-			{ repeat: 999, duration: 3000, yoyo: true },
-			'#wave1.3',
-			{ path: '#wave1.3' },
-			{ path: '#wave2.3' },
-			{ repeat: 999, duration: 3000, yoyo: true },
-			'#wave1.4',
-			{ path: '#wave1.4' },
-			{ path: '#wave2.4' },
-			{ repeat: 999, duration: 3000, yoyo: true }
-		);
-		tweenWave.start();
 	});
 </script>
 
@@ -127,5 +107,4 @@
 
 <!--STYLE -------------------------------------------------------------------------------------------------------- -->
 <style>
-
 </style>
