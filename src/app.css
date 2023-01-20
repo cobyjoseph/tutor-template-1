@@ -17,7 +17,7 @@ body {
 		),
 		radial-gradient(at 30% 30%, #bac3ef, #cccef0, #c8c3ef);
 	/* width: 100vw;
-	height: 100vh;
+	height: 100%;
 	overflow-x: hidden; */
 	/* overflow: hidden; */
 }

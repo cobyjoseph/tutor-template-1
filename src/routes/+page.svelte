@@ -41,6 +41,6 @@
 	}
 	.snap-item {
 		scroll-snap-align: center; /* align each item to the start of the container when snapped */
-		height: 100vh; /* set the height of each item to the viewport height */
+		height: 100%; /* set the height of each item to the viewport height */
 	}
 </style>

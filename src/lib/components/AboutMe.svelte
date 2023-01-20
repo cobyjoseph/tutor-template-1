@@ -1,16 +1,15 @@
 <script lang="ts">
 	import OnPage from '$lib/actions/OnPage';
-
 	let visible;
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-screen relative bg-[#c3f2e5] outline outline-black flow-root   ">
+<div class=" min-h-full relative bg-[#c3f2e5] outline outline-black flow-root   ">
 	<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
 
 	<div
-		class="grid-cols-1 max-w-[1400px]  px-[3%] max-h-[800px] mt-[50%] mb-auto ml-auto mr-auto outline outline-slate-400  "
+		class="grid-cols-1 max-w-[1400px]  px-[3%] max-h-[800px] mt-[100px] mb-auto ml-auto mr-auto outline outline-slate-400  "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
@@ -50,13 +49,11 @@
 		filter: blur(5px);
 		transition: all 1s;
 	}
-
 	.visible {
 		opacity: 1;
 		filter: blur(0);
 		transform: translateX(0);
 	}
-
 	.title::after {
 		content: '';
 		width: 100%;
@@ -69,7 +66,6 @@
 		transform-origin: left;
 		z-index: -1;
 	}
-
 	.waveStyleRed {
 		aspect-ratio: 960/250;
 		width: 100%;
@@ -77,7 +73,6 @@
 		background-position: center;
 		background-size: cover;
 	}
-
 	.layeredWaveGreen {
 		background-image: url('./layered-waves-green.svg');
 	}
