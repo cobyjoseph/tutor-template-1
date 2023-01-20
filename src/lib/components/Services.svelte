@@ -16,9 +16,9 @@
 	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
 
-	<!-- old classes for div below grid-cols-1 max-h-full max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
+	<!-- old classes for div below grid-cols-1 max-h-full max-w-[83rem] w-full px-7 ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
 	<div
-		class="grid-cols-1 max-w-[1400px] w-full px-[3%] ml-auto mr-auto  mt-auto mb-auto relative "
+		class="grid-cols-1 max-w-[83rem] w-full px-7 ml-auto mr-auto  mt-auto mb-auto relative "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;

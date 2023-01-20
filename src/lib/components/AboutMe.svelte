@@ -4,12 +4,14 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-full relative bg-[#c3f2e5] outline outline-black flow-root   ">
+<div
+	class=" min-h-full relative bg-[#c3f2e5] outline outline-black grid justify-center content-center  "
+>
 	<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
 
 	<div
-		class="grid-cols-1 max-w-[1400px]  px-[3%] max-h-[800px] mt-[100px] mb-auto ml-auto mr-auto outline outline-slate-400  "
+		class="grid-cols-1 max-w-[83rem] px-7 max-h-[800px] justify-center content-center outline outline-slate-400 flow-root "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;

@@ -14,7 +14,7 @@
 
 <div class="bg-white bg-opacity-0 flex justify-center mt-3 z-0 relative">
 	<div
-		class=" font-Heebo w-full max-w-[1400px] relative flex justify-between text-xl rounded-lg px-[3%] text-titles py-2 "
+		class=" font-Heebo w-full max-w-[83rem] relative flex justify-between text-xl rounded-lg px-7 text-titles py-2 "
 	>
 		<div class="flex gap-2">
 			<svg

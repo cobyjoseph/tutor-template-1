@@ -22,7 +22,7 @@
 
 	<div class="absolute layeredWave waveStyle bottom-0 z-0" />
 
-	<div class=" grid grid-cols-1 max-w-[1400px] z-10 min-h-screen px-[3%]  ml-auto mr-auto">
+	<div class=" grid grid-cols-1 max-w-[83rem] z-10 min-h-screen px-7  ml-auto mr-auto">
 		<div class="grid grid-cols-2 ">
 			<!-- LEFT COLUMN -->
 
