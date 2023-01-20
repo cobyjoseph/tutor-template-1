@@ -13,8 +13,8 @@
 <div class="min-h-screen relative flex bg-[#fad9d8]">
 	<ServicesBackground />
 
-	<div class="absolute layeredWaveRed waveStyleRed top-0 z-0 rotate-180 " />
-	<div class="absolute layeredWaveRed waveStyleRed bottom-0 z-0  " />
+	<div class="absolute layeredWaveRed waveStyleRed w-full h-[70%]  top-0 z-0 rotate-180 " />
+	<div class="absolute layeredWaveRed waveStyleRed w-full h-[70%] bottom-0 z-0  " />
 
 	<!-- old classes for div below grid-cols-1 max-h-full max-w-[83rem] w-full px-7 ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
 	<div
@@ -80,7 +80,7 @@
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 4000ms"
 			>
-				<img class="h-[100px] w-[100px]" src="math-icon.svg" alt="Student studying math" />
+				<img class="h-[100px] w-[100px]" src="subjects/math.svg" alt="Student studying math" />
 			</div>
 
 			<div
@@ -91,7 +91,7 @@
 			>
 				<img
 					class="h-[100px] w-[100px]"
-					src="economics-icon.svg"
+					src="subjects/economics.svg"
 					alt="Student studying economics"
 				/>
 			</div>
@@ -102,7 +102,11 @@
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 5000ms"
 			>
-				<img class="h-[100px] w-[100px]" src="history-icon.svg" alt="Student studying history" />
+				<img
+					class="h-[100px] w-[100px]"
+					src="subjects/history.svg"
+					alt="Student studying history"
+				/>
 			</div>
 			<div
 				class="mx-auto col-span-7  english  {visible
@@ -110,7 +114,11 @@
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 5500ms"
 			>
-				<img class="h-[100px] w-[100px]" src="english-icon.svg" alt="Student studying english" />
+				<img
+					class="h-[100px] w-[100px]"
+					src="subjects/english.svg"
+					alt="Student studying english"
+				/>
 			</div>
 			<div
 				class="mx-auto col-span-5  science  {visible
@@ -118,7 +126,11 @@
 					: 'hiddenPreTransition'}"
 				style="transition-delay: 6000ms"
 			>
-				<img class="h-[100px] w-[100px]" src="science-icon.svg" alt="Student studying science" />
+				<img
+					class="h-[100px] w-[100px]"
+					src="subjects/science.svg"
+					alt="Student studying science"
+				/>
 			</div>
 		</div>
 	</div>
@@ -148,14 +160,14 @@
 
 	.waveStyleRed {
 		aspect-ratio: 960/250;
-		width: 100%;
+		/* width: 100%; */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 
 	.layeredWaveRed {
-		background-image: url('./layered-waves-orange-med.svg');
+		background-image: url('/waves/orange.svg');
 	}
 
 	.title::after {

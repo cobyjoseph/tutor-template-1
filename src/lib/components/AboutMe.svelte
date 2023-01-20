@@ -4,11 +4,9 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div
-	class=" min-h-full relative bg-[#c3f2e5] outline outline-black grid justify-center content-center  "
->
-	<div class="absolute layeredWaveGreen waveStyleRed top-0 z-0 rotate-180 " />
-	<div class="absolute layeredWaveGreen waveStyleRed bottom-0 z-0  " />
+<div class=" min-h-full relative bg-[#c3f2e5] grid justify-center content-center ">
+	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] top-0 z-0 rotate-180 " />
+	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
 
 	<div
 		class="grid-cols-1 max-w-[83rem] px-7 max-h-[800px] justify-center content-center outline outline-slate-400 flow-root "
@@ -70,12 +68,13 @@
 	}
 	.waveStyleRed {
 		aspect-ratio: 960/250;
-		width: 100%;
+		/* height: 50%;
+		width: 100%; */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 	.layeredWaveGreen {
-		background-image: url('./layered-waves-green.svg');
+		background-image: url('/waves/green.svg');
 	}
 </style>
