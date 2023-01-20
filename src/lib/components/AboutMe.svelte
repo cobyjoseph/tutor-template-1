@@ -9,7 +9,7 @@
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
 
 	<div
-		class="grid-cols-1 max-w-[83rem] px-7 max-h-[800px] justify-center content-center outline outline-slate-400 flow-root "
+		class="grid-cols-1 max-w-[83rem] px-7  justify-center content-center outline outline-slate-400 flow-root "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
