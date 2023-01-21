@@ -8,6 +8,12 @@
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
 
+	<img
+		class=" absolute w-full aspect-auto rounded-md z-10 "
+		src="waves/central-wave.svg"
+		alt="professoinal headshot "
+	/>
+
 	<div
 		class="grid-cols-1 max-w-[83rem] px-7  justify-center content-center flow-root "
 		use:OnPage
@@ -26,8 +32,11 @@
 		<!-- Central 2 column grid -->
 
 		<div>
-			<div class=" grid grid-cols-2 gap-10 outline outline-blue-500 ">
-				<div class="relative flex  items-center ">
+			<div class=" grid grid-cols-2 relative  overflow-clip ">
+				<!-- <div
+					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
+				/> -->
+				<div class="relative flex  items-center  ">
 					<div class=" relative   flex-wrap  ">
 						<div class="relative z-20 text-titles p-3">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -38,14 +47,14 @@
 							mollit anim id est laborum
 						</div>
 						<div
-							class="absolute bg-white z-10 w-full h-full -translate-y-[100%]   rounded-lg  opacity-20 outline-[0.1rem] outline outline-[#40c9a5] shadow-2xl  shadow-slate-800/80 backdrop-blur    "
+							class="absolute bg-white z-10 w-full h-full -translate-y-[100%]   rounded-lg  opacity-40 outline-[0.1rem] outline outline-white shadow-lg  shadow-slate-800/40 backdrop-blur-md  "
 						/>
 					</div>
 				</div>
 
 				<div class="min-w-10  w-full box-border flex justify-center ">
 					<img
-						class=" max-w-sm  w-full aspect-auto rounded-md "
+						class=" max-w-sm  w-full aspect-auto rounded-md z-30 "
 						src="headshot.jpg"
 						alt="professoinal headshot "
 					/>
