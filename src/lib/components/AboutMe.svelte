@@ -17,29 +17,39 @@
 	>
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block text-5xl font-bold mb-1 text-titles relative z-30 title outline outline-blue-400 "
+			inline-block text-5xl font-bold mb-1 text-titles relative z-30 title "
 			style="transition-delay: 100ms;"
 		>
 			About me
 		</div>
 
-		<div class="outline outline-purple-400 ">
-			<div>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
+		<!-- Central 2 column grid -->
 
-			<div class="max-w-[30%] max-h-[30%] w-full box-border grid outline outline-4 outline-red-500">
-				<img
-					class=" w-max-[150px] h-max-[50px] w-full aspect-auto "
-					src="headshot.jpg"
-					alt="professoinal headshot "
-				/>
+		<div>
+			<div class="outline outline-purple-400 grid grid-cols-2 gap-10 p-5">
+				<div class="relative flex outline outline-black items-center">
+					<div class=" relative  outline-red-500 outline m-2 flex-wrap  ">
+						<div class="relative z-20">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							laborum. sdfds
+						</div>
+						<div
+							class="absolute bg-white z-10 w-full h-full -translate-y-[80%] -translate-x-4 opacity-100 blur-md"
+						/>
+					</div>
+				</div>
+
+				<div class="min-w-10  w-full box-border grid outline outline-4 outline-red-500">
+					<img
+						class=" w-max-[150px] h-max-[50px] w-full aspect-auto "
+						src="headshot.jpg"
+						alt="professoinal headshot "
+					/>
+				</div>
 			</div>
 		</div>
+
+		<!-- end of central grid -->
 	</div>
 </div>
 
