@@ -9,7 +9,7 @@
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
 
 	<div
-		class="grid-cols-1 max-w-[83rem] px-7  justify-center content-center outline outline-slate-400 flow-root "
+		class="grid-cols-1 max-w-[83rem] px-7  justify-center content-center flow-root "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
@@ -26,22 +26,26 @@
 		<!-- Central 2 column grid -->
 
 		<div>
-			<div class="outline outline-purple-400 grid grid-cols-2 gap-10 p-5">
-				<div class="relative flex outline outline-black items-center">
-					<div class=" relative  outline-red-500 outline m-2 flex-wrap  ">
-						<div class="relative z-20">
+			<div class=" grid grid-cols-2 gap-10 outline outline-blue-500 ">
+				<div class="relative flex  items-center ">
+					<div class=" relative   flex-wrap  ">
+						<div class="relative z-20 text-titles p-3">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							laborum. sdfds
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum
 						</div>
 						<div
-							class="absolute bg-white z-10 w-full h-full -translate-y-[80%] -translate-x-4 opacity-100 blur-md"
+							class="absolute bg-white z-10 w-full h-full -translate-y-[100%]   rounded-lg  opacity-20 outline-[0.1rem] outline outline-[#40c9a5] shadow-2xl  shadow-slate-800/80 backdrop-blur    "
 						/>
 					</div>
 				</div>
 
-				<div class="min-w-10  w-full box-border grid outline outline-4 outline-red-500">
+				<div class="min-w-10  w-full box-border flex justify-center ">
 					<img
-						class=" w-max-[150px] h-max-[50px] w-full aspect-auto "
+						class=" max-w-sm  w-full aspect-auto rounded-md "
 						src="headshot.jpg"
 						alt="professoinal headshot "
 					/>
