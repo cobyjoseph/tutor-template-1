@@ -10,8 +10,9 @@
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
 
-<div class="min-h-screen relative flex ">
+<div class=" relative flex  min-h-screen">
 	<!-- <ServicesBackground /> -->
+
 	<div class="absolute -top-9 -left-9 text-[10rem] font-caveat font-bold -z-1 text-shading ">
 		SERVICES
 	</div>
@@ -21,7 +22,7 @@
 
 	<!-- old classes for div below grid-cols-1 max-h-full max-w-[83rem] w-full px-7 ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
 	<div
-		class="grid-cols-1 max-w-[83rem] w-full px-14 ml-auto mr-auto  mt-auto mb-auto relative "
+		class="grid-cols-1 max-w-[83rem] w-full px-14 ml-auto mr-auto  mt-auto mb-auto relative  "
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
@@ -29,7 +30,7 @@
 	>
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-				inline-block text-6xl font-bold mb-1 text-primaryBright relative z-30 title  "
+				inline-block text-6xl font-bold mb-4 text-primaryBright relative z-30 title  "
 			style="transition-delay: 100ms;"
 		>
 			Services
@@ -71,9 +72,10 @@
 
 			<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
-			<div class="grid grid-cols-4">
+			<!-- change these margins on each grid element on differnet sized screens -->
+			<div class="grid grid-cols-4 gap-y-10 ">
 				<div
-					class=" col-span-3  math {visible
+					class=" col-span-2 row-span-2 row-start-1 math ml-8 {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 300ms"
@@ -82,7 +84,7 @@
 				</div>
 
 				<div
-					class="  col-span-3  col-start-2  economics {visible
+					class="  col-span-2 row-span-2 row-start-2 col-start-4 mr-8 economics  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 500ms"
@@ -95,7 +97,7 @@
 				</div>
 
 				<div
-					class=" col-span-3 history  {visible
+					class=" col-span-2 row-span-2 row-start-3 history ml-8  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 700ms"
@@ -107,7 +109,7 @@
 					/>
 				</div>
 				<div
-					class=" col-span-3   english  {visible
+					class=" col-span-2 row-span-2 row-start-4 col-start-4 mr-8 english  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 900ms"
@@ -119,7 +121,7 @@
 					/>
 				</div>
 				<div
-					class=" col-span-3 science  {visible
+					class=" col-span-2 row-span-2 row-start-5 science ml-8 {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1100ms"
@@ -130,6 +132,14 @@
 						alt="Student studying science"
 					/>
 				</div>
+				<div
+					class="col-span-2 row-start-6 col-start-3 ml-4 text-secondary text-5xl mb-4 font-Caveat {visible
+						? 'visible hiddenPreTransition'
+						: 'hiddenPreTransition'}"
+					style="transition-delay: 1300ms"
+				>
+					...and more
+				</div>
 			</div>
 		</div>
 	</div>
@@ -137,12 +147,17 @@
 
 <!-- style --------------------------------------------------------------------- -->
 <style>
+	.test::before {
+		content: 'before';
+		margin-right: 1rem;
+	}
+
 	.hiddenPreTransition {
 		opacity: 0.3;
 		filter: blur(5px);
 		transform: translateX(100vw);
 		transition: all 1s;
-		overflow-x: hidden;
+
 		/* transition-delay: calc(100ms * var(--delayVariable)); */
 	}
 
@@ -185,50 +200,56 @@
 
 	.math::before {
 		content: 'Math';
-		margin-right: 2rem;
-		font-size: x-large;
+		position: absolute;
+		top: 1rem;
+		left: 7rem;
+		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3a53b8;
+		color: #cc3232;
 	}
 
 	.economics::before {
 		content: 'Economics';
-		display: flex;
-		justify-content: center;
-		font-size: x-large;
+		position: absolute;
+		top: 1rem;
+		left: -8rem;
+		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3a53b8;
+		color: #cc3232;
 	}
 
 	.history::before {
 		content: 'History';
-		display: flex;
-		justify-content: center;
-		font-size: x-large;
+		position: absolute;
+		top: 1rem;
+		left: 7rem;
+		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3a53b8;
+		color: #cc3232;
 	}
 
 	.english::before {
 		content: 'English';
-		display: flex;
-		justify-content: center;
-		font-size: x-large;
+		position: absolute;
+		top: 1rem;
+		left: -6rem;
+		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3a53b8;
+		color: #cc3232;
 	}
 
 	.science::before {
 		content: 'Science';
-		display: flex;
-		justify-content: center;
-		font-size: x-large;
+		position: absolute;
+		top: 1rem;
+		left: 7rem;
+		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #3a53b8;
+		color: #cc3232;
 	}
 </style>
