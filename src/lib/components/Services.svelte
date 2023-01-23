@@ -29,7 +29,7 @@
 	>
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-				inline-block text-5xl font-bold mb-1 text-primaryBright relative z-30 title  "
+				inline-block text-6xl font-bold mb-1 text-primaryBright relative z-30 title  "
 			style="transition-delay: 100ms;"
 		>
 			Services
@@ -38,7 +38,21 @@
 		<!-- Columns separating the text and the icons -->
 		<div class="grid grid-cols-2 ">
 			<!-- this container div for the two bullets keeps them in the same grid column -->
-			<div class="text-primary text-3xl font-semibold flex flex-grow-0 ">
+			<div class="text-primary text-3xl font-semibold  ">
+				<div
+					class="flex flex-grow mb-10  {visible ? 'visible blurIn' : 'blurIn'} "
+					style="transition-delay: 100ms;"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="w-12 h-12 flex stroke-secondary fill-none stroke-2"
+					>
+						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
+					</svg>
+					<div class="flex">Private, in-person or online sessions</div>
+				</div>
+
 				<div
 					class="flex flex-grow  {visible ? 'visible blurIn' : 'blurIn'} "
 					style="transition-delay: 100ms;"
@@ -46,21 +60,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
-						class="w-12 h-12 p-1 flex stroke-primary fill-none stroke-2"
-					>
-						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-					</svg>
-					<div class="mb-6 flex">Private, in-person or online sessions</div>
-				</div>
-
-				<div
-					class="flex flex-grow items-center {visible ? 'visible blurIn' : 'blurIn'} "
-					style="transition-delay: 100ms;"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						class="w-6 h-6 p-1  stroke-primary fill-none stroke-2"
+						class="w-12 h-12 p-1  stroke-secondary fill-none stroke-2"
 					>
 						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 					</svg>
@@ -73,7 +73,7 @@
 
 			<div class="grid grid-cols-4">
 				<div
-					class="mx-auto col-span-3  math {visible
+					class=" col-span-3  math {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 300ms"
@@ -82,7 +82,7 @@
 				</div>
 
 				<div
-					class=" mx-auto col-span-3 row-start-2 col-start-2  economics {visible
+					class="  col-span-3  col-start-2  economics {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 500ms"
@@ -95,7 +95,7 @@
 				</div>
 
 				<div
-					class="mx-auto col-span-3 history  {visible
+					class=" col-span-3 history  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 700ms"
@@ -107,7 +107,7 @@
 					/>
 				</div>
 				<div
-					class="mx-auto col-span-3   english  {visible
+					class=" col-span-3   english  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 900ms"
@@ -119,7 +119,7 @@
 					/>
 				</div>
 				<div
-					class="mx-auto col-span-3 science  {visible
+					class=" col-span-3 science  {visible
 						? 'visible hiddenPreTransition'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1100ms"
