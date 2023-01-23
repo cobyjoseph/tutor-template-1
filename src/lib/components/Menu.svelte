@@ -8,12 +8,12 @@
 	}
 </script>
 
-<div class="bg-white bg-opacity-0 flex justify-center mt-3 z-0 relative">
+<div class="bg-white bg-opacity-0 flex justify-center  z-0 relative ">
 	<div
-		class=" font-Heebo w-full max-w-[83rem] relative flex justify-between items-center text-xl rounded-lg px-7 text-primaryBright py-2 "
+		class="font-Heebo w-full relative flex justify-between items-center text-xl rounded-lg px-7 text-primaryBright  "
 	>
 		<div class="flex gap-2 items-center">
-			<img class="w-12" src="book-logo.svg" alt="Student working at computer" />
+			<img class="w-12" src="book-logo.svg" alt="rise tutoring logo" />
 
 			<div class=" relative text-4xl text-secondary font-Caveat font-bold  ">Rise tutoring</div>
 		</div>

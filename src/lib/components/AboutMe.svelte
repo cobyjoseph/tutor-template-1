@@ -5,8 +5,8 @@
 
 <!-- SCREEN -WIDE  -->
 <div class=" min-h-full relative grid justify-center content-center ">
-	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] top-0 z-0 rotate-180 " />
-	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
+	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
+	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
 	<img
 		class=" absolute w-full aspect-auto rounded-md z-10 "
@@ -89,15 +89,15 @@
 		transform-origin: left;
 		z-index: -1;
 	}
-	.waveStyleRed {
+	.waveStyle {
 		aspect-ratio: 960/250;
-		/* height: 50%;
-		width: 100%; */
+		/* width: 100%;  */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
-	.layeredWaveGreen {
-		background-image: url('/waves/green.svg');
+
+	.layeredWave {
+		background-image: url('/waves/short-3.svg');
 	}
 </style>

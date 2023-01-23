@@ -105,6 +105,6 @@
 	}
 
 	.layeredWave {
-		background-image: url('/waves/simple.svg');
+		background-image: url('/waves/short-1.svg');
 	}
 </style>
