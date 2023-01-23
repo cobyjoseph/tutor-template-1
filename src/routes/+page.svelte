@@ -15,7 +15,7 @@
 
 <div class="snap-container">
 	<div class="snap-item">
-		<Menu />
+		
 		<LandingPage mountLandingAnimation={mountPassThrough} />
 	</div>
 	<div id="section2" class="snap-item">

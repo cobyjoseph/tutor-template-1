@@ -4,15 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#aad3ff',
-				primaryDark: '#56A6F9',
-				primaryBright: '#3116EC',
-				secondary: '#B0ABFF',
-				third: '#3988EC',
-				textAlternate: '#2B217A',
-				background1: '#CBC8F0',
-				background2: '#DFE0FF',
-				background3: '#CAD3FF'
+				primary: '#1a1101',
+				primaryDark: '#151225',
+				primaryBright: '#2A2AAC',
+				secondary: '#CC3232',
+				secondaryDark: '#6b1b15',
+				third: '#F6991B',
+				accent: '#F6895A',
+				textAlternate: '#2B217A'
 			},
 			fontFamily: {
 				Heebo: ['Heebo'],

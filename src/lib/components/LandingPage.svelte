@@ -4,6 +4,7 @@
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
 	import LandingBackground from './LandingBackground.svelte';
+	import Menu from './Menu.svelte';
 
 	export let mountLandingAnimation: Boolean;
 
@@ -20,9 +21,11 @@
 <div class="flex relative  ">
 	<LandingBackground />
 
-	<div class="absolute layeredWave waveStyle w-full h-[80%] bottom-0 z-0" />
+	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
 	<div class=" grid grid-cols-1 max-w-[83rem] z-10 min-h-screen px-7  ml-auto mr-auto">
+		<Menu />
+
 		<div class="grid grid-cols-2 ">
 			<!-- LEFT COLUMN -->
 
@@ -33,7 +36,7 @@
 				{#if mountLandingAnimation}
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-						class="mt-3  text-xl text-[#544E4E]"
+						class="mt-3  text-xl text-primary"
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
@@ -41,7 +44,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  inline-block buttonUnderline mt-2 text-4xl text-titles font-bold bg-clip   "
+						class="  inline-block buttonUnderline mt-2 text-4xl text-primaryBright font-bold bg-clip   "
 					>
 						See services
 					</a>
@@ -60,7 +63,7 @@
 <!-- both columns end -->
 <style>
 	.gradient {
-		background-image: linear-gradient(120deg, #3709ee, #0284da 55% 100%);
+		background-image: linear-gradient(120deg, #1a1101, #1a1101 55% 100%);
 	}
 
 	.buttonUnderline {
@@ -70,16 +73,16 @@
 	.buttonUnderline:hover {
 		color: transparent;
 		background-clip: text;
-		background-image: linear-gradient(90deg, #3709ee, #0284da 55% 100%);
+		background-image: linear-gradient(90deg, #cc3232, #f6991b 100%);
 	}
 
 	.buttonUnderline:after {
 		content: '';
 		width: 100%;
 		height: 8px;
-		opacity: 40%;
+		opacity: 70%;
 		position: relative;
-		background: #0284da;
+		background: #f6991b;
 		display: block;
 		transform: translate(-4px, -8px) scaleX(0.42) skew(-50deg);
 		transform-origin: left;
@@ -88,24 +91,20 @@
 	}
 
 	.buttonUnderline:hover::after {
-		background: linear-gradient(90deg, #3709ee, #0284da 65% 100%);
+		background: linear-gradient(90deg, #cc3232, #f6991b 100%);
 		transform: translate(-4px, -3px) skew(-40deg);
 		opacity: 70%;
 	}
 
-	.gradient {
-		background-image: linear-gradient(120deg, #3709ee, #0284da 35% 100%);
-	}
-
 	.waveStyle {
-		/* aspect-ratio: 960/250;
-		width: 100%; */
+		aspect-ratio: 960/250;
+		/* width: 100%; */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 
 	.layeredWave {
-		background-image: url('/waves/purple.svg');
+		background-image: url('/waves/simple.svg');
 	}
 </style>

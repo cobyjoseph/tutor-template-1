@@ -4,7 +4,7 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-full relative bg-[#c3f2e5] grid justify-center content-center ">
+<div class=" min-h-full relative grid justify-center content-center ">
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] top-0 z-0 rotate-180 " />
 	<div class="absolute layeredWaveGreen waveStyleRed w-full h-[50%] bottom-0 z-0  " />
 

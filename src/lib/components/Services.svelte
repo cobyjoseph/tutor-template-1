@@ -10,11 +10,11 @@
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
 
-<div class="min-h-screen relative flex bg-[#fad9d8]">
-	<ServicesBackground />
+<div class="min-h-screen relative flex ">
+	<!-- <ServicesBackground /> -->
 
-	<div class="absolute layeredWaveRed waveStyleRed w-full h-[70%]  top-0 z-0 rotate-180 " />
-	<div class="absolute layeredWaveRed waveStyleRed w-full h-[70%] bottom-0 z-0  " />
+	<!-- <div class="absolute layeredWaveRed waveStyleRed w-full h-[70%]  top-0 z-0 rotate-180 " /> -->
+	<div class="absolute layeredWave waveStyle w-full h-[70%] bottom-0 z-0  " />
 
 	<!-- old classes for div below grid-cols-1 max-h-full max-w-[83rem] w-full px-7 ml-auto mr-auto  mt-auto mb-auto outline outline-green-500   -->
 	<div
@@ -158,16 +158,16 @@
 		transform: translateX(0);
 	}
 
-	.waveStyleRed {
-		aspect-ratio: 960/250;
-		/* width: 100%; */
+	.waveStyle {
+		/* aspect-ratio: 960/250;
+		width: 100%; */
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 
-	.layeredWaveRed {
-		background-image: url('/waves/orange.svg');
+	.layeredWave {
+		background-image: url('/waves/simple.svg');
 	}
 
 	.title::after {
