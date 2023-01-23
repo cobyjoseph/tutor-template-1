@@ -23,7 +23,7 @@
 
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
-	<div class=" grid grid-cols-1 max-w-[83rem] z-10 min-h-screen px-7  ml-auto mr-auto">
+	<div class=" grid grid-cols-1 max-w-[83rem] z-10 min-h-screen px-14  ml-auto mr-auto">
 		<Menu />
 
 		<div class="grid grid-cols-2 ">
@@ -36,7 +36,7 @@
 				{#if mountLandingAnimation}
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-						class="mt-3  text-xl text-primary"
+						class="mt-4  text-xl text-primary"
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
@@ -44,7 +44,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  inline-block buttonUnderline mt-2 text-4xl text-primaryBright font-bold bg-clip   "
+						class="  inline-block buttonUnderline mt-7 text-4xl text-primaryBright font-bold bg-clip   "
 					>
 						See services
 					</a>

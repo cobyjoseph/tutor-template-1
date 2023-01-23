@@ -10,6 +10,7 @@ module.exports = {
 				secondary: '#CC3232',
 				secondaryDark: '#6b1b15',
 				third: '#F6991B',
+				shading: '#f0e8d8',
 				accent: '#F6895A',
 				textAlternate: '#2B217A'
 			},

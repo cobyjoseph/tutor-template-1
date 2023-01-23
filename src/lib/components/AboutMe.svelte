@@ -5,6 +5,7 @@
 
 <!-- SCREEN -WIDE  -->
 <div class=" min-h-full relative grid justify-center content-center ">
+	
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
