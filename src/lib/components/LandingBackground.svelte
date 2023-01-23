@@ -14,7 +14,7 @@
 	});
 </script>
 
-<!--ANIMATED BLOB  -->
+<!--ANIMATED BLOB     -->
 
 <div class=" z-0  ">
 	<div class="absolute transform -translate-x-[160%] -translate-y-[165%] top-1/2 left-1/2  ">
