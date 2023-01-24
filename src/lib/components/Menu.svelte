@@ -13,7 +13,7 @@
 		class="font-Heebo w-full relative flex justify-between items-center text-xl rounded-lg  text-primaryBright  "
 	>
 		<div class="flex gap-4 items-center">
-			<img class="w-12" src="book-logo.svg" alt="rise tutoring logo" />
+			<img class="w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
 
 			<div class=" relative text-4xl text-secondary font-Caveat font-bold  ">Rise tutoring</div>
 		</div>

@@ -4,70 +4,83 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-screen relative grid justify-center content-center ">
-
+<div class=" min-h-screen relative flex-col items-center  ">
+	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
 	<img
-		class=" absolute w-full aspect-auto rounded-md z-10 "
+		class=" absolute z-0 aspect-auto w-full"
 		src="waves/central-wave.svg"
 		alt="professoinal headshot "
 	/>
 
+	<div class="absolute -top-9 -left-9 text-[10rem] font-caveat font-bold -z-1 text-shading ">
+		ABOUT ME
+	</div>
+
 	<div
-		class="grid-cols-1 max-w-[83rem] px-7  justify-center content-center flow-root "
+		class="{visible ? 'visible blurIn' : 'blurIn'} 
+			inline-block absolute top-20 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
+		style="transition-delay: 100ms;"
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
 			visible = detail;
 		}}
 	>
-		<div
-			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block text-5xl font-bold mb-1 text-titles relative z-30 title "
-			style="transition-delay: 100ms;"
-		>
-			About me
-		</div>
+		About me
+	</div>
 
-		<!-- Central 2 column grid -->
+	<div class=" max-w-[45rem] -bottom-8 overflow-clip  -right-16  absolute  ">
+		<img
+			class="   aspect-auto z-30 rounded-l-2xl rounded-r-[2rem]  "
+			src="other/headshot.png"
+			alt="professoinal headshot "
+		/>
+	</div>
 
-		<div>
-			<div class=" grid grid-cols-2 relative  overflow-clip ">
-				<!-- <div
+	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
+
+	<div class=" max-w-[72rem] flex-grow   bg-blue-300 mt-[10rem]   ">
+		<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->
-				<div class="relative flex  items-center  ">
-					<div class=" relative   flex-wrap  ">
-						<div class="relative z-20 text-titles p-3">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-							mollit anim id est laborum
-						</div>
-						<div
-							class="absolute bg-white z-10 w-full h-full -translate-y-[100%]   rounded-lg  opacity-40 outline-[0.1rem] outline outline-white shadow-lg  shadow-slate-800/40 backdrop-blur-md  "
-						/>
-					</div>
-				</div>
 
-				<div class="min-w-10  w-full box-border flex justify-center ">
-					<img
-						class=" max-w-sm  w-full aspect-auto rounded-md z-30 "
-						src="headshot.jpg"
-						alt="professoinal headshot "
-					/>
-				</div>
+		<div class=" flex max-w-[44rem] frostedBox z-20 self-start ">
+			<div class="relative z-20 text-titles p-3">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 			</div>
+			<!-- <div
+				class=" bg-white z-10 w-full h-full  rounded-lg  opacity-30 outline-[0.1rem] outline outline-white shadow-lg  shadow-slate-800/40 backdrop-blur-md  "
+			/> -->
 		</div>
 
-		<!-- end of central grid -->
+		<div class=" w-full mt-10 frostedBox p-4">
+			Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials
+			Testimonials Testimonials Testimonials Testimonia Testimonials Testimonia Testimonials
+			Testimonia Testimonials Testimonia
+			TestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTest
+		</div>
 	</div>
+
+	<!-- end of central grid -->
 </div>
 
 <style>
+	/* From https://css.glass */
+	.frostedBox {
+		background: rgba(255, 255, 255, 0.4);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
+		border: 0.1rem solid rgba(255, 255, 255, 0.68);
+	}
+
 	.blurIn {
 		opacity: 0.3;
 		filter: blur(5px);
