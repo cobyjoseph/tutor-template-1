@@ -4,7 +4,7 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-screen relative flex-col items-center  ">
+<div class=" min-h-screen relative flow-root   ">
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
@@ -15,13 +15,13 @@
 		alt="professoinal headshot "
 	/>
 
-	<div class="absolute -top-9 -left-9 text-[10rem] font-caveat font-bold -z-1 text-shading ">
+	<div class="absolute -top-[5rem] -left-9  text-[10rem] font-caveat font-bold -z-20 text-shading ">
 		ABOUT ME
 	</div>
 
 	<div
 		class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block absolute top-20 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
+			inline-block absolute top-12 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
 		style="transition-delay: 100ms;"
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
@@ -41,44 +41,56 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class=" max-w-[72rem] flex-grow   bg-blue-300 mt-[10rem]   ">
-		<!-- <div
+	<div class="flex-col flex items-center text-[1.2em] text-primary  ">
+		<div class=" max-w-[72rem]  mt-[8.5rem] flex-col flex justify-between    ">
+			<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->
 
-		<div class=" flex max-w-[44rem] frostedBox z-20 self-start ">
-			<div class="relative z-20 text-titles p-3">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-			</div>
-			<!-- <div
+			<div class=" max-w-[42rem] mb-6 z-20 lessFrostedBox  ">
+				<div class="relative z-20  p-4  ">
+					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
+					experienced private tutor specializing in a range of middle and high school courses. I am
+					able to effectively help students in a wide range of subjects including math, science,
+					history, and economics. I am passionate about education and am committed to helping
+					students achieve their full potential. With my personalized approach and a focus on
+					building strong foundations, I have a proven track record of helping students improve
+					their grades and reach their goals. Whether you're struggling with a specific subject or
+					looking to get ahead, I can help you succeed.
+				</div>
+				<!-- <div
 				class=" bg-white z-10 w-full h-full  rounded-lg  opacity-30 outline-[0.1rem] outline outline-white shadow-lg  shadow-slate-800/40 backdrop-blur-md  "
 			/> -->
-		</div>
+			</div>
 
-		<div class=" w-full mt-10 frostedBox p-4">
-			Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials
-			Testimonials Testimonials Testimonials Testimonia Testimonials Testimonia Testimonials
-			Testimonia Testimonials Testimonia
-			TestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTest
+			<div class="  frostedBox p-4">
+				Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials
+				Testimonials Testimonials Testimonials Testimonia Testimonials Testimonia Testimonials
+				Testimonia Testimonials Testimonia
+				TestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTest
+			</div>
 		</div>
 	</div>
-
-	<!-- end of central grid -->
 </div>
 
 <style>
 	/* From https://css.glass */
 	.frostedBox {
-		background: rgba(255, 255, 255, 0.4);
+		background: rgba(255, 255, 255, 0.45);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(3px);
-		-webkit-backdrop-filter: blur(3px);
-		border: 0.1rem solid rgba(255, 255, 255, 0.68);
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		border: 0.05rem solid rgba(255, 255, 255, 0.4);
+	}
+
+	.lessFrostedBox {
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(0.3px);
+		-webkit-backdrop-filter: blur(0.3px);
+		border: 0.05rem solid rgba(255, 255, 255, 0.2);
 	}
 
 	.blurIn {
@@ -102,6 +114,16 @@
 		transform: translate(-4px, -8px) scaleX(1) skew(-50deg);
 		transform-origin: left;
 		z-index: -1;
+	}
+
+	.spanClass::before {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+		opacity: 35%;
+		background: #f71912;
 	}
 	.waveStyle {
 		aspect-ratio: 960/250;

@@ -16,13 +16,13 @@
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
-	<div class="absolute -top-9 -left-9 text-[10rem] font-caveat font-bold -z-1 text-shading ">
+	<div class="absolute -top-[5rem] -left-9  text-[10rem] font-caveat font-bold -z-20 text-shading ">
 		SERVICES
 	</div>
 
 	<div
 		class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block absolute top-20 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
+			inline-block absolute top-12 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
 		style="transition-delay: 100ms;"
 		use:OnPage
 		on:customOnKeyword={({ detail }) => {
@@ -31,8 +31,6 @@
 	>
 		Services
 	</div>
-
-
 
 	<!-- Columns separating the text and the icons -->
 	<div class="grid grid-cols-2 max-w-[83rem] w-full px-14 ml-auto mr-auto mt-14  relative  ">
