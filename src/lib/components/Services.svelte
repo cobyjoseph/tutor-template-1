@@ -16,7 +16,7 @@
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
-	<div class="absolute -top-[5rem] -left-9  text-[10rem] font-caveat font-bold -z-20 text-shading ">
+	<div class="absolute -top-[2.5rem] -left-9  text-[10rem] font-caveat font-bold z-5 text-shading ">
 		SERVICES
 	</div>
 

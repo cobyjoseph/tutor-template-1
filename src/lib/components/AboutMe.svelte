@@ -15,20 +15,8 @@
 		alt="professoinal headshot "
 	/>
 
-	<div class="absolute -top-[5rem] -left-9  text-[10rem] font-caveat font-bold -z-20 text-shading ">
+	<div class="absolute -top-[2.5rem] -left-9  text-[10rem] font-caveat font-bold z-5 text-shading ">
 		ABOUT ME
-	</div>
-
-	<div
-		class="{visible ? 'visible blurIn' : 'blurIn'} 
-			inline-block absolute top-12 left-16 text-6xl font-bold mb-1 text-primaryBright  z-30 title "
-		style="transition-delay: 100ms;"
-		use:OnPage
-		on:customOnKeyword={({ detail }) => {
-			visible = detail;
-		}}
-	>
-		About me
 	</div>
 
 	<div class=" max-w-[45rem] -bottom-8 overflow-clip  -right-16  absolute  ">
@@ -41,7 +29,20 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex items-center text-[1.2em] text-primary  ">
+	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%]">
+		
+		<div
+			class="{visible ? 'visible blurIn' : 'blurIn'} 
+			text-6xl font-bold  text-primaryBright pt-[4rem] z-30 titlePseudo "
+			style="transition-delay: 100ms;"
+			use:OnPage
+			on:customOnKeyword={({ detail }) => {
+				visible = detail;
+			}}
+		>
+			About me
+		</div>
+
 		<div class=" max-w-[72rem]  mt-[8.5rem] flex-col flex justify-between    ">
 			<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
@@ -103,9 +104,9 @@
 		filter: blur(0);
 		transform: translateX(0);
 	}
-	.title::after {
+	.titlePseudo::after {
 		content: '';
-		width: 100%;
+		width: 15rem;
 		height: 8px;
 		opacity: 35%;
 		position: relative;
@@ -116,15 +117,6 @@
 		z-index: -1;
 	}
 
-	.spanClass::before {
-		content: '';
-		position: absolute;
-		bottom: -2px;
-		left: 0;
-		right: 0;
-		opacity: 35%;
-		background: #f71912;
-	}
 	.waveStyle {
 		aspect-ratio: 960/250;
 		/* width: 100%;  */
