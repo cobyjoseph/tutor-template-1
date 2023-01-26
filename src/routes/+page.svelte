@@ -15,13 +15,12 @@
 
 <div class="snap-container">
 	<div class="snap-item">
-		
 		<LandingPage mountLandingAnimation={mountPassThrough} />
 	</div>
 	<div id="section2" class="snap-item">
 		<Services />
 	</div>
-	<div id="section3" class="snap-item">
+	<div id="section3" class="snap-item ">
 		<AboutMe />
 	</div>
 	<div id="section4" class="snap-item">
@@ -36,6 +35,7 @@
 	/* Add scroll snap styles */
 	.snap-container {
 		height: 100vh;
+		height: 100dvh;
 		overflow-y: scroll;
 		scroll-snap-type: y mandatory; /* enable vertical snap scrolling and make it mandatory */
 	}

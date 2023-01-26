@@ -184,9 +184,9 @@
 		content: '';
 		width: 100%;
 		height: 8px;
-		opacity: 35%;
+		opacity: 80%;
 		position: relative;
-		background: #f71912;
+		background: #f6991b;
 		display: block;
 		transform: translate(-4px, -8px) scaleX(1) skew(-50deg);
 		transform-origin: left;

@@ -4,36 +4,40 @@
 </script>
 
 <!-- SCREEN -WIDE  -->
-<div class=" min-h-screen relative flow-root   ">
+<section class=" min-h-screen relative flow-root bg-image   ">
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
-	<img
-		class=" absolute z-0 aspect-auto w-full"
+	<!-- <img
+		class=" absolute z-0 aspect-auto w-full opacity-30 translate-y-20"
+		src="waves/central-wave-2.png"
+		alt="background wave shape"
+	/> -->
+	<!-- <img
+		class=" absolute z-0 aspect-auto w-full "
 		src="waves/central-wave.svg"
-		alt="professoinal headshot "
-	/>
+		alt="background wave shape"
+	/> -->
 
 	<div class="absolute -top-[2.5rem] -left-9  text-[10rem] font-caveat font-bold z-5 text-shading ">
 		ABOUT ME
 	</div>
 
-	<div class=" max-w-[45rem] -bottom-8 overflow-clip  -right-16  absolute  ">
+	<!-- <div class=" max-w-[45rem] -bottom-8 overflow-clip  -right-16  absolute  ">
 		<img
 			class="   aspect-auto z-30 rounded-l-2xl rounded-r-[2rem]  "
 			src="other/headshot.png"
 			alt="professoinal headshot "
 		/>
-	</div>
+	</div> -->
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%]">
-		
+	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%] pr-">
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			text-6xl font-bold  text-primaryBright pt-[4rem] z-30 titlePseudo "
+			text-6xl font-bold  text-primaryBright pt-[4rem] z-30 titlePseudo   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
@@ -43,7 +47,7 @@
 			About me
 		</div>
 
-		<div class=" max-w-[72rem]  mt-[8.5rem] flex-col flex justify-between    ">
+		<div class=" max-w-[83rem] pt-5  flex-col flex     ">
 			<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->
@@ -72,9 +76,17 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
+	section {
+		background-image: url(/other/headshot.png), url(/waves/central-wave.svg);
+		background-position: right bottom, center;
+		background-size: 50%, cover;
+		background-repeat: no-repeat;
+		display: block;
+	}
+
 	/* From https://css.glass */
 	.frostedBox {
 		background: rgba(255, 255, 255, 0.45);
@@ -86,7 +98,7 @@
 	}
 
 	.lessFrostedBox {
-		background: rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.1);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
@@ -106,11 +118,11 @@
 	}
 	.titlePseudo::after {
 		content: '';
-		width: 15rem;
+		width: 17.5rem;
 		height: 8px;
-		opacity: 35%;
+		opacity: 80%;
 		position: relative;
-		background: #f71912;
+		background: #f6991b;
 		display: block;
 		transform: translate(-4px, -8px) scaleX(1) skew(-50deg);
 		transform-origin: left;
