@@ -1,6 +1,23 @@
 <script lang="ts">
 	import OnPage from '$lib/actions/OnPage';
 	let visible;
+
+	$: direction = 'right';
+	$: currentCard = 0;
+
+	function nextCard() {
+		direction = 'right';
+		currentCard = (currentCard + 1) % postCount;
+	}
+
+	function prevCard() {
+		direction = 'left';
+		if (currentCard != 0) {
+			currentCard = (currentCard - 1) % postCount;
+		} else {
+			currentCard = postCount - 1;
+		}
+	}
 </script>
 
 <!-- SCREEN -WIDE  -->

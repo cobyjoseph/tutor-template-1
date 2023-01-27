@@ -1,10 +1,10 @@
 <script lang="ts">
-	import TypingAnimation from './TypingAnimation.svelte';
+	import TypingAnimation from '$lib/components/TypingAnimation.svelte';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
-	import LandingBackground from './LandingBackground.svelte';
-	import Menu from './Menu.svelte';
+	import LandingBackground from '$lib/components/LandingBackground.svelte';
+	import Menu from '$lib/components/Menu.svelte';
 
 	export let mountLandingAnimation: Boolean;
 
