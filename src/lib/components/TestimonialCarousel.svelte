@@ -29,7 +29,7 @@
 	}
 </script>
 
-<div class="flex justify-between px-3 frostedBox gap-3 h-[7rem]">
+<div class="flex justify-between px-3 frostedBox relative gap-3 min-h-[7rem]">
 	<!-- arrow left -->
 	<button on:click={prevCard}>
 		<svg
@@ -55,11 +55,13 @@
 							alt="carousel images of students"
 						/>
 					</div>
-					<div class=" flex shrink-0 text-xl font-semibold font-Caveat text-primaryBright self-end ">
+					<div
+						class=" flex shrink-0 text-xl font-semibold font-Caveat text-primaryBright self-end "
+					>
 						- {testimonial.name}
 					</div>
 				</div>
-				<div class="flex text-[.9em] italic ">
+				<div class="flex text-[.9em] italic pseudoQuote relative">
 					{testimonial.quote}
 				</div>
 			</div>
@@ -99,5 +101,30 @@
 		backdrop-filter: blur(14px);
 		-webkit-backdrop-filter: blur(14px);
 		border: 0.05rem solid rgba(255, 255, 255, 0.4);
+	}
+
+	.pseudoQuote::before {
+		content: '"';
+		position: absolute;
+		top: -2rem;
+		left: -2rem;
+		font-size: 6rem;
+		color: #a46e57;
+		opacity: 0.4;
+		font-family: IM Fell English;
+		transform: scaleX(-1);
+		z-index: -20;
+	}
+	.pseudoQuote::after {
+		content: '"';
+		position: absolute;
+		transform: translateY(1rem);
+
+		right: -0.8rem;
+		font-size: 6rem;
+		color: #a46e57;
+		opacity: 0.4;
+		font-family: IM Fell English;
+		z-index: -20;
 	}
 </style>
