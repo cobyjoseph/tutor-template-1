@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Services from '$lib/components/sections/Services.svelte';
-	import AboutMe from '$lib/components/sections/AboutMe.svelte';
-	import LandingPage from '$lib/components/sections/LandingPage.svelte';
-	import Schedule from '$lib/components/sections/Schedule.svelte';
+	import Services from '$lib/sections/Services.svelte';
+	import AboutMe from '$lib/sections/AboutMe.svelte';
+	import LandingPage from '$lib/sections/LandingPage.svelte';
+	import Schedule from '$lib/sections/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
 

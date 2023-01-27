@@ -1,23 +1,8 @@
 <script lang="ts">
 	import OnPage from '$lib/actions/OnPage';
+	import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
+
 	let visible;
-
-	$: direction = 'right';
-	$: currentCard = 0;
-
-	function nextCard() {
-		direction = 'right';
-		currentCard = (currentCard + 1) % postCount;
-	}
-
-	function prevCard() {
-		direction = 'left';
-		if (currentCard != 0) {
-			currentCard = (currentCard - 1) % postCount;
-		} else {
-			currentCard = postCount - 1;
-		}
-	}
 </script>
 
 <!-- SCREEN -WIDE  -->
@@ -51,7 +36,7 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%] pr-">
+	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%] pr-[5%]">
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
 			text-6xl font-bold  text-primaryBright pt-[4rem] z-30 titlePseudo   "
@@ -85,12 +70,7 @@
 			/> -->
 			</div>
 
-			<div class="  frostedBox p-4">
-				Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials Testimonials
-				Testimonials Testimonials Testimonials Testimonia Testimonials Testimonia Testimonials
-				Testimonia Testimonials Testimonia
-				TestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTestimonialsTest
-			</div>
+			<TestimonialCarousel />
 		</div>
 	</div>
 </section>
