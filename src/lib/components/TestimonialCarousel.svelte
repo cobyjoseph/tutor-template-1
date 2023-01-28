@@ -1,8 +1,21 @@
 <script lang="ts">
 	import { testimonialsStore } from '$lib/stores/Testimonials';
+	import { fade, fly } from 'svelte/transition';
+	import { sineIn, sineOut, quintOut } from 'svelte/easing';
+	import { flip } from 'svelte/animate';
+	import { onMount } from 'svelte';
 
 	let testimonials;
 	let postCount: Number;
+	let stopCar = true;
+
+	onMount(async () => {
+		if (stopCar) {
+			setInterval(autoScroll, 8000);
+		} else if (!stopCar) {
+			clearInterval(autoScroll);
+		}
+	});
 
 	testimonialsStore.subscribe((value) => {
 		testimonials = value;
@@ -14,9 +27,15 @@
 	$: direction = 'right';
 	$: currentCard = 0;
 
+	let autoScroll = () => {
+		direction = 'right';
+		currentCard = (currentCard + 1) % postCount;
+	};
+
 	function nextCard() {
 		direction = 'right';
 		currentCard = (currentCard + 1) % postCount;
+		stopCar = false;
 	}
 
 	function prevCard() {
@@ -43,11 +62,29 @@
 	</button>
 
 	<!-- this w-full makes this a central box that takes up the whole center, while the arrows are still pushed to either side with justify-between -->
+	<!-- {#key testimonials[currentCard]} -->
 	<div class="flex w-full">
 		{#each [testimonials[currentCard]] as testimonial, index (testimonial.id)}
-			<div class="flex  gap-5  p-2  items-center bg-opacity-30 ">
+			<div
+				in:fly={{
+					delay: 0,
+					duration: direction === 'right' ? 500 : 500,
+					x: direction === 'right' ? 100 : -100,
+					easing: sineIn
+				}}
+				out:fly={{
+					duration: 600,
+					x: direction === 'right' ? -100 : 100,
+					easing: sineOut
+				}}
+				animate:flip={{
+					delay: 0,
+					easing: quintOut
+				}}
+				class="flex  gap-5  p-2  items-center bg-opacity-30 "
+			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
-				<div class="flex shrink-0 gap-1">
+				<div in:blur={{ duration: 600 }} class="flex shrink-0 gap-1">
 					<div class="rounded-full overflow-hidden   ">
 						<img
 							class=" shrink-0 w-[90px] h-[90px] object-cover  "
@@ -67,6 +104,7 @@
 			</div>
 		{/each}
 	</div>
+	<!-- {/key} -->
 
 	<!-- arrow right -->
 	<button on:click={nextCard}>
