@@ -49,7 +49,7 @@
 </script>
 
 <div
-	class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] xl:min-h-[10rem] mt-auto relative z-10"
+	class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] xl:min-h-[10rem] mt-auto relative z-10  "
 >
 	<!-- arrow left -->
 	<button on:click={prevCard}>
@@ -83,11 +83,11 @@
 					delay: 0,
 					easing: quintOut
 				}}
-				class="flex  gap-5  p-2  items-center bg-opacity-30 "
+				class="flex flex-col-reverse md:flex-row  gap-5  p-2  items-center bg-opacity-30 "
 			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
-				<div in:blur={{ duration: 600 }} class="flex shrink-0 gap-1 min-w-[13.5rem]">
-					<div class="rounded-full overflow-hidden   ">
+				<div in:blur={{ duration: 600 }} class="flex  shrink-0 gap-1 min-w-[13.5rem]">
+					<div class="rounded-full overflow-hidden ">
 						<img
 							class=" shrink-0 w-[90px] h-[90px] object-cover  "
 							src="/testimonials/{testimonial.image}"
