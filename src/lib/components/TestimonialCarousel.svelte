@@ -48,7 +48,7 @@
 	}
 </script>
 
-<div class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] mt-auto">
+<div class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] mt-auto relative z-10">
 	<!-- arrow left -->
 	<button on:click={prevCard}>
 		<svg

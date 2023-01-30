@@ -7,6 +7,8 @@
 
 <!-- SCREEN -WIDE  -->
 <section class=" min-h-screen relative flow-root bg-image   ">
+	<!-- container for profile picture background -->
+	<div class="picContainer" />
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
@@ -36,7 +38,7 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex relative text-[1.1em] text-primary pl-[5%] pr-[5%]">
+	<div class="flex-col flex relative  text-primary pl-[5%] pr-[5%]">
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
 			text-6xl font-bold  text-primaryBright pt-[3.6rem] z-30 titlePseudo   "
@@ -54,8 +56,8 @@
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->
 
-			<div class=" max-w-[47rem]  z-20 ">
-				<div class="relative z-20    ">
+			<div class=" max-w-[42rem]  z-20 ">
+				<div class="relative z-20 text-[1.1em] xl:text-[1.4em]  ">
 					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
 					able to effectively help students in a wide range of subjects including math, science,
@@ -92,10 +94,23 @@
 		z-index: -1;
 	}
 
+	.picContainer {
+		position: absolute;
+		height: 100%;
+		width: 50rem;
+		right: 0;
+		z-index: 10;
+		background-image: url(/other/headshot.png);
+		background-position: bottom right;
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: block;
+	}
+
 	section {
-		background-image: url(/other/headshot.png), url(/waves/central-wave.svg);
-		background-position: bottom right -2rem;
-		background-size: 50%, cover;
+		background-image: url(/waves/central-wave.svg);
+		background-position: center;
+		background-size: cover;
 		background-repeat: no-repeat;
 		display: block;
 	}
