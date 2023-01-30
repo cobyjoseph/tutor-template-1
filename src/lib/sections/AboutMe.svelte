@@ -51,7 +51,9 @@
 			About me
 		</div>
 
-		<div class="  pt-5  flex-col flex gap-5 min-h-[70dvh]    ">
+		<div
+			class="  pt-5  flex-col flex gap-5 min-h-[70dvh] min-h-[70vh] xl:min-h-[80dvh] xl:min-h-[80vh]   "
+		>
 			<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->

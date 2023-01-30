@@ -48,7 +48,9 @@
 	}
 </script>
 
-<div class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] mt-auto relative z-10">
+<div
+	class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] xl:min-h-[10rem] mt-auto relative z-10"
+>
 	<!-- arrow left -->
 	<button on:click={prevCard}>
 		<svg
@@ -63,7 +65,7 @@
 
 	<!-- this w-full makes this a central box that takes up the whole center, while the arrows are still pushed to either side with justify-between -->
 	<!-- {#key testimonials[currentCard]} -->
-	<div class="flex w-full">
+	<div class="flex w-full pseudoQuote">
 		{#each [testimonials[currentCard]] as testimonial, index (testimonial.id)}
 			<div
 				in:fly={{
@@ -84,7 +86,7 @@
 				class="flex  gap-5  p-2  items-center bg-opacity-30 "
 			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
-				<div in:blur={{ duration: 600 }} class="flex shrink-0 gap-1">
+				<div in:blur={{ duration: 600 }} class="flex shrink-0 gap-1 min-w-[13.5rem]">
 					<div class="rounded-full overflow-hidden   ">
 						<img
 							class=" shrink-0 w-[90px] h-[90px] object-cover  "
@@ -98,7 +100,7 @@
 						- {testimonial.name}
 					</div>
 				</div>
-				<div class="flex text-[.9em] italic pseudoQuote relative">
+				<div class="flex text-[.9em] xl:text-[1.3em] italic  relative pr-5">
 					{testimonial.quote}
 				</div>
 			</div>
@@ -144,8 +146,8 @@
 	.pseudoQuote::before {
 		content: '"';
 		position: absolute;
-		top: -2rem;
-		left: -2rem;
+		top: -1rem;
+		left: 14rem;
 		font-size: 6rem;
 		color: #a46e57;
 		opacity: 0.4;
@@ -156,9 +158,10 @@
 	.pseudoQuote::after {
 		content: '"';
 		position: absolute;
-		transform: translateY(1rem);
+		/* transform: translateY(1rem); */
+		bottom: -4.5rem;
 
-		right: -0.8rem;
+		right: 2.8rem;
 		font-size: 6rem;
 		color: #a46e57;
 		opacity: 0.4;
