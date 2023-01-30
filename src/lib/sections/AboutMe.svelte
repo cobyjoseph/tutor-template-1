@@ -36,10 +36,10 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex relative text-[1.2em] text-primary pl-[5%] pr-[5%]">
+	<div class="flex-col flex relative text-[1.1em] text-primary pl-[5%] pr-[5%]">
 		<div
 			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			text-6xl font-bold  text-primaryBright pt-[4rem] z-30 titlePseudo   "
+			text-6xl font-bold  text-primaryBright pt-[3.6rem] z-30 titlePseudo   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
@@ -49,13 +49,13 @@
 			About me
 		</div>
 
-		<div class=" max-w-[83rem] pt-5  flex-col flex     ">
+		<div class="  pt-5  flex-col flex gap-5 min-h-[70dvh]    ">
 			<!-- <div
 					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
 				/> -->
 
-			<div class=" max-w-[42rem] mb-6 z-20 lessFrostedBox  ">
-				<div class="relative z-20  p-4  ">
+			<div class=" max-w-[47rem]  z-20 ">
+				<div class="relative z-20    ">
 					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
 					able to effectively help students in a wide range of subjects including math, science,
@@ -76,9 +76,25 @@
 </section>
 
 <style>
+	.spanClass {
+		position: relative;
+	}
+
+	.spanClass::before {
+		content: '';
+		width: 5.8em;
+		height: 8px;
+		opacity: 25%;
+		position: absolute;
+		background: #cc3232;
+		transform: translate(0em, 1em) skew(-50deg);
+		transform-origin: left;
+		z-index: -1;
+	}
+
 	section {
 		background-image: url(/other/headshot.png), url(/waves/central-wave.svg);
-		background-position: right bottom, center;
+		background-position: bottom right -2rem;
 		background-size: 50%, cover;
 		background-repeat: no-repeat;
 		display: block;
@@ -95,7 +111,7 @@
 	}
 
 	.lessFrostedBox {
-		background: rgba(255, 255, 255, 0.1);
+		background: rgba(255, 255, 255, 0.01);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(0.3px);
@@ -117,7 +133,7 @@
 		content: '';
 		width: 17.5rem;
 		height: 8px;
-		opacity: 80%;
+		opacity: 40%;
 		position: relative;
 		background: #f6991b;
 		display: block;

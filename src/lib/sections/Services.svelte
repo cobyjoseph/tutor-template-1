@@ -150,7 +150,7 @@
 	.hiddenPreTransition {
 		opacity: 0.3;
 		filter: blur(5px);
-		transform: translateX(35vw);
+		/* transform: translateX(35vw); */
 		transition: all 1s;
 
 		/* transition-delay: calc(100ms * var(--delayVariable)); */
@@ -184,7 +184,7 @@
 		content: '';
 		width: 100%;
 		height: 8px;
-		opacity: 80%;
+		opacity: 40%;
 		position: relative;
 		background: #f6991b;
 		display: block;
