@@ -12,12 +12,13 @@
 
 	<!-- container for profile picture background -->
 	<div class="picContainer" />
+
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="layeredWave waveStyle absolute top-0 w-full rotate-180 max-lg:h-[30rem] " />
 	<div class="layeredWave waveStyle absolute bottom-0 w-full " />
 
 	<div
-		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
+		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[4.5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
 	>
 		ABOUT ME
 	</div>
@@ -37,6 +38,12 @@
 			About me
 		</div>
 
+		<img
+			class="absolute z-40 aspect-auto w-[20rem]"
+			src="other/headshot-cut.png"
+			alt="tutor headshot"
+		/>
+
 		<div
 			class="  flex  min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh]  "
 		>
@@ -44,7 +51,7 @@
 				class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 			>
 				<div
-					class="lessFrostedBox relative z-20 text-[0.9em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.6em]  "
+					class="lessFrostedBox z-1 relative text-[0.9em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.6em]  "
 				>
 					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
@@ -62,6 +69,8 @@
 </section>
 
 <style>
+	/* PATTERNED BACKGROUND BEHIND HEADSHOT FROM SVGBACKGROUNDS.COM */
+
 	.spanClass {
 		position: relative;
 	}
