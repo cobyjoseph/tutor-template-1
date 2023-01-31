@@ -19,7 +19,7 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
-		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[4.5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
+		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem]"
 	>
 		SERVICES
 	</div>
@@ -27,7 +27,7 @@
 	<div class="relative flex flex-col  pl-[5%] pr-[5%] text-primary">
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright md:pt-[3.6rem] sm:text-6xl   "
+			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
@@ -37,31 +37,28 @@
 			Services
 		</div>
 		<!-- Columns separating the text and the icons -->
-		<div class="relative ml-auto mr-auto mt-14 grid w-full max-w-[83rem] grid-cols-2  px-14  ">
+		<div class="relative  w-full max-w-[83rem]  ">
 			<!-- this container div for the two bullets keeps them in the same grid column -->
-			<div class="text-3xl font-semibold text-primary  ">
+			<div class=" text-xl font-semibold text-primary lg:text-3xl  ">
 				<div
-					class="mb-10 flex flex-grow  {visible ? 'blurIn visible' : 'blurIn'} "
+					class="  flex flex-grow items-start gap-2 {visible ? 'blurIn visible' : 'blurIn'} "
 					style="transition-delay: 100ms;"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						class="flex h-12 w-12 fill-none stroke-secondary stroke-2"
+					<div
+						class=" bulletPseudo flex place-self-start self-start   "
 					>
-						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-					</svg>
-					<div class="flex">Private, in-person or online sessions</div>
+						Private, in-person or online sessions
+					</div>
 				</div>
 
 				<div
-					class="flex flex-grow  {visible ? 'blurIn visible' : 'blurIn'} "
+					class="flex flex-grow items-center gap-2  {visible ? 'blurIn visible' : 'blurIn'} "
 					style="transition-delay: 100ms;"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
-						class="h-12 w-12 fill-none  stroke-secondary stroke-2 p-1"
+						class="flex h-4 w-4 bg-blue-400 fill-none stroke-secondary lg:h-12 lg:w-12"
 					>
 						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
 					</svg>
@@ -147,6 +144,15 @@
 
 <!-- style --------------------------------------------------------------------- -->
 <style>
+	.bulletPseudo::before {
+		content: '';
+		width: 1rem;
+		background-image: url('/other/bullet-point.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 	.test::before {
 		content: 'before';
 		margin-right: 1rem;

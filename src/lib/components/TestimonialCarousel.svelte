@@ -103,7 +103,7 @@
 						- {testimonial.name}
 					</div>
 				</div>
-				<div class=" relative flex pt-2 text-[.9em] italic md:pt-0 md:pr-5  xl:text-[1.3em]">
+				<div class=" relative flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]">
 					{testimonial.quote}
 				</div>
 			</div>

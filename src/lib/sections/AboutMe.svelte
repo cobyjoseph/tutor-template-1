@@ -20,7 +20,7 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
-		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[4.5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
+		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem] "
 	>
 		ABOUT ME
 	</div>
@@ -53,7 +53,7 @@
 				class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 			>
 				<div
-					class="lessFrostedBox z-1 relative text-[0.9em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.6em]  "
+					class="lessFrostedBox z-1 relative text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem]  "
 				>
 					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
