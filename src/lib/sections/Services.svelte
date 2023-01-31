@@ -1,5 +1,5 @@
 <script>
-	import ServicesBackground from '$lib/components/ServicesBackground.svelte';
+	import ServicesBackground from '$lib/components/blobs/ServicesBlobs.svelte';
 	import OnPage from '$lib/actions/OnPage';
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';

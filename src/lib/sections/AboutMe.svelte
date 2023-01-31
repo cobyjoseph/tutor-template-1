@@ -1,92 +1,33 @@
 <script lang="ts">
 	import OnPage from '$lib/actions/OnPage';
 	import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
-
-	import { onMount } from 'svelte';
-
-	import KUTE from 'kute.js';
+	import AboutMeBlobs from '$lib/components/blobs/AboutMeBlobs.svelte';
 
 	let visible;
-
-	onMount(() => {
-		const tweenBlob = KUTE.fromTo(
-			'#blob5',
-			{ path: '#blob5' },
-			{ path: '#blob6' },
-			{ repeat: 999, duration: 3000, yoyo: true }
-		);
-		tweenBlob.start();
-	});
 </script>
 
 <!-- SCREEN -WIDE  -->
-<section class=" min-h-screen relative flow-root bg-image   ">
-	<!-- ANIMATED BLOB -->
-	<div class="absolute transform translate-x-[20%] -translate-y-[10%] top-0 right-0  ">
-		<svg
-			id="visual"
-			viewBox="0 0 1200 450"
-			width="600"
-			height="450"
-			xmlns="http://www.w3.org/2000/svg"
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			version="1.1"
-			class=""
-			><g transform="translate(444 340)"
-				><path
-					id="blob5"
-					d="M139.6 -164.7C184.9 -128.3 228.3 -88.1 230 -45.5C231.7 -2.8 191.6 42.4 156.8 79.2C122 116 92.5 144.4 58.7 153.3C24.9 162.3 -13.2 151.6 -67 147.8C-120.8 144 -190.3 147 -211.5 118.3C-232.6 89.5 -205.4 29 -188.6 -27.5C-171.8 -84 -165.3 -136.6 -135.6 -175.7C-105.8 -214.8 -52.9 -240.4 -2.9 -237C47.1 -233.5 94.3 -201 139.6 -164.7"
-					fill="#F0DDC1"
-				/></g
-			>
-			<g transform="translate(435 264)"
-				><path
-					id="blob6"
-					style="visibility: hidden;"
-					d="M119.7 -129.7C162.7 -106.6 210.4 -76 227.6 -32.2C244.8 11.7 231.5 68.8 197 99.9C162.6 131 107 136 59.2 146.1C11.5 156.3 -28.3 171.7 -80.1 173.2C-132 174.7 -195.9 162.3 -231.3 122.9C-266.8 83.5 -273.7 17 -257.8 -40.7C-242 -98.4 -203.3 -147.2 -156.5 -169.7C-109.7 -192.1 -54.9 -188 -8.2 -178.2C38.4 -168.4 76.7 -152.7 119.7 -129.7"
-					fill="#F0DDC1"
-				/></g
-			></svg
-		>
-	</div>
-
-	<!-- END OF ANIMATED BLOB -->
+<section class=" bg-image relative flow-root min-h-screen   ">
+	<AboutMeBlobs />
 
 	<!-- container for profile picture background -->
 	<div class="picContainer" />
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
-	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 max-lg:h-[30rem] " />
-	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
+	<div class="layeredWave waveStyle absolute top-0 w-full rotate-180 max-lg:h-[30rem] " />
+	<div class="layeredWave waveStyle absolute bottom-0 w-full " />
 
-	<!-- <img
-		class=" absolute z-0 aspect-auto w-full opacity-30 translate-y-20"
-		src="waves/central-wave-2.png"
-		alt="background wave shape"
-	/> -->
-	<!-- <img
-		class=" absolute z-0 aspect-auto w-full "
-		src="waves/central-wave.svg"
-		alt="background wave shape"
-	/> -->
-
-	<div class="absolute -top-[2.5rem] -left-9  text-[10rem] font-caveat font-bold z-5 text-shading ">
+	<div
+		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
+	>
 		ABOUT ME
 	</div>
 
-	<!-- <div class=" max-w-[45rem] -bottom-8 overflow-clip  -right-16  absolute  ">
-		<img
-			class="   aspect-auto z-30 rounded-l-2xl rounded-r-[2rem]  "
-			src="other/headshot.png"
-			alt="professoinal headshot "
-		/>
-	</div> -->
-
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="flex-col flex relative  text-primary pl-[5%] pr-[5%]">
+	<div class="relative flex flex-col  pl-[5%] pr-[5%] text-primary">
 		<div
-			class="{visible ? 'visible blurIn' : 'blurIn'} 
-			text-6xl font-bold  text-primaryBright pt-[3.6rem] z-30 titlePseudo   "
+			class="{visible ? 'blurIn visible' : 'blurIn'} 
+			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright md:pt-[3.6rem] md:text-6xl   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
@@ -97,17 +38,13 @@
 		</div>
 
 		<div
-			class="  pt-5  flex-col flex gap-5 min-h-[70dvh] min-h-[70vh] xl:min-h-[80dvh] xl:min-h-[80vh] lg:min-h-[76dvh] lg:min-h-[76vh]  "
+			class="  flex  min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh]  "
 		>
-			<!-- <div
-					class="absolute bg-[#40C8A4] w-[120%] h-full z-0 -translate-x-[10%] translate-y-8 rounded-xl opacity-25"
-				/> -->
-
 			<div
-				class=" max-w-[42rem] lg:max-w-full xl:max-w-[42.5rem]  2xl:max-w-[46rem] 3xl:max-w-[50rem]  z-20 "
+				class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 			>
 				<div
-					class="relative z-20 text-[0.9em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.6em] lessFrostedBox  "
+					class="lessFrostedBox relative z-20 text-[0.9em] lg:text-[1.4em] xl:text-[1.4em] 2xl:text-[1.6em]  "
 				>
 					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
@@ -117,9 +54,6 @@
 					building strong foundations, I have a proven track record of helping students improve
 					their grades and reach their goals.
 				</div>
-				<!-- <div
-				class=" bg-white z-10 w-full h-full  rounded-lg  opacity-30 outline-[0.1rem] outline outline-white shadow-lg  shadow-slate-800/40 backdrop-blur-md  "
-			/> -->
 			</div>
 
 			<TestimonialCarousel />
@@ -135,7 +69,7 @@
 	.spanClass::before {
 		content: '';
 		width: 5.8em;
-		height: 8px;
+		height: 5px;
 		opacity: 25%;
 		position: absolute;
 		background: #cc3232;
@@ -147,7 +81,7 @@
 	.picContainer {
 		position: absolute;
 		height: 100%;
-		width: 50rem;
+		width: 70%;
 		right: 0;
 		z-index: 10;
 		background-image: url(/other/headshot.png);
@@ -172,7 +106,10 @@
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border: 0.05rem solid rgba(255, 255, 255, 0.2);
-		padding: 1rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		padding-top: 0.9rem;
+		padding-bottom: 0.9rem;
 	}
 
 	.blurIn {
@@ -187,7 +124,7 @@
 	}
 	.titlePseudo::after {
 		content: '';
-		width: 17.4rem;
+		width: 9rem;
 		height: 8px;
 		opacity: 40%;
 		position: relative;
@@ -212,10 +149,34 @@
 
 	/* MEDIA QUERIES */
 
+	@media (min-width: 640px) {
+		.lessFrostedBox {
+			background: rgba(255, 255, 255, 0.4);
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+		}
+	}
+
+	@media (min-width: 640px) {
+		.spanClass::before {
+			height: 8px;
+		}
+	}
+
+	@media (min-width: 640px) {
+		.titlePseudo::after {
+			width: 17.4rem;
+		}
+	}
+
 	/* WHY ISN'T THIS ONE INCLUSIVE????? */
-	@media (max-width: 639px) {
+	@media (min-width: 640px) {
 		.picContainer {
-			width: 70%;
+			width: 40%;
 		}
 	}
 
