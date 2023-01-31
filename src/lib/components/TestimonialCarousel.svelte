@@ -88,7 +88,7 @@
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
 				<div
 					in:blur={{ duration: 600 }}
-					class="flex  min-w-[13.5rem] shrink-0 justify-end gap-1 self-end md:justify-start md:self-start"
+					class="flex  min-w-[13.5rem] shrink-0 justify-end gap-1 self-end  md:justify-start  md:self-center"
 				>
 					<div class="overflow-hidden rounded-full  ">
 						<img
@@ -124,17 +124,6 @@
 	</button>
 </div>
 
-<!-- Nav dots group -->
-<!-- <div class="mx-12 flex h-[26px] items-center justify-center gap-1.5 "> -->
-<!-- {#each testimonials as i, index (i.id)}
-				{#if currentCard === index}
-					<div class="h-[18px] w-[18px]  rounded-sm bg-secondary" />
-				{:else}
-					<div class="h-[15px] w-[15px] rounded-sm bg-white" />
-				{/if}
-			{/each} -->
-
-<!-- </div> -->
 <style>
 	.test {
 		background-color: green;
@@ -149,11 +138,6 @@
 		border: 0.05rem solid rgba(255, 255, 255, 0.4);
 	}
 
-	/* pseudo quotes are arranged in two ways  - when the flex-row is applied, the after quote needs to be positioned based on the outer frosted box, because the height of the box is fixed.
-	When the flex row is column, the after quote needs to be positioned based on the quote text itself, because the height of the text changes.
-	so I've applied the pseudoQuoteBefore to all sized screens, b/c that doesn't need to change.
-	then I've made a media query to hide pseudoQuoteAfter on smaller screens. Then I've applied pseudoQuoteSmallAfter by default, but then created a media query to make that hidden on bigger screens   */
-
 	.pseudoQuote::after {
 		content: '"';
 		position: absolute;
@@ -161,7 +145,7 @@
 		bottom: -1rem;
 		right: 2rem;
 		font-size: 4rem;
-		color: blue;
+		color: #a46e57;
 		opacity: 0.4;
 		font-family: IM Fell English;
 		z-index: -20;
