@@ -55,7 +55,7 @@
 	<!-- container for profile picture background -->
 	<div class="picContainer" />
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
-	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 " />
+	<div class="absolute layeredWave waveStyle w-full top-0 rotate-180 max-lg:h-[30rem] " />
 	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
 
 	<!-- <img
