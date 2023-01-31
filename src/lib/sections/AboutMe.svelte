@@ -14,8 +14,10 @@
 	<div class="picContainer invisible md:visible " />
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
-	<div class="layeredWave waveStyle absolute top-0 w-full rotate-180 max-lg:h-[30rem] " />
-	<div class="layeredWave waveStyle absolute bottom-0 w-full " />
+	<div
+		class="layeredWave waveStyle absolute top-0 h-[28rem] w-full rotate-180 lg:h-[25rem] xl:h-[32rem] "
+	/>
+	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
 		class="font-caveat z-5 absolute -left-9  -top-[1rem] text-[4.5rem] font-bold text-shading md:-top-[2.5rem] md:text-[10rem] "
@@ -28,7 +30,7 @@
 	<div class="relative flex flex-col  pl-[5%] pr-[5%] text-primary">
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright md:pt-[3.6rem] md:text-6xl   "
+			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
