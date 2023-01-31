@@ -49,7 +49,7 @@
 </script>
 
 <div
-	class="flex justify-between px-3 frostedBox gap-3 min-h-[7rem] xl:min-h-[10rem] mt-auto relative z-10  "
+	class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-1 md:gap-3 md:px-3 xl:min-h-[10rem]  "
 >
 	<!-- arrow left -->
 	<button on:click={prevCard}>
@@ -65,7 +65,7 @@
 
 	<!-- this w-full makes this a central box that takes up the whole center, while the arrows are still pushed to either side with justify-between -->
 	<!-- {#key testimonials[currentCard]} -->
-	<div class="flex w-full pseudoQuote">
+	<div class="  pseudoQuote  flex w-full   ">
 		{#each [testimonials[currentCard]] as testimonial, index (testimonial.id)}
 			<div
 				in:fly={{
@@ -83,24 +83,27 @@
 					delay: 0,
 					easing: quintOut
 				}}
-				class="flex flex-col-reverse md:flex-row  gap-5  p-2  items-center bg-opacity-30 "
+				class="flex flex-col-reverse items-center gap-[0.1rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
 			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
-				<div in:blur={{ duration: 600 }} class="flex  shrink-0 gap-1 min-w-[13.5rem]">
-					<div class="rounded-full overflow-hidden ">
+				<div
+					in:blur={{ duration: 600 }}
+					class="flex  min-w-[13.5rem] shrink-0 justify-end gap-1 self-end md:justify-start md:self-start"
+				>
+					<div class="overflow-hidden rounded-full  ">
 						<img
-							class=" shrink-0 w-[90px] h-[90px] object-cover  "
+							class=" h-[40px] w-[40px] shrink-0 object-cover md:h-[90px] md:w-[90px]  "
 							src="/testimonials/{testimonial.image}"
 							alt="carousel images of students"
 						/>
 					</div>
 					<div
-						class=" flex shrink-0 text-xl font-semibold font-Caveat text-primaryBright self-end "
+						class=" flex shrink-0 self-end font-Caveat text-sm font-semibold text-primaryBright md:text-xl "
 					>
 						- {testimonial.name}
 					</div>
 				</div>
-				<div class="flex text-[.9em] xl:text-[1.3em] italic  relative pr-5">
+				<div class=" relative flex pt-2 text-[.9em] italic md:pt-0 md:pr-5  xl:text-[1.3em]">
 					{testimonial.quote}
 				</div>
 			</div>
@@ -133,6 +136,9 @@
 
 <!-- </div> -->
 <style>
+	.test {
+		background-color: green;
+	}
 	/* From https://css.glass */
 	.frostedBox {
 		background: rgba(255, 255, 255, 0.45);
@@ -143,29 +149,86 @@
 		border: 0.05rem solid rgba(255, 255, 255, 0.4);
 	}
 
+	/* pseudo quotes are arranged in two ways  - when the flex-row is applied, the after quote needs to be positioned based on the outer frosted box, because the height of the box is fixed.
+	When the flex row is column, the after quote needs to be positioned based on the quote text itself, because the height of the text changes.
+	so I've applied the pseudoQuoteBefore to all sized screens, b/c that doesn't need to change.
+	then I've made a media query to hide pseudoQuoteAfter on smaller screens. Then I've applied pseudoQuoteSmallAfter by default, but then created a media query to make that hidden on bigger screens   */
+
+	.pseudoQuote::after {
+		content: '"';
+		position: absolute;
+		/* transform: translateY(1rem); */
+		bottom: -1rem;
+		right: 2rem;
+		font-size: 4rem;
+		color: blue;
+		opacity: 0.4;
+		font-family: IM Fell English;
+		z-index: -20;
+	}
+
 	.pseudoQuote::before {
 		content: '"';
 		position: absolute;
-		top: -1rem;
-		left: 14rem;
-		font-size: 6rem;
+		top: -0.5rem;
+		left: 0.5rem;
+		font-size: 4rem;
 		color: #a46e57;
 		opacity: 0.4;
 		font-family: IM Fell English;
 		transform: scaleX(-1);
 		z-index: -20;
 	}
-	.pseudoQuote::after {
+	/* .pseudoQuoteAfter::after {
 		content: '"';
 		position: absolute;
-		/* transform: translateY(1rem); */
-		bottom: -4.5rem;
 
-		right: 2.8rem;
-		font-size: 6rem;
-		color: #a46e57;
+		bottom: -2.5rem;
+		right: 2.2rem;
+		font-size: 4rem;
+
+		color: red;
 		opacity: 0.4;
 		font-family: IM Fell English;
 		z-index: -20;
+	} */
+
+	/* MEDIA QUERIES BELOW ------------------------------------------- */
+	/* @media (max-width: 639px) {
+		.pseudoQuoteAfter::after {
+			visibility: hidden;
+		}
+	} */
+
+	@media (min-width: 768px) {
+		.pseudoQuote::before {
+			font-size: 5rem;
+			top: -1rem;
+			left: 15rem;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.pseudoQuote::before {
+			font-size: 6rem;
+			top: -1rem;
+			left: 14rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.pseudoQuote::after {
+			font-size: 5rem;
+			bottom: -3.5rem;
+			right: 2rem;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.pseudoQuote::after {
+			font-size: 6rem;
+			bottom: -3.5rem;
+			right: 2rem;
+		}
 	}
 </style>
