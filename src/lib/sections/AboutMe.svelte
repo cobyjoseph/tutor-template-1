@@ -11,7 +11,7 @@
 	<AboutMeBlobs />
 
 	<!-- container for profile picture background -->
-	<div class="picContainer" />
+	<div class="picContainer invisible md:visible " />
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div class="layeredWave waveStyle absolute top-0 w-full rotate-180 max-lg:h-[30rem] " />
@@ -39,7 +39,7 @@
 		</div>
 
 		<img
-			class="absolute z-40 aspect-auto w-[20rem]"
+			class="absolute z-40 aspect-auto w-[20rem] md:hidden"
 			src="other/headshot-cut.png"
 			alt="tutor headshot"
 		/>
