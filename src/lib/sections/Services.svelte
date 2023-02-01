@@ -25,7 +25,8 @@
 	</div>
 
 	<!-- This flex-col below contains the page title and all it's content -->
-	<div class="relative flex flex-col gap-1 px-[8%] text-primary sm:gap-2 landscape:sm:gap-1">
+	<!-- landscape:h719:gap-1  -->
+	<div class=" relative flex flex-col gap-1 px-[8%] text-primary sm:gap-2 ">
 		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
@@ -38,10 +39,12 @@
 			Services
 		</div>
 
-		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:gap-8  ">
+		<!-- landscape:h719:gap-8  -->
+		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:h602:gap-8  ">
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
+			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
 			<div
-				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6 sm:text-3xl landscape:sm:gap-3 landscape:sm:text-xl lg:text-4xl "
+				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl  "
 			>
 				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
 					<div class=" bulletPseudo flex ">Private, in-person or online sessions</div>
@@ -56,8 +59,9 @@
 
 			<!-- change these margins on each grid element on differnet sized screens -->
 
+			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class="grid w-full grid-cols-4 gap-y-10 xs:gap-y-[15%] sm:gap-y-[7%] landscape:flex landscape:items-center landscape:justify-center  landscape:gap-[6%] landscape:sm:gap-[10%] landscape:lg:flex-wrap "
+				class="grid w-full grid-cols-4 gap-y-10 sm:gap-y-[7%] xs:gap-y-[15%] landscape:h602:flex landscape:h602:gap-[5%]  "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -65,11 +69,7 @@
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 300ms"
 				>
-					<img
-						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
-						src="subjects/math.svg"
-						alt="Student studying math"
-					/>
+					<img class="h-[100px] w-[100px]  " src="subjects/math.svg" alt="Student studying math" />
 				</div>
 
 				<div
@@ -79,7 +79,7 @@
 					style="transition-delay: 500ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
+						class="h-[100px] w-[100px]  "
 						src="subjects/economics.svg"
 						alt="Student studying economics"
 					/>
@@ -92,7 +92,7 @@
 					style="transition-delay: 700ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
+						class="h-[100px] w-[100px]  "
 						src="subjects/history.svg"
 						alt="Student studying history"
 					/>
@@ -104,7 +104,7 @@
 					style="transition-delay: 900ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
+						class="h-[100px] w-[100px]  "
 						src="subjects/english.svg"
 						alt="Student studying english"
 					/>
@@ -116,13 +116,14 @@
 					style="transition-delay: 1100ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
+						class="h-[100px] w-[100px]  "
 						src="subjects/science.svg"
 						alt="Student studying science"
 					/>
 				</div>
+				<!-- landscape:text-2xl  -->
 				<div
-					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl landscape:text-2xl {visible
+					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1300ms"

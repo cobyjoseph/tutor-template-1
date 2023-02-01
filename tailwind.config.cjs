@@ -5,7 +5,11 @@ module.exports = {
 		extend: {
 			screens: {
 				'xs': '389px',
-				'3xl': '1749px'
+				'3xl': '1749px',
+				'h415': { 'raw': '(max-height: 415px)' },
+				'h602': { 'raw': '(max-height: 602px)' },
+				'h719': { 'raw': '(max-height: 719px)' },
+				'h1025': { 'raw': '(max-height: 1025px)' }
 			},
 			colors: {
 				primary: '#1a1101',
