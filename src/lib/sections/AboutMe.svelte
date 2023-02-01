@@ -27,10 +27,10 @@
 
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
-	<div class="relative flex flex-col  pl-[5%] pr-[5%] text-primary">
+	<div class="relative flex flex-col px-[8%] text-primary">
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
+			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
 			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {

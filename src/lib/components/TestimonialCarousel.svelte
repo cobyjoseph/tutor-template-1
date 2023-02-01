@@ -178,11 +178,6 @@
 	} */
 
 	/* MEDIA QUERIES BELOW ------------------------------------------- */
-	/* @media (max-width: 639px) {
-		.pseudoQuoteAfter::after {
-			visibility: hidden;
-		}
-	} */
 
 	@media (min-width: 768px) {
 		.pseudoQuote::before {

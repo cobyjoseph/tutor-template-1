@@ -41,7 +41,7 @@
 <div>
 	{#if pause}
 		<div
-			class="after:content-['|'] after:text-5xl after:font-medium after:pl-1 after:text-[#544E4E]"
+			class="after:pl-1 after:text-2xl after:font-medium after:text-[#544E4E] after:content-['|'] md:after:text-5xl"
 		>
 			{typedChars}
 		</div>
@@ -53,7 +53,7 @@
 		{typedChars}
 
 		<div
-			class=" min-h-full after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
+			class=" min-h-full text-2xl  after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] md:after:text-5xl"
 		>
 			{typedChars2}
 		</div>
