@@ -38,7 +38,7 @@
 			Services
 		</div>
 
-		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:gap-12  ">
+		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:gap-8  ">
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<div
 				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6 sm:text-3xl landscape:sm:gap-3 landscape:sm:text-xl lg:text-4xl "
@@ -57,7 +57,7 @@
 			<!-- change these margins on each grid element on differnet sized screens -->
 
 			<div
-				class="grid w-full grid-cols-4 gap-y-10 xs:gap-y-[15%] sm:gap-y-[7%] landscape:flex landscape:items-center landscape:justify-center  landscape:gap-[14%] landscape:sm:flex-wrap landscape:sm:gap-[10%] "
+				class="grid w-full grid-cols-4 gap-y-10 xs:gap-y-[15%] sm:gap-y-[7%] landscape:flex landscape:items-center landscape:justify-center  landscape:gap-[6%] landscape:sm:gap-[10%] landscape:lg:flex-wrap "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -66,7 +66,7 @@
 					style="transition-delay: 300ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px]"
+						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
 						src="subjects/math.svg"
 						alt="Student studying math"
 					/>
@@ -79,7 +79,7 @@
 					style="transition-delay: 500ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px]"
+						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
 						src="subjects/economics.svg"
 						alt="Student studying economics"
 					/>
@@ -92,7 +92,7 @@
 					style="transition-delay: 700ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px]"
+						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
 						src="subjects/history.svg"
 						alt="Student studying history"
 					/>
@@ -104,7 +104,7 @@
 					style="transition-delay: 900ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px]"
+						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
 						src="subjects/english.svg"
 						alt="Student studying english"
 					/>
@@ -116,13 +116,13 @@
 					style="transition-delay: 1100ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px]"
+						class="h-[100px] w-[100px] sm:portrait:h-[190px] sm:portrait:w-[190px] lg:landscape:h-[190px] lg:landscape:w-[190px]"
 						src="subjects/science.svg"
 						alt="Student studying science"
 					/>
 				</div>
 				<div
-					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl {visible
+					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl landscape:text-2xl {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1300ms"
@@ -271,21 +271,21 @@
 		}
 	}
 
-	@media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.math::before {
 			top: 2rem;
 			left: 13rem;
 		}
 	}
 
-	@media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.history::before {
 			top: 2rem;
 			left: 13rem;
 		}
 	}
 
-	@media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.science::before {
 			top: 2rem;
 			left: 13rem;
@@ -295,70 +295,70 @@
 
 	@media (orientation: landscape) {
 		.math::before {
-			top: -1rem;
+			top: -2rem;
 			left: 0rem;
 		}
 	}
 
 	@media (orientation: landscape) {
 		.economics::before {
-			top: 4rem;
+			top: 5rem;
 			left: -2rem;
 		}
 	}
 
 	@media (orientation: landscape) {
 		.history::before {
-			top: -1rem;
+			top: -2rem;
 			left: 0rem;
 		}
 	}
 
 	@media (orientation: landscape) {
 		.english::before {
-			top: 4rem;
+			top: 5rem;
 			left: -1rem;
 		}
 	}
 
 	@media (orientation: landscape) {
 		.science::before {
-			top: -1rem;
+			top: -2rem;
 			left: 0rem;
 		}
 	}
 
 	/* orientation and min-width */
 
-	@media (min-width: 640px) and (orientation: landscape) {
+	@media (min-width: 1024px) and (orientation: landscape) {
 		.math::before {
 			top: -2.5rem;
 			left: -2rem;
 		}
 	}
 
-	@media (min-width: 640px) and (orientation: landscape) {
+	@media (min-width: 1024px) and (orientation: landscape) {
 		.economics::before {
 			top: -2.5rem;
 			left: -2rem;
 		}
 	}
 
-	@media (min-width: 640px) and (orientation: landscape) {
+	@media (min-width: 1024px) and (orientation: landscape) {
 		.history::before {
 			top: -2.5rem;
 			left: -2rem;
 		}
 	}
 
-	@media (min-width: 640px) and (orientation: landscape) {
+	@media (min-width: 1024px) and (orientation: landscape) {
 		.english::before {
 			top: 12rem;
 			left: -2rem;
 		}
 	}
 
-	@media (min-width: 640px) and (orientation: landscape) {
+	@media (min-width: 1024px) and (orientation: landscape) {
 		.science::before {
 			top: 12rem;
 			left: -2rem;
