@@ -25,7 +25,7 @@
 	</div>
 
 	<!-- This flex-col below contains the page title and all it's content -->
-	<div class="relative flex flex-col gap-1 px-[8%] text-primary sm:gap-2">
+	<div class="relative flex flex-col gap-1 px-[8%] text-primary sm:gap-2 landscape:sm:gap-1">
 		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
@@ -38,10 +38,10 @@
 			Services
 		</div>
 
-		<div class=" flex max-w-[83rem] flex-col justify-between gap-5 sm:gap-5 landscape:gap-12  ">
+		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:gap-12  ">
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<div
-				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6  sm:text-3xl lg:text-4xl "
+				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6 sm:text-3xl landscape:sm:gap-3 landscape:sm:text-xl lg:text-4xl "
 			>
 				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
 					<div class=" bulletPseudo flex ">Private, in-person or online sessions</div>
@@ -57,7 +57,7 @@
 			<!-- change these margins on each grid element on differnet sized screens -->
 
 			<div
-				class="grid w-full grid-cols-4 gap-y-10 xs:gap-y-[15%] sm:gap-y-[7%] landscape:flex landscape:gap-[10%] "
+				class="grid w-full grid-cols-4 gap-y-10 xs:gap-y-[15%] sm:gap-y-[7%] landscape:flex landscape:items-center landscape:justify-center  landscape:gap-[14%] landscape:sm:flex-wrap landscape:sm:gap-[10%] "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -86,7 +86,7 @@
 				</div>
 
 				<div
-					class=" history col-span-2 row-span-2 row-start-3  {visible
+					class=" history col-span-2 row-span-2 row-start-3 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 700ms"
@@ -265,7 +265,7 @@
 		}
 	}
 
-	@media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.bulletPseudo::before {
 			top: 0.8rem;
 		}
@@ -325,6 +325,43 @@
 		.science::before {
 			top: -1rem;
 			left: 0rem;
+		}
+	}
+
+	/* orientation and min-width */
+
+	@media (min-width: 640px) and (orientation: landscape) {
+		.math::before {
+			top: -2.5rem;
+			left: -2rem;
+		}
+	}
+
+	@media (min-width: 640px) and (orientation: landscape) {
+		.economics::before {
+			top: -2.5rem;
+			left: -2rem;
+		}
+	}
+
+	@media (min-width: 640px) and (orientation: landscape) {
+		.history::before {
+			top: -2.5rem;
+			left: -2rem;
+		}
+	}
+
+	@media (min-width: 640px) and (orientation: landscape) {
+		.english::before {
+			top: 12rem;
+			left: -2rem;
+		}
+	}
+
+	@media (min-width: 640px) and (orientation: landscape) {
+		.science::before {
+			top: 12rem;
+			left: -2rem;
 		}
 	}
 </style>
