@@ -1,3 +1,3 @@
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
-					> <path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" fill=none stroke-width="2rem" />
+					> <path stroke="#2A2AAC" stroke-width="2" fill="none" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"   />
 					</svg>

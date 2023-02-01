@@ -10,7 +10,7 @@
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
 
-<section class="bg-image relative flow-root min-h-screen">
+<section class="bg-image relative flow-root min-h-screen  ">
 	<!-- <ServicesBackground /> -->
 
 	<div
@@ -24,11 +24,12 @@
 		SERVICES
 	</div>
 
-	<div class="relative flex flex-col  pl-[5%] pr-[5%] text-primary">
+	<!-- This flex-col below contains the page title and all it's content -->
+	<div class="relative flex flex-col gap-1 pl-[5%] pr-[5%] text-primary">
+		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
 			titlePseudo z-30 pt-[2.5rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
-			style="transition-delay: 100ms;"
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
 				visible = detail;
@@ -36,106 +37,90 @@
 		>
 			Services
 		</div>
-		<!-- Columns separating the text and the icons -->
-		<div class="relative  w-full max-w-[83rem]  ">
-			<!-- this container div for the two bullets keeps them in the same grid column -->
-			<div class=" text-xl font-semibold text-primary lg:text-3xl  ">
-				<div
-					class="  flex flex-grow items-start gap-2 {visible ? 'blurIn visible' : 'blurIn'} "
-					style="transition-delay: 100ms;"
-				>
-					<div
-						class=" bulletPseudo flex place-self-start self-start   "
-					>
-						Private, in-person or online sessions
-					</div>
+
+		<div class=" flex max-w-[83rem] flex-col gap-5  ">
+			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
+			<div class=" flex flex-col gap-3  text-xl font-semibold text-primary  lg:text-3xl ">
+				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
+					<div class=" bulletPseudo flex ">Private, in-person or online sessions</div>
 				</div>
 
-				<div
-					class="flex flex-grow items-center gap-2  {visible ? 'blurIn visible' : 'blurIn'} "
-					style="transition-delay: 100ms;"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						class="flex h-4 w-4 bg-blue-400 fill-none stroke-secondary lg:h-12 lg:w-12"
-					>
-						<path d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-					</svg>
-
-					Middle school and high school courses
+				<div class="  {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 300ms;">
+					<div class=" bulletPseudo flex ">Middle school and high school courses</div>
 				</div>
 			</div>
 
 			<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
 
 			<!-- change these margins on each grid element on differnet sized screens -->
-			<div class="grid grid-cols-4 gap-y-10 ">
-				<div
-					class=" math col-span-2 row-span-2 row-start-1 ml-8 {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 300ms"
-				>
-					<img class="h-[100px] w-[100px]" src="subjects/math.svg" alt="Student studying math" />
-				</div>
+			<div class="flex  ">
+				<div class="grid w-full grid-cols-4 gap-y-10  ">
+					<div
+						class=" math col-span-2 row-span-2 row-start-1 ml-8 {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 300ms"
+					>
+						<img class="h-[100px] w-[100px]" src="subjects/math.svg" alt="Student studying math" />
+					</div>
 
-				<div
-					class="  economics col-span-2 col-start-4 row-span-2 row-start-2 mr-8  {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 500ms"
-				>
-					<img
-						class="h-[100px] w-[100px]"
-						src="subjects/economics.svg"
-						alt="Student studying economics"
-					/>
-				</div>
+					<div
+						class="  economics col-span-2 col-start-4 row-span-2 row-start-2 mr-8  {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 500ms"
+					>
+						<img
+							class="h-[100px] w-[100px]"
+							src="subjects/economics.svg"
+							alt="Student studying economics"
+						/>
+					</div>
 
-				<div
-					class=" history col-span-2 row-span-2 row-start-3 ml-8  {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 700ms"
-				>
-					<img
-						class="h-[100px] w-[100px]"
-						src="subjects/history.svg"
-						alt="Student studying history"
-					/>
-				</div>
-				<div
-					class=" english col-span-2 col-start-4 row-span-2 row-start-4 mr-8  {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 900ms"
-				>
-					<img
-						class="h-[100px] w-[100px]"
-						src="subjects/english.svg"
-						alt="Student studying english"
-					/>
-				</div>
-				<div
-					class=" science col-span-2 row-span-2 row-start-5 ml-8 {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 1100ms"
-				>
-					<img
-						class="h-[100px] w-[100px]"
-						src="subjects/science.svg"
-						alt="Student studying science"
-					/>
-				</div>
-				<div
-					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-5xl text-secondary {visible
-						? 'hiddenPreTransition visible'
-						: 'hiddenPreTransition'}"
-					style="transition-delay: 1300ms"
-				>
-					...and more
+					<div
+						class=" history col-span-2 row-span-2 row-start-3 ml-8  {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 700ms"
+					>
+						<img
+							class="h-[100px] w-[100px]"
+							src="subjects/history.svg"
+							alt="Student studying history"
+						/>
+					</div>
+					<div
+						class=" english col-span-2 col-start-4 row-span-2 row-start-4 mr-8  {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 900ms"
+					>
+						<img
+							class="h-[100px] w-[100px]"
+							src="subjects/english.svg"
+							alt="Student studying english"
+						/>
+					</div>
+					<div
+						class=" science col-span-2 row-span-2 row-start-5 ml-8 {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 1100ms"
+					>
+						<img
+							class="h-[100px] w-[100px]"
+							src="subjects/science.svg"
+							alt="Student studying science"
+						/>
+					</div>
+					<div
+						class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-5xl text-primaryBright {visible
+							? 'hiddenPreTransition visible'
+							: 'hiddenPreTransition'}"
+						style="transition-delay: 1300ms"
+					>
+						...and more
+					</div>
 				</div>
 			</div>
 		</div>
@@ -146,7 +131,12 @@
 <style>
 	.bulletPseudo::before {
 		content: '';
+		position: relative;
+		top: 0.6rem;
+		right: 0.3rem;
 		width: 1rem;
+		height: 0.7rem;
+
 		background-image: url('/other/bullet-point.svg');
 		background-position: center;
 		background-repeat: no-repeat;
@@ -193,7 +183,7 @@
 
 	.titlePseudo::after {
 		content: '';
-		width: 8rem;
+		width: 7.5rem;
 		height: 8px;
 		opacity: 40%;
 		position: relative;
@@ -222,7 +212,7 @@
 		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #cc3232;
+		color: #2a2aac;
 	}
 
 	.history::before {
@@ -244,7 +234,7 @@
 		font-size: xx-large;
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
-		color: #cc3232;
+		color: #2a2aac;
 	}
 
 	.science::before {
