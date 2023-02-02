@@ -41,12 +41,12 @@
 
 		<!-- landscape:h719:gap-8  -->
 		<div
-			class=" flex max-w-[83rem] flex-col  gap-3 sm:gap-5  md:grid md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
+			class=" flex max-w-[83rem] flex-col  gap-3 sm:gap-5  md:grid md:grid-cols-2 landscape:h769:flex landscape:h769:gap-8  "
 		>
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
 			<div
-				class=" flex flex-col gap-3 pl-1  text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl  "
+				class=" land flex flex-col gap-3  pl-1 text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl "
 			>
 				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
 					<div class=" bulletPseudo flex ">
@@ -66,7 +66,7 @@
 
 			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class="grid w-full grid-cols-4 gap-y-[7vh] sm:gap-y-[6vh]  landscape:h602:flex landscape:h602:gap-[5%]  "
+				class="grid w-full grid-cols-4 gap-y-[7vh] sm:gap-y-[6vh] landscape:h769:flex landscape:h769:flex-wrap landscape:h769:gap-[5%] "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -132,7 +132,7 @@
 				</div>
 				<!-- landscape:text-2xl  -->
 				<div
-					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl {visible
+					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4  font-Caveat text-4xl text-primaryBright sm:text-5xl md:p-8 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1500ms"
@@ -334,6 +334,43 @@
 		.science::before {
 			top: -2rem;
 			left: 0rem;
+		}
+	}
+
+	/* changed for one screen size below */
+
+	@media (min-height: 602px) and (max-height: 769px) and (orientation: landscape) {
+		.math::before {
+			top: -2rem;
+			left: 3rem;
+		}
+	}
+
+	@media (min-height: 602px) and (max-height: 769px) and (orientation: landscape) {
+		.economics::before {
+			top: -2rem;
+			left: 3rem;
+		}
+	}
+
+	@media (min-height: 602px) and (max-height: 769px) and (orientation: landscape) {
+		.history::before {
+			top: -2rem;
+			left: 2rem;
+		}
+	}
+
+	@media (min-height: 602px) and (max-height: 769px) and (orientation: landscape) {
+		.english::before {
+			top: 11rem;
+			left: 3rem;
+		}
+	}
+
+	@media (min-height: 602px) and (max-height: 769px) and (orientation: landscape) {
+		.science::before {
+			top: 11rem;
+			left: 3rem;
 		}
 	}
 

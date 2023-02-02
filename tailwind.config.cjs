@@ -8,7 +8,7 @@ module.exports = {
 				'3xl': '1749px',
 				'h415': { 'raw': '(max-height: 415px)' },
 				'h602': { 'raw': '(max-height: 602px)' },
-				'h719': { 'raw': '(max-height: 719px)' },
+				'h769': { 'raw': '(max-height: 769px)' },
 				'h1025': { 'raw': '(max-height: 1025px)' }
 			},
 			colors: {
