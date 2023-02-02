@@ -26,7 +26,7 @@
 
 	<!-- This flex-col below contains the page title and all it's content -->
 	<!-- landscape:h719:gap-1  -->
-	<div class=" relative flex flex-col gap-1 px-[8%] text-primary sm:gap-2 ">
+	<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary sm:gap-2 xl:gap-4 ">
 		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
@@ -41,22 +41,22 @@
 
 		<!-- landscape:h719:gap-8  -->
 		<div
-			class=" flex max-w-[83rem] flex-col  gap-3 sm:gap-5  md:grid landscape:md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
+			class=" flex  flex-col  gap-3 sm:gap-5  md:grid landscape:md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
 		>
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
 			<div
-				class="  flex flex-col gap-3  pl-1 text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl "
+				class="  flex flex-col gap-3   text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl xl:gap-10 landscape:h602:gap-3 landscape:h602:text-xl "
 			>
 				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
-					<div class=" bulletPseudo flex ">
-						Private, in person sessions in the Kansas City area, or online sessions for students
-						anywhere
-					</div>
+					<div class=" bulletPseudo flex ">Middle school and high school courses.</div>
 				</div>
 
 				<div class="  {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 400ms;">
-					<div class=" bulletPseudo flex ">Middle school and high school courses</div>
+					<div class=" bulletPseudo flex ">
+						Private, in person sessions in the Kansas City area, or online sessions for students
+						anywhere.
+					</div>
 				</div>
 			</div>
 
@@ -66,7 +66,7 @@
 
 			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]   landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
+				class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]  landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -132,7 +132,7 @@
 				</div>
 				<!-- landscape:text-2xl  -->
 				<div
-					class="col-span-2 col-start-3 row-start-6   m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl  {visible
+					class="col-span-2 col-start-3 row-start-6  m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl lg:pl-6 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1500ms"
@@ -283,8 +283,15 @@
 
 	/* ---------------- */
 
-	@media (min-width: 640px) {
+	@media (min-width: 640px) and (min-height: 600px) {
 		.bulletPseudo::before {
+			top: 0.7rem;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.bulletPseudo::before {
+			left: -1.4rem;
 			top: 0.8rem;
 		}
 	}
@@ -382,6 +389,47 @@
 	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.science::before {
 			top: 2rem;
+			left: 12rem;
+		}
+	}
+
+	/* ----------------- */
+	@media (min-width: 1280px) or (min-height: 1300px) {
+		.math::before {
+			font-size: 2.5rem;
+			top: 6rem;
+			left: 12rem;
+		}
+	}
+
+	@media (min-width: 1280px) or (min-height: 1300px) {
+		.economics::before {
+			font-size: 2.5rem;
+			top: 6rem;
+			left: -10.5rem;
+		}
+	}
+
+	@media (min-width: 1280px) or (min-height: 1300px) {
+		.history::before {
+			font-size: 2.5rem;
+			top: 6rem;
+			left: 12rem;
+		}
+	}
+
+	@media (min-width: 1280px) or (min-height: 1300px) {
+		.english::before {
+			font-size: 2.5rem;
+			top: 6rem;
+			left: -8rem;
+		}
+	}
+
+	@media (min-width: 1280px) or (min-height: 1300px) {
+		.science::before {
+			font-size: 2.5rem;
+			top: 6rem;
 			left: 12rem;
 		}
 	}

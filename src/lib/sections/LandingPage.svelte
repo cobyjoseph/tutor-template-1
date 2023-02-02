@@ -23,7 +23,7 @@
 
 	<div class="layeredWave waveStyle absolute bottom-0 w-full " />
 
-	<div class=" z-10 ml-auto mr-auto grid min-h-screen max-w-[83rem]  grid-cols-1 px-14">
+	<div class=" z-10 ml-auto mr-auto grid min-h-screen  grid-cols-1 px-14">
 		<Menu />
 
 		<div class="grid grid-cols-2 ">
