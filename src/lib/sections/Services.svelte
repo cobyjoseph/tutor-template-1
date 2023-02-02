@@ -40,7 +40,7 @@
 		</div>
 
 		<!-- landscape:h719:gap-8  -->
-		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5 landscape:h602:gap-8  ">
+		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5  landscape:h602:gap-8  ">
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
 			<div
@@ -260,7 +260,7 @@
 	}
 
 	/* MEDIA QUERIES ------------------------------------------------ */
-	@media (min-width: 640px) {
+	/* @media (min-width: 640px) {
 		.titlePseudo::after {
 			width: 14.5rem;
 		}
@@ -291,38 +291,38 @@
 			top: 2rem;
 			left: 13rem;
 		}
-	}
+	} */
 	/* orientation landscape */
 
-	@media (orientation: landscape) {
+	@media (max-height: 602px) and (orientation: landscape) {
 		.math::before {
 			top: -2rem;
 			left: 0rem;
 		}
 	}
 
-	@media (orientation: landscape) {
+	@media (max-height: 602px) and (orientation: landscape) {
 		.economics::before {
 			top: 5rem;
 			left: -2rem;
 		}
 	}
 
-	@media (orientation: landscape) {
+	@media (max-height: 602px) and (orientation: landscape) {
 		.history::before {
 			top: -2rem;
 			left: 0rem;
 		}
 	}
 
-	@media (orientation: landscape) {
+	@media (max-height: 602px) and (orientation: landscape) {
 		.english::before {
 			top: 5rem;
 			left: -1rem;
 		}
 	}
 
-	@media (orientation: landscape) {
+	@media (max-height: 602px) and (orientation: landscape) {
 		.science::before {
 			top: -2rem;
 			left: 0rem;
@@ -331,7 +331,7 @@
 
 	/* orientation and min-width */
 
-	@media (min-width: 1024px) and (orientation: landscape) {
+	/* @media (min-width: 1024px) and (orientation: landscape) {
 		.math::before {
 			top: -2.5rem;
 			left: -2rem;
@@ -364,5 +364,5 @@
 			top: 12rem;
 			left: -2rem;
 		}
-	}
+	} */
 </style>
