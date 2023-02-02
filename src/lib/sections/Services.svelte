@@ -66,7 +66,7 @@
 
 			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class="grid w-full grid-cols-4 gap-y-[7vh] sm:gap-y-[6vh]  landscape:md:gap-y-[3.8vh]   landscape:h602:flex landscape:h602:gap-[5%]   "
+				class=" grid w-full grid-cols-4 gap-y-[7vh]  sm:gap-y-[6vh]   landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -75,7 +75,7 @@
 					style="transition-delay: 600ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/math.svg"
 						alt="Student studying math"
 					/>
@@ -88,7 +88,7 @@
 					style="transition-delay: 800ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/economics.svg"
 						alt="Student studying economics"
 					/>
@@ -101,7 +101,7 @@
 					style="transition-delay: 1000ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/history.svg"
 						alt="Student studying history"
 					/>
@@ -113,7 +113,7 @@
 					style="transition-delay: 1200ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/english.svg"
 						alt="Student studying english"
 					/>
@@ -125,14 +125,14 @@
 					style="transition-delay: 1300ms"
 				>
 					<img
-						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[18vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/science.svg"
 						alt="Student studying science"
 					/>
 				</div>
 				<!-- landscape:text-2xl  -->
 				<div
-					class="col-span-2 col-start-3 row-start-6   font-Caveat text-4xl text-primaryBright sm:text-5xl  {visible
+					class="col-span-2 col-start-3 row-start-6   m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl  {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 1500ms"
@@ -275,6 +275,14 @@
 		}
 	}
 
+	@media (orientation: landscape) and (min-width: 640px) and (min-height: 602px) {
+		.titlePseudo::after {
+			width: 14.5rem;
+		}
+	}
+
+	/* ---------------- */
+
 	@media (orientation: portrait) and (min-width: 640px) {
 		.bulletPseudo::before {
 			top: 0.8rem;
@@ -341,37 +349,37 @@
 
 	/* ------------- */
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.math::before {
-			top: 5rem;
+			top: 2rem;
 			left: 12rem;
 		}
 	}
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.economics::before {
-			top: 5rem;
+			top: 2rem;
 			left: -8rem;
 		}
 	}
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.history::before {
-			top: 5rem;
+			top: 2rem;
 			left: 12rem;
 		}
 	}
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.english::before {
-			top: 5rem;
+			top: 2rem;
 			left: -6rem;
 		}
 	}
 
-	@media (min-width: 768px) and (orientation: landscape) {
+	@media (min-width: 768px) and (min-height: 602px) and (orientation: landscape) {
 		.science::before {
-			top: 5rem;
+			top: 2rem;
 			left: 12rem;
 		}
 	}
