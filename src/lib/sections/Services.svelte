@@ -69,7 +69,11 @@
 						: 'hiddenPreTransition'}"
 					style="transition-delay: 300ms"
 				>
-					<img class="h-[100px] w-[100px]  " src="subjects/math.svg" alt="Student studying math" />
+					<img
+						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+						src="subjects/math.svg"
+						alt="Student studying math"
+					/>
 				</div>
 
 				<div
@@ -79,7 +83,7 @@
 					style="transition-delay: 500ms"
 				>
 					<img
-						class="h-[100px] w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/economics.svg"
 						alt="Student studying economics"
 					/>
@@ -92,7 +96,7 @@
 					style="transition-delay: 700ms"
 				>
 					<img
-						class="h-[100px] w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/history.svg"
 						alt="Student studying history"
 					/>
@@ -104,7 +108,7 @@
 					style="transition-delay: 900ms"
 				>
 					<img
-						class="h-[100px] w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/english.svg"
 						alt="Student studying english"
 					/>
@@ -116,7 +120,7 @@
 					style="transition-delay: 1100ms"
 				>
 					<img
-						class="h-[100px] w-[100px]  "
+						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
 						src="subjects/science.svg"
 						alt="Student studying science"
 					/>
