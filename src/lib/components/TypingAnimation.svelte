@@ -38,22 +38,20 @@
 	typing2();
 </script>
 
-<div>
+<div class="relative z-30 text-4xl lg:text-5xl">
 	{#if pause}
-		<div
-			class="text-xl after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] lg:after:text-5xl"
-		>
+		<div class=" after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] ">
 			{typedChars}
 		</div>
 		<div>
-			<div class="text-xl opacity-0 lg:text-5xl">{phrase2}</div>
+			<div>{phrase2}</div>
 		</div>
 	{/if}
 	{#if noTypeDiv}
 		{typedChars}
 
 		<div
-			class=" min-h-full text-xl after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] lg:after:text-5xl"
+			class=" min-h-full  after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] "
 		>
 			{typedChars2}
 		</div>
