@@ -18,19 +18,19 @@
 </script>
 
 <!-- the RELATIVE creates a reference point for the background item, which is absolute. Otherwise it would absolutely position relative to the page itself. And flex is used for the different pages/sections to be one after the other. flex necessary? -->
-<div class="flex relative  ">
+<div class="relative flex  ">
 	<LandingBackground />
 
-	<div class="absolute layeredWave waveStyle w-full bottom-0 " />
+	<div class="layeredWave waveStyle absolute bottom-0 w-full " />
 
-	<div class=" grid grid-cols-1 max-w-[83rem] z-10 min-h-screen px-14  ml-auto mr-auto">
+	<div class=" z-10 ml-auto mr-auto grid min-h-screen max-w-[83rem]  grid-cols-1 px-14">
 		<Menu />
 
 		<div class="grid grid-cols-2 ">
 			<!-- LEFT COLUMN -->
 
 			<div class=" mt-auto mb-auto -translate-y-12">
-				<div class="text-5xl font-extrabold text-transparent bg-clip-text gradient ">
+				<div class="gradient bg-clip-text text-5xl font-extrabold text-transparent ">
 					<TypingAnimation />
 				</div>
 				{#if mountLandingAnimation}
@@ -44,7 +44,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  inline-block buttonUnderline mt-7 text-4xl text-primaryBright font-bold bg-clip   "
+						class="  buttonUnderline bg-clip mt-7 inline-block text-4xl font-bold text-primaryBright   "
 					>
 						See services
 					</a>
@@ -63,7 +63,7 @@
 <!-- both columns end -->
 <style>
 	.gradient {
-		background-image: linear-gradient(120deg, #1a1101, #1a1101 55% 100%);
+		background-image: linear-gradient(120deg, #cc3232, #f6991b 100%);
 	}
 
 	.buttonUnderline {
