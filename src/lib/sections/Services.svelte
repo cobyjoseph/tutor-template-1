@@ -19,7 +19,7 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
-		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem]"
+		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem] landscape:h602:-left-4 landscape:h602:-top-[1rem] landscape:h602:text-[4.5rem]"
 	>
 		SERVICES
 	</div>
@@ -30,7 +30,7 @@
 		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
 			class="{visible ? 'blurIn visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
+			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
 				visible = detail;
@@ -40,17 +40,22 @@
 		</div>
 
 		<!-- landscape:h719:gap-8  -->
-		<div class=" flex max-w-[83rem] flex-col  gap-5 sm:gap-5  landscape:h602:gap-8  ">
+		<div
+			class=" flex max-w-[83rem] flex-col  gap-3 sm:gap-5  md:grid md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
+		>
 			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
 			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
 			<div
-				class=" flex flex-col gap-3 text-xl  font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl  "
+				class=" flex flex-col gap-3 pl-1  text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl landscape:h602:gap-3 landscape:h602:text-xl  "
 			>
 				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
-					<div class=" bulletPseudo flex ">Private, in-person or online sessions</div>
+					<div class=" bulletPseudo flex ">
+						Private, in person sessions in the Kansas City area, or online sessions for students
+						anywhere
+					</div>
 				</div>
 
-				<div class="  {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 300ms;">
+				<div class="  {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 400ms;">
 					<div class=" bulletPseudo flex ">Middle school and high school courses</div>
 				</div>
 			</div>
@@ -61,13 +66,13 @@
 
 			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class="grid w-full grid-cols-4 gap-y-10 sm:gap-y-[7%] xs:gap-y-[15%] landscape:h602:flex landscape:h602:gap-[5%]  "
+				class="grid w-full grid-cols-4 gap-y-[7vh] sm:gap-y-[6vh]  landscape:h602:flex landscape:h602:gap-[5%]  "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 300ms"
+					style="transition-delay: 600ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -80,7 +85,7 @@
 					class="  economics col-span-2 col-start-4 row-span-2 row-start-2   {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 500ms"
+					style="transition-delay: 800ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -93,7 +98,7 @@
 					class=" history col-span-2 row-span-2 row-start-3 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 700ms"
+					style="transition-delay: 1000ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -105,7 +110,7 @@
 					class=" english col-span-2 col-start-4 row-span-2 row-start-4   {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 900ms"
+					style="transition-delay: 1200ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -117,7 +122,7 @@
 					class=" science col-span-2 row-span-2 row-start-5 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1100ms"
+					style="transition-delay: 1300ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[190px] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -130,7 +135,7 @@
 					class="col-span-2 col-start-3 row-start-6 ml-4 mb-4 font-Caveat text-4xl text-primaryBright sm:text-5xl {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1300ms"
+					style="transition-delay: 1500ms"
 				>
 					...and more
 				</div>
@@ -151,10 +156,10 @@
 
 	.bulletPseudo::before {
 		content: '';
-		position: relative;
+		position: absolute;
 		top: 0.4rem;
-		right: 0.3rem;
-		width: 1.3rem;
+		left: -1.2rem;
+		width: 1.1rem;
 		height: 1rem;
 
 		background-image: url('/other/bullet-point.svg');
@@ -264,7 +269,7 @@
 	}
 
 	/* MEDIA QUERIES ------------------------------------------------ */
-	/* @media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.titlePseudo::after {
 			width: 14.5rem;
 		}
@@ -295,8 +300,7 @@
 			top: 2rem;
 			left: 13rem;
 		}
-	} */
-	/* orientation landscape */
+	}
 
 	@media (max-height: 602px) and (orientation: landscape) {
 		.math::before {

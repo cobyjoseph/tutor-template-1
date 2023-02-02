@@ -53,7 +53,7 @@
 
 			<!-- LEFT COLUMN END -->
 
-			<div class="mt-auto mb-auto -translate-y-12">
+			<div class="mt-auto mb-auto -translate-y-12 ">
 				<img src="other/tutor-graphic-1.svg" alt="Student working at computer" />
 			</div>
 		</div>
