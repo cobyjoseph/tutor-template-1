@@ -66,7 +66,7 @@
 
 			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 			<div
-				class=" grid w-full grid-cols-4 gap-y-[7vh]  sm:gap-y-[6vh]   landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
+				class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]   landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -283,11 +283,13 @@
 
 	/* ---------------- */
 
-	@media (orientation: portrait) and (min-width: 640px) {
+	@media (min-width: 640px) {
 		.bulletPseudo::before {
 			top: 0.8rem;
 		}
 	}
+
+	/* ---- */
 
 	@media (orientation: portrait) and (min-width: 640px) {
 		.math::before {
