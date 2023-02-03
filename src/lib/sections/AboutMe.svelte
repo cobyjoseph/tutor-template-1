@@ -11,7 +11,7 @@
 	<AboutMeBlobs />
 
 	<!-- container for profile picture background -->
-	<!-- <div class="picContainer invisible md:visible " /> -->
+	<div class="picContainer invisible md:visible " />
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div
@@ -57,7 +57,7 @@
 				>
 					<div class=" float-right h-[4rem] w-[7rem] rounded-full " />
 
-					My name is<span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
+					My name is <span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
 					passionate about education and am committed to helping students achieve their full
 					potential. With my personalized approach and a focus on building strong foundations, I

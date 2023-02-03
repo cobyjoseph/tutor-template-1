@@ -17,6 +17,8 @@
 	// 	}
 	// });
 
+	// have a variable that settimeout in addition to interval, and after every interval set back the initial state and reset
+
 	testimonialsStore.subscribe((value) => {
 		testimonials = value;
 	});

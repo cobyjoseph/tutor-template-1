@@ -29,7 +29,7 @@
 		</div>
 
 		<div class=" flex flex-col gap-4">
-			<div class="gradient relative z-50 bg-clip-text font-extrabold text-transparent ">
+			<div class="gradient relative z-50 bg-clip-text font-extrabold  ">
 				<TypingAnimation />
 			</div>
 
@@ -49,7 +49,7 @@
 					href={'#section2'}
 					on:click|preventDefault={scrollIntoView}
 					transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-					class="  buttonUnderline bg-clip relative z-40 pt-2 inline-block text-4xl font-bold text-primaryBright   "
+					class="  buttonUnderline bg-clip relative z-40 inline-block pt-2 text-4xl font-bold text-primaryBright   "
 				>
 					See services
 				</a>
@@ -81,6 +81,7 @@
 		color: transparent;
 		background-clip: text;
 		background-image: linear-gradient(90deg, #cc3232, #f6991b 100%);
+		background-image: -webkit-linear-gradient(90deg, #cc3232, #f6991b 100%);
 	}
 
 	.buttonUnderline:after {

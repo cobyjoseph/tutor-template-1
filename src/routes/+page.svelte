@@ -4,18 +4,18 @@
 	import LandingPage from '$lib/sections/LandingPage.svelte';
 	import Schedule from '$lib/sections/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
-	// import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	let mountPassThrough = false;
 
-	// onMount(async () => {
-	// 	mountPassThrough = true;
-	// });
+	onMount(async () => {
+		mountPassThrough = true;
+	});
 </script>
 
 <div class="snap-container">
 	<div class="snap-item">
-		<LandingPage />
+		<LandingPage mountLandingAnimation={mountPassThrough} />
 	</div>
 	<div id="section2" class="snap-item">
 		<Services />

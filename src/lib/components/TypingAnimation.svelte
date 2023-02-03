@@ -38,7 +38,7 @@
 	typing2();
 </script>
 
-<div class="relative z-30 text-4xl lg:text-5xl">
+<div class="gradientText relative z-30 text-4xl lg:text-5xl">
 	{#if pause}
 		<div class=" after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] ">
 			{typedChars}
@@ -51,7 +51,7 @@
 		{typedChars}
 
 		<div
-			class=" min-h-full  after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] "
+			class=" min-h-full text-xl after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] lg:after:text-5xl"
 		>
 			{typedChars2}
 		</div>
@@ -98,3 +98,42 @@
 	{typedSentence1}
 </div>
 <div>Get results.</div> -->
+<style>
+	.gradientText {
+		background-color: #ca4246;
+
+		/* Create the gradient. */
+		background-image: linear-gradient(
+			45deg,
+			#cc3232 16.666%,
+			#2B217A 16.666%,
+			#2B217A 33.333%,
+			#f6991b 33.333%,
+			#f6991b 50%,
+			#f6895a 50%,
+			#f6895a 66.666%,
+			#c8c0b2 66.666%,
+			#c8c0b2 83.333%,
+			#c8c0b2 83.333%
+		);
+
+		/* 
+		primary: '#1a1101',
+				primaryDark: '#151225',
+				primaryBright: '#2A2AAC',
+				secondary: '#CC3232',
+				secondaryDark: '#6b1b15',
+				third: '#F6991B',
+				shading: '#f0e8d8',
+				accent: '#F6895A',
+				textAlternate: '#2B217A' */
+		/* Set the background size and repeat properties. */
+		background-size: 100%;
+		background-repeat: repeat;
+
+		/* Use the text as a mask for the background. */
+		/* This will show the gradient as a text color rather than element bg. */
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+</style>
