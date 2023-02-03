@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import KUTE from 'kute.js';
+	// import { onMount } from 'svelte';
+	// import KUTE from 'kute.js';
 
-	onMount(() => {
-		const tweenBlob = KUTE.fromTo(
-			'#blob5',
-			{ path: '#blob5' },
-			{ path: '#blob6' },
-			{ repeat: 999, duration: 3000, yoyo: true }
-		);
-		tweenBlob.start();
-	});
+	// onMount(() => {
+	// 	const tweenBlob = KUTE.fromTo(
+	// 		'#blob5',
+	// 		{ path: '#blob5' },
+	// 		{ path: '#blob6' },
+	// 		{ repeat: 999, duration: 3000, yoyo: true }
+	// 	);
+	// 	tweenBlob.start();
+	// });
 </script>
 
 <div class="absolute top-0 right-0 translate-x-[20%] -translate-y-[10%] transform  ">

@@ -9,13 +9,13 @@
 	let postCount: Number;
 	let stopCar = true;
 
-	onMount(async () => {
-		if (stopCar) {
-			setInterval(autoScroll, 8000);
-		} else if (!stopCar) {
-			clearInterval(autoScroll);
-		}
-	});
+	// onMount(async () => {
+	// 	if (stopCar) {
+	// 		setInterval(autoScroll, 8000);
+	// 	} else if (!stopCar) {
+	// 		clearInterval(autoScroll);
+	// 	}
+	// });
 
 	testimonialsStore.subscribe((value) => {
 		testimonials = value;

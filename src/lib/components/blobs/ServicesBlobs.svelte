@@ -1,27 +1,27 @@
 <script>
-	import { onMount } from 'svelte';
+	// import { onMount } from 'svelte';
 
-	import KUTE from 'kute.js';
+	// import KUTE from 'kute.js';
 
-	onMount(() => {
-		const tweenOrangeBlob = KUTE.fromTo(
-			'#orangeBlob1',
-			{ path: '#orangeBlob1' },
-			{ path: '#orangeBlob2' },
-			{ repeat: 999, duration: 3000, yoyo: true }
-		);
+	// onMount(() => {
+	// 	const tweenOrangeBlob = KUTE.fromTo(
+	// 		'#orangeBlob1',
+	// 		{ path: '#orangeBlob1' },
+	// 		{ path: '#orangeBlob2' },
+	// 		{ repeat: 999, duration: 3000, yoyo: true }
+	// 	);
 
-		tweenOrangeBlob.start();
+	// 	tweenOrangeBlob.start();
 
-		const tweenOrangeBlob2 = KUTE.fromTo(
-			'#orangeBlob3',
-			{ path: '#orangeBlob3' },
-			{ path: '#orangeBlob4' },
-			{ repeat: 999, duration: 3000, yoyo: true }
-		);
+	// 	const tweenOrangeBlob2 = KUTE.fromTo(
+	// 		'#orangeBlob3',
+	// 		{ path: '#orangeBlob3' },
+	// 		{ path: '#orangeBlob4' },
+	// 		{ repeat: 999, duration: 3000, yoyo: true }
+	// 	);
 
-		tweenOrangeBlob2.start();
-	});
+	// 	tweenOrangeBlob2.start();
+	// });
 </script>
 
 <!--ANIMATED BLOB  -->
