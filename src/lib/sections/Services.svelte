@@ -116,7 +116,7 @@
 				</div>
 				<div
 					class=" science col-span-2 row-span-2 row-start-5 {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay1500 visible'
 						: 'hiddenPreTransition'}"
 				>
 					<img
@@ -128,7 +128,7 @@
 				<!-- landscape:text-2xl  -->
 				<div
 					class="col-span-2 col-start-3 row-start-6  m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl lg:pl-6 {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay1700 visible'
 						: 'hiddenPreTransition'}"
 				>
 					...and more
@@ -285,6 +285,14 @@
 		transition-delay: 1100ms;
 	}
 	.delay1300 {
+		transition-delay: 1300ms;
+	}
+
+	.delay1500 {
+		transition-delay: 1300ms;
+	}
+
+	.delay1700 {
 		transition-delay: 1300ms;
 	}
 

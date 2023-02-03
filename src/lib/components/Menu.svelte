@@ -1,4 +1,5 @@
 <script>
+	import { backIn, sineIn } from 'svelte/easing';
 	import { blur } from 'svelte/transition';
 
 	let showMenu = false;
@@ -73,20 +74,46 @@
 			{/if}
 
 			{#if showMenu}
-				<button on:click={handleMenu} in:blur>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="flex h-6 w-6"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-					</svg>
-				</button>
 				<div class="relative">
-					<div class="frostedBox absolute right-0 z-[300] h-[20rem] w-[10rem]" />
+					<button on:click={handleMenu} in:blur>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="flex h-6 w-6"
+						>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+
+					<div
+						class="frostedBox absolute top-7 right-0 z-[300] flex min-w-[12rem] flex-col gap-4 p-6"
+						in:blur={{ duration: 300, easing: sineIn }}
+					>
+						<a
+							href={'#section2'}
+							class=" customUnderline  font-semibold"
+							on:click|preventDefault={scrollIntoView}>My services</a
+						>
+
+						<a
+							href={'#section3'}
+							class=" customUnderline  font-semibold"
+							on:click|preventDefault={scrollIntoView}>About me</a
+						>
+						<a
+							href={'#section4'}
+							class=" customUnderline  font-semibold"
+							on:click|preventDefault={scrollIntoView}>Schedule</a
+						>
+						<a
+							href={'#section5'}
+							class=" customUnderline  font-semibold"
+							on:click|preventDefault={scrollIntoView}>Contact</a
+						>
+					</div>
 				</div>
 			{/if}
 		</div>
@@ -134,8 +161,8 @@
 		background: rgba(255, 255, 255, 0.45);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(14px);
-		-webkit-backdrop-filter: blur(14px);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
 		border: 0.05rem solid rgba(255, 255, 255, 0.4);
 	}
 </style>
