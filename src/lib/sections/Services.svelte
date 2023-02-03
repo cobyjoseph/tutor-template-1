@@ -4,8 +4,10 @@
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	
 
 	let visible;
+	console.log('visible', visible);
 </script>
 
 <!-- REMEMBER THIS RELATIVE IS NEEDED SO THE SERVICES ABSOLUTE ATTRIBUTES (THE BACKGROUND/WAVE) HAVE SOMETHING TO ATTACH TO, OTHERWISE IT ATTACHES TO THE PAGE ITSELF (EG AT THE TOP RATHER THAN IN THIS SCROLLED DOWN PAGE 2 SECTION) -->
