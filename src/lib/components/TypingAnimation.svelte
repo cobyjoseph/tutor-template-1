@@ -33,7 +33,7 @@
 <div>
 	{#if pause}
 		<div
-			class="gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
+			class="gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|'] "
 		>
 			{typedChars}
 		</div>
@@ -47,7 +47,7 @@
 		</div>
 
 		<div
-			class=" gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
+			class=" gradientText text-4xl after:animate-blinking after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
 		>
 			{typedChars2}
 		</div>

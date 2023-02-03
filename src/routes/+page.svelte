@@ -16,7 +16,7 @@
 <div class="snap-container">
 	<div class="snap-item">
 		<LandingPage mountLandingAnimation={mountPassThrough} />
-	</div>
+	</div> 
 	<div id="section2" class="snap-item">
 		<Services />
 	</div>

@@ -13,7 +13,7 @@
 	// });
 </script>
 
-<div class="absolute top-0 right-0 translate-x-[20%] -translate-y-[10%] transform  ">
+<div class="max-w-100vw absolute top-0 right-0   ">
 	<svg
 		id="visual"
 		viewBox="0 0 1200 450"
