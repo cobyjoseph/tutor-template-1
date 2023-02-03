@@ -11,7 +11,7 @@
 	<AboutMeBlobs />
 
 	<!-- container for profile picture background -->
-	<div class="picContainer invisible md:visible " />
+	<!-- <div class="picContainer invisible md:visible " /> -->
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div
@@ -65,7 +65,7 @@
 				</div>
 			</div>
 
-			<TestimonialCarousel />
+			<!-- <TestimonialCarousel /> -->
 		</div>
 	</div>
 </section>
