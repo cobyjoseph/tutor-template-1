@@ -49,7 +49,7 @@
 </script>
 
 <div
-	class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-1 md:gap-3 md:px-3 xl:min-h-[10rem]  "
+	class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem]  "
 >
 	<!-- arrow left -->
 	<button on:click={prevCard}>
@@ -86,24 +86,24 @@
 				class="flex flex-col items-center gap-[0.4rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
 			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
+
 				<div
 					in:blur={{ duration: 600 }}
-					class="flex  min-w-[13.5rem] shrink-0 justify-end gap-1 self-end  md:justify-start  md:self-center"
+					class=" -mt-6 -ml-12 flex min-w-[13.5rem] shrink-0 gap-1 self-start md:justify-start md:self-center"
 				>
-					<div class="overflow-hidden rounded-full  ">
-						<img
-							class=" h-[40px] w-[40px] shrink-0 object-cover md:h-[90px] md:w-[90px]  "
-							src="/testimonials/{testimonial.image}"
-							alt="carousel images of students"
-						/>
-					</div>
+					<img
+						class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] "
+						src="/testimonials/{testimonial.image}"
+						alt="carousel images of students"
+					/>
 					<div
 						class=" flex shrink-0 self-end font-Caveat text-sm font-semibold text-primaryBright md:text-xl "
 					>
 						- {testimonial.name}
 					</div>
 				</div>
-				<div class=" relative flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]">
+
+				<div class=" relative -mt-1 flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]">
 					{testimonial.quote}
 				</div>
 			</div>
@@ -142,8 +142,8 @@
 		content: '"';
 		position: absolute;
 		/* transform: translateY(1rem); */
-		bottom: -1rem;
-		right: 2rem;
+		bottom: -3rem;
+		right: 0.5rem;
 		font-size: 4rem;
 		color: #a46e57;
 		opacity: 0.4;
@@ -154,8 +154,8 @@
 	.pseudoQuote::before {
 		content: '"';
 		position: absolute;
-		top: -0.5rem;
-		left: 0.5rem;
+		top: 1.1rem;
+		left: 0.3rem;
 		font-size: 4rem;
 		color: #a46e57;
 		opacity: 0.4;
