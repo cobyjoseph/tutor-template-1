@@ -28,7 +28,7 @@
 			<Menu />
 		</div>
 
-		<div class=" flex flex-col gap-3">
+		<div class=" flex flex-col gap-4">
 			<div class="gradient relative z-50 bg-clip-text font-extrabold text-transparent ">
 				<TypingAnimation />
 			</div>
@@ -49,7 +49,7 @@
 					href={'#section2'}
 					on:click|preventDefault={scrollIntoView}
 					transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-					class="  buttonUnderline bg-clip relative z-40 mt-4 inline-block text-4xl font-bold text-primaryBright   "
+					class="  buttonUnderline bg-clip relative z-40 pt-2 inline-block text-4xl font-bold text-primaryBright   "
 				>
 					See services
 				</a>

@@ -6,6 +6,7 @@
 
 export default function onPage(node) {
 	const handleIntersect = (e) => {
+		console.log('is intersecting');
 		node.dispatchEvent(
 			new CustomEvent('customOnKeyword', {
 				detail: e[0].isIntersecting

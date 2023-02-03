@@ -15,7 +15,7 @@
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div
-		class="layeredWave waveStyle absolute top-0 h-[28rem] w-full rotate-180 lg:h-[25rem] xl:h-[32rem] "
+		class="layeredWave waveStyle absolute top-0 h-[28rem] max-w-[100vw] rotate-180 lg:h-[25rem] xl:h-[32rem] "
 	/>
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
@@ -29,7 +29,7 @@
 
 	<div class="relative flex flex-col px-[8%] text-primary">
 		<div
-			class="{visible ? 'blurIn visible' : 'blurIn'} 
+			class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
 			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
 			style="transition-delay: 100ms;"
 			use:OnPage
@@ -57,7 +57,7 @@
 				>
 					<div class=" float-right h-[4rem] w-[7rem] rounded-full " />
 
-					My name is <span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
+					My name is<span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
 					passionate about education and am committed to helping students achieve their full
 					potential. With my personalized approach and a focus on building strong foundations, I
@@ -72,6 +72,14 @@
 
 <style>
 	/* PATTERNED BACKGROUND BEHIND HEADSHOT FROM SVGBACKGROUNDS.COM */
+
+	.delay100 {
+		transition-delay: 100ms;
+	}
+
+	.delaylong {
+		transition-delay: 2300ms;
+	}
 
 	.spanClass {
 		position: relative;

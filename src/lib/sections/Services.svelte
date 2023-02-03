@@ -29,7 +29,7 @@
 	<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary sm:gap-2 xl:gap-4 ">
 		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 		<div
-			class="{visible ? 'blurIn visible' : 'blurIn'} 
+			class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
 			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
 			use:OnPage
 			on:customOnKeyword={({ detail }) => {
@@ -48,11 +48,11 @@
 			<div
 				class="  flex flex-col gap-3   text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl xl:gap-10 landscape:h602:gap-3 landscape:h602:text-xl "
 			>
-				<div class=" {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 100ms;">
+				<div class=" {visible ? 'blurIn delay300 visible' : 'blurIn'} ">
 					<div class=" bulletPseudo flex ">Middle school and high school courses.</div>
 				</div>
 
-				<div class="  {visible ? 'blurIn visible' : 'blurIn'} " style="transition-delay: 400ms;">
+				<div class="  {visible ? 'blurIn delay500 visible' : 'blurIn'} ">
 					<div class=" bulletPseudo flex ">
 						Private, in person sessions in the Kansas City area, or online sessions for students
 						anywhere.
@@ -70,9 +70,8 @@
 			>
 				<div
 					class=" math col-span-2 row-span-2 row-start-1 {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay700 visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 600ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -83,9 +82,8 @@
 
 				<div
 					class="  economics col-span-2 col-start-4 row-span-2 row-start-2   {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay900 visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 800ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -96,9 +94,8 @@
 
 				<div
 					class=" history col-span-2 row-span-2 row-start-3 {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay1100 visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1000ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -108,9 +105,8 @@
 				</div>
 				<div
 					class=" english col-span-2 col-start-4 row-span-2 row-start-4   {visible
-						? 'hiddenPreTransition visible'
+						? 'hiddenPreTransition delay1300 visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1200ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -122,7 +118,6 @@
 					class=" science col-span-2 row-span-2 row-start-5 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1300ms"
 				>
 					<img
 						class="h-[100px] w-[100px] sm:h-[18vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
@@ -135,7 +130,6 @@
 					class="col-span-2 col-start-3 row-start-6  m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl lg:pl-6 {visible
 						? 'hiddenPreTransition visible'
 						: 'hiddenPreTransition'}"
-					style="transition-delay: 1500ms"
 				>
 					...and more
 				</div>
@@ -266,6 +260,32 @@
 		font-weight: 700;
 		font-family: 'Caveat', cursive;
 		color: #cc3232;
+	}
+
+	.delay100 {
+		transition-delay: 100ms;
+	}
+
+	.delay300 {
+		transition-delay: 300ms;
+	}
+
+	.delay500 {
+		transition-delay: 500ms;
+	}
+
+	.delay700 {
+		transition-delay: 700ms;
+	}
+
+	.delay900 {
+		transition-delay: 900ms;
+	}
+	.delay1100 {
+		transition-delay: 1100ms;
+	}
+	.delay1300 {
+		transition-delay: 1300ms;
 	}
 
 	/* MEDIA QUERIES ------------------------------------------------ */
