@@ -23,8 +23,10 @@
 
 	<div class="layeredWave waveStyle absolute bottom-0 h-[32rem] w-full" />
 
-	<div class="  flex min-h-screen flex-col px-[7%] pt-40  ">
-		<!-- <Menu /> -->
+	<div class="  flex min-h-screen flex-col gap-[15vh]  px-[7%] ">
+		<div class="flex w-full flex-row place-self-start">
+			<Menu />
+		</div>
 
 		<div class=" flex flex-col gap-3">
 			<div class="gradient relative z-50 bg-clip-text font-extrabold text-transparent ">

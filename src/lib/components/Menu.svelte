@@ -8,37 +8,57 @@
 	}
 </script>
 
-<div class="bg-white bg-opacity-0 flex justify-center  z-0 relative items-start mt-6 ">
+<div class="relative z-0 mt-6 w-full items-start justify-center  ">
 	<div
-		class="font-Heebo w-full relative flex justify-between items-center text-xl rounded-lg  text-primaryBright  "
+		class="relative flex w-full items-center justify-between rounded-lg font-Heebo  text-xl text-primaryBright "
 	>
-		<div class="flex gap-4 items-center">
-			<img class="w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
+		<div class="flex items-center gap-4">
+			<img class="w-7 sm:w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
 
-			<div class=" relative text-4xl text-secondary font-Caveat font-bold  ">Rise tutoring</div>
+			<div class=" relative font-Caveat text-2xl font-bold text-secondary md:text-4xl  ">
+				Rise tutoring
+			</div>
 		</div>
-		<div class=" relative flex   gap-14   ">
-			<a
-				href={'#section2'}
-				class=" font-semibold  customUnderline"
-				on:click|preventDefault={scrollIntoView}>My services</a
-			>
+		<div class=" relative flex    gap-14  ">
+			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
+			<div class="hidden md:flex">
+				<a
+					href={'#section2'}
+					class=" customUnderline  font-semibold"
+					on:click|preventDefault={scrollIntoView}>My services</a
+				>
 
-			<a
-				href={'#section3'}
-				class=" font-semibold  customUnderline"
-				on:click|preventDefault={scrollIntoView}>About me</a
+				<a
+					href={'#section3'}
+					class=" customUnderline  font-semibold"
+					on:click|preventDefault={scrollIntoView}>About me</a
+				>
+				<a
+					href={'#section4'}
+					class=" customUnderline  font-semibold"
+					on:click|preventDefault={scrollIntoView}>Schedule</a
+				>
+				<a
+					href={'#section5'}
+					class=" customUnderline  font-semibold"
+					on:click|preventDefault={scrollIntoView}>Contact</a
+				>
+			</div>
+
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class=" flex h-6 w-6"
 			>
-			<a
-				href={'#section4'}
-				class=" font-semibold  customUnderline"
-				on:click|preventDefault={scrollIntoView}>Schedule</a
-			>
-			<a
-				href={'#section5'}
-				class=" font-semibold  customUnderline"
-				on:click|preventDefault={scrollIntoView}>Contact</a
-			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+				/>
+			</svg>
 		</div>
 	</div>
 </div>
