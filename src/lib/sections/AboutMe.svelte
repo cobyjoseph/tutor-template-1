@@ -41,13 +41,13 @@
 		</div>
 
 		<img
-			class="absolute z-40 aspect-auto w-[20rem] md:hidden"
+			class="z-40 -mt-[5rem] flex aspect-auto w-[8rem] self-end  md:hidden"
 			src="other/headshot-cut.png"
 			alt="tutor headshot"
 		/>
 
 		<div
-			class="  flex  min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh]  "
+			class="  -mt-[6.5rem] flex min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh]  "
 		>
 			<div
 				class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
@@ -55,13 +55,13 @@
 				<div
 					class="lessFrostedBox z-1 relative text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem]  "
 				>
-					My name is <span class="spanClass">Charlie Smith</span>, and I am a dedicated and
+					<div class=" float-right h-[4rem] w-[7rem] rounded-full " />
+
+					My name is <span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
 					experienced private tutor specializing in a range of middle and high school courses. I am
-					able to effectively help students in a wide range of subjects including math, science,
-					history, and economics. I am passionate about education and am committed to helping
-					students achieve their full potential. With my personalized approach and a focus on
-					building strong foundations, I have a proven track record of helping students improve
-					their grades and reach their goals.
+					passionate about education and am committed to helping students achieve their full
+					potential. With my personalized approach and a focus on building strong foundations, I
+					have a proven track record of helping students improve their grades and reach their goals.
 				</div>
 			</div>
 

@@ -83,7 +83,7 @@
 					delay: 0,
 					easing: quintOut
 				}}
-				class="flex flex-col-reverse items-center gap-[1rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
+				class="flex flex-col items-center gap-[0.4rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
 			>
 				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
 				<div
