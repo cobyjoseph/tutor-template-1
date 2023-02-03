@@ -1,44 +1,60 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
 	let phrase1 = 'Build confidence.';
 	let typedChars = '';
 	let index = 0;
-
 	let phrase2 = 'Get results.';
 	let typedChars2 = '';
 	let index2 = 0;
 	let pause = true;
 	let noTypeDiv = false;
-
 	setTimeout(() => {
 		pause = false;
 		noTypeDiv = true;
 	}, 2000);
-
 	const addChars = () => {
 		if (index < phrase1.length) typedChars += phrase1[index];
 		index++;
 	};
-
 	const addChars2 = () => {
 		if (index2 < phrase2.length) typedChars2 += phrase2[index2];
 		index2++;
 	};
-
 	const typing = () => setInterval(addChars, 100);
-
 	const typing2 = () => {
 		setTimeout(() => {
 			setInterval(addChars2, 100);
 		}, 2500);
 	};
-
 	typing();
 	typing2();
 </script>
 
-<div class="gradientText relative z-30 text-4xl lg:text-5xl">
+<div>
+	{#if pause}
+		<div
+			class="gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
+		>
+			{typedChars}
+		</div>
+		<div>
+			<div class="text-4xl opacity-0 md:text-5xl">{phrase2}</div>
+		</div>
+	{/if}
+	{#if noTypeDiv}
+		<div class="gradientText text-4xl md:text-5xl ">
+			{typedChars}
+		</div>
+
+		<div
+			class=" gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
+		>
+			{typedChars2}
+		</div>
+	{/if}
+</div>
+
+<!-- <div class="gradientText relative z-30 text-4xl lg:text-5xl">
 	{#if pause}
 		<div class=" after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] ">
 			{typedChars}
@@ -56,7 +72,7 @@
 			{typedChars2}
 		</div>
 	{/if}
-</div>
+</div> -->
 
 <!-- <script lang="ts">
 		import { onMount } from 'svelte';
@@ -105,9 +121,9 @@
 		/* Create the gradient. */
 		background-image: linear-gradient(
 			45deg,
+			#2a2aac 16.666%,
 			#cc3232 16.666%,
-			#2B217A 16.666%,
-			#2B217A 33.333%,
+			#cc3232 33.333%,
 			#f6991b 33.333%,
 			#f6991b 50%,
 			#f6895a 50%,
