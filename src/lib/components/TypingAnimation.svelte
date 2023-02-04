@@ -37,7 +37,7 @@
 	typing2();
 </script>
 
-<div class="text-4xl sm:text-5xl landscape:h602:sm:text-4xl">
+<div class="text-4xl sm:text-5xl landscape:h602:sm:text-4xl ">
 	{#if pause}
 		<div
 			class="gradientText  after:pl-1 after:after:font-bold after:text-[#544E4E] after:content-['|'] "
