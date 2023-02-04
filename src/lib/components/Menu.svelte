@@ -30,7 +30,7 @@
 		</div>
 		<div class="  flex    gap-14  ">
 			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
-			<div class="hidden gap-8 md:flex landscape:h1025:md:hidden">
+			<div class="hidden gap-8 lg:flex landscape:h1025:md:hidden">
 				<a
 					href={'#section2'}
 					class=" customUnderline   font-semibold"
@@ -54,7 +54,7 @@
 				>
 			</div>
 
-			<div class="md:hidden landscape:h1025:md:block">
+			<div class="lg:hidden  landscape:h1025:lg:block">
 				{#if !showMenu}
 					<button on:click={handleMenu} in:blur>
 						<svg

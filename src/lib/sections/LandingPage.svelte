@@ -36,7 +36,7 @@
 			</div>
 
 			<img
-				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end  landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:left-1/2 landscape:h415:h-[15rem] landscape:h415:w-[15rem] landscape:h415:-translate-x-[15rem] landscape:h1025:col-span-2 landscape:h1025:col-start-3 landscape:h1025:mt-[-5rem] landscape:h1025:w-full "
+				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end  landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:left-1/2 landscape:h415:h-[13rem] landscape:h415:w-[13rem] landscape:h415:-translate-x-[12rem] landscape:h1025:col-span-2 landscape:h1025:col-start-3 landscape:h1025:mt-[-5rem] landscape:h1025:w-full "
 				src="other/tutor-graphic-1.svg"
 				alt="Student working at computer"
 			/>
@@ -46,7 +46,7 @@
 				>
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-						class=" text-xl text-primary sm:text-2xl landscape:h769:md:text-xl "
+						class=" text-xl text-primary md:text-2xl landscape:h769:md:text-lg "
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
@@ -54,7 +54,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  buttonUnderline bg-clip landscape:h415::md:text-xl relative z-40 inline-block pt-3 text-2xl font-bold text-primaryBright sm:pt-6 sm:text-5xl md:text-5xl landscape:h769:md:text-3xl    "
+						class="  buttonUnderline bg-clip relative z-40 inline-block pt-3 text-4xl font-bold text-primaryBright sm:pt-6 md:text-5xl md:text-5xl landscape:h415:md:text-xl landscape:h769:md:text-3xl    "
 					>
 						See services
 					</a>
