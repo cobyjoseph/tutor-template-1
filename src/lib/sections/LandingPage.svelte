@@ -23,36 +23,42 @@
 
 	<div class="layeredWave waveStyle absolute bottom-0 h-[32rem] w-full" />
 
-	<div class="  flex min-h-screen flex-col gap-[12vh] px-[7%] sm:gap-5 landscape:h602:gap-[8vh] ">
-		<div class="flex w-full flex-row place-self-start">
+	<div
+		class="  flex min-h-screen flex-col gap-[12vh] px-[7%] sm:gap-[10vh] landscape:h1025:gap-[8vh] landscape:lg:h1025:gap-[18vh] "
+	>
+		<div class="relative z-[300] flex w-full flex-row place-self-start">
 			<Menu />
 		</div>
 
-		<div class=" flex flex-col gap-4 landscape:h602:grid landscape:h602:grid-cols-4">
-			<div class="gradient relative z-50 bg-clip-text font-extrabold landscape:h602:col-span-4 ">
+		<div class=" flex flex-col gap-4 landscape:h1025:grid landscape:h1025:grid-cols-4">
+			<div class=" relative z-50 bg-clip-text font-extrabold landscape:h1025:col-span-4 ">
 				<TypingAnimation />
 			</div>
 
 			<img
-				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end landscape:h602:col-span-2 landscape:h602:col-start-3 landscape:h602:mt-[-8rem] landscape:h602:w-[20rem] "
+				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end landscape:h1025:col-span-2 landscape:h1025:col-start-3 landscape:h1025:mt-[-20rem] landscape:h1025:w-full  "
 				src="other/tutor-graphic-1.svg"
 				alt="Student working at computer"
 			/>
 			{#if mountLandingAnimation}
 				<div
-					transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-					class=" text-xl text-primary landscape:h602:col-span-2 landscape:h602:col-start-1 landscape:h602:row-start-2"
+					class=" pt-2 landscape:h1025:col-span-2 landscape:h1025:col-start-1 landscape:h1025:row-start-2"
 				>
-					Personalized high school and middle school tutoring for a range of subjects.
+					<div
+						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
+						class=" text-xl text-primary sm:text-2xl landscape:h769:md:text-xl "
+					>
+						Personalized high school and middle school tutoring for a range of subjects.
+					</div>
+					<a
+						href={'#section2'}
+						on:click|preventDefault={scrollIntoView}
+						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
+						class="  buttonUnderline bg-clip relative z-40 inline-block pt-3 text-2xl font-bold text-primaryBright sm:pt-6 sm:text-5xl md:text-5xl landscape:h769:md:text-3xl    "
+					>
+						See services
+					</a>
 				</div>
-				<a
-					href={'#section2'}
-					on:click|preventDefault={scrollIntoView}
-					transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-					class="  buttonUnderline bg-clip relative z-40 inline-block pt-2 text-4xl font-bold text-primaryBright landscape:h602:col-span-4 landscape:h602:mt-[-4vh]   "
-				>
-					See services
-				</a>
 			{/if}
 		</div>
 	</div>
@@ -72,21 +78,64 @@
 		background-image: linear-gradient(120deg, #cc3232, #f6991b 100%);
 	}
 
+	.gradientText {
+		background-color: #ca4246;
+
+		/* Create the gradient. */
+		background-image: linear-gradient(
+			45deg,
+			#2a2aac 16.666%,
+			#cc3232 16.666%,
+			#cc3232 33.333%,
+			#f6991b 33.333%,
+			#f6991b 50%,
+			#f6895a 50%,
+			#f6895a 66.666%,
+			#c8c0b2 66.666%,
+			#c8c0b2 83.333%,
+			#c8c0b2 83.333%
+		);
+
+		background-size: 100%;
+		background-repeat: repeat;
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
 	.buttonUnderline {
 		position: relative;
 		z-index: 50;
 	}
 
 	.buttonUnderline:hover {
-		color: transparent;
-		background-clip: text;
-		background-image: linear-gradient(90deg, #cc3232, #f6991b 100%);
-		background-image: -webkit-linear-gradient(90deg, #cc3232, #f6991b 100%);
+		background-color: #ca4246;
+
+		/* Create the gradient. */
+		background-image: linear-gradient(
+			45deg,
+			#2a2aac 5%,
+			#cc3232 5%,
+			#cc3232 10%,
+			#f6991b 10%,
+			#f6991b 20%,
+			#f6895a 20%,
+			#f6895a 30%,
+			#c8c0b2 30%,
+			#c8c0b2 40%,
+			#c8c0b2 40%
+		);
+
+		background-size: 100%;
+		background-repeat: repeat;
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 
 	.buttonUnderline:after {
 		content: '';
-		width: 100%;
+		width: 12rem;
 		height: 8px;
 		opacity: 70%;
 		position: relative;
@@ -99,9 +148,24 @@
 	}
 
 	.buttonUnderline:hover::after {
-		background: linear-gradient(90deg, #cc3232, #f6991b 100%);
-		transform: translate(-4px, -3px) skew(-40deg);
+		transform: translate(-6px, -3px) skew(-40deg);
+		width: 100%;
 		opacity: 70%;
+
+		/* Create the gradient. */
+		background-image: linear-gradient(
+			45deg,
+			#2a2aac 16%,
+			#cc3232 16%,
+			#cc3232 33%,
+			#f6991b 33%,
+			#f6991b 70%,
+			#f6895a 70%,
+			#f6895a 96%,
+			#c8c0b2 96%,
+			#c8c0b2 98%,
+			#c8c0b2 98%
+		);
 	}
 
 	.waveStyle {

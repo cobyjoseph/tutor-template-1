@@ -37,90 +37,30 @@
 	typing2();
 </script>
 
-<div>
+<div class="text-4xl sm:text-5xl landscape:h602:sm:text-4xl">
 	{#if pause}
 		<div
-			class="gradientText text-4xl after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|'] "
+			class="gradientText  after:pl-1 after:after:font-bold after:text-[#544E4E] after:content-['|'] "
 		>
 			{typedChars}
 		</div>
 		<div>
-			<div class="text-4xl opacity-0 lg:text-5xl">{phrase2}</div>
+			<div class="opacity-0 ">{phrase2}</div>
 		</div>
 	{/if}
 	{#if noTypeDiv}
-		<div class="gradientText text-4xl lg:text-5xl ">
+		<div class="gradientText  ">
 			{typedChars}
 		</div>
 
 		<div
-			class=" gradientText text-4xl after:animate-blinking after:pl-1 after:text-4xl after:font-medium after:text-[#544E4E] after:content-['|']"
+			class=" gradientText after:animate-blinking after:pl-1 after:text-5xl after:font-bold after:text-[#544E4E] after:content-['|']"
 		>
 			{typedChars2}
 		</div>
 	{/if}
 </div>
 
-<!-- <div class="gradientText relative z-30 text-4xl lg:text-5xl">
-	{#if pause}
-		<div class=" after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] ">
-			{typedChars}
-		</div>
-		<div>
-			<div>{phrase2}</div>
-		</div>
-	{/if}
-	{#if noTypeDiv}
-		{typedChars}
-
-		<div
-			class=" min-h-full text-xl after:animate-blinking after:pl-1 after:font-medium after:text-[#544E4E] after:content-['|'] lg:after:text-5xl"
-		>
-			{typedChars2}
-		</div>
-	{/if}
-</div> -->
-
-<!-- <script lang="ts">
-		import { onMount } from 'svelte';
-		import { current_component, text } from 'svelte/internal';
-
-	let sentence1 = 'Build confidence.';
-	let sentence2 = 'Get results.';
-	let i = 0;
-	
-	$: typedSentence1 = [];
-	
-	let typedToIndex = 0;
-	
-	// $: typedSentence1 = sentence1.slice(0, typedToIndex);
-	
-	function typeWriter() {
-		if (i < sentence1.length) {
-			typedSentence1 = [...typedSentence1, sentence1.charAt(i)];
-			i++;
-			setTimeout(typeWriter, 300);
-		}
-	}
-	
-	// const handleTyping = () => {
-		// 	if (typedToIndex + 1 <= typedSentence1.length) {
-			// 		typedToIndex++;
-			// 		typedSentence1 = [...typedSentence1, typedSentence1[typedToIndex]];
-			// 	}
-			// };
-			
-			onMount(() => {
-				typeWriter();
-	});
-</script>
-
-<div
-	class="after:content-['|'] after:text-5xl after:animate-blinking after:font-medium after:pl-1 after:text-[#544E4E]"
->
-	{typedSentence1}
-</div>
-<div>Get results.</div> -->
 <style>
 	.gradientText {
 		background-color: #ca4246;
