@@ -4,9 +4,11 @@
 	import { sineIn, sineOut, quintOut } from 'svelte/easing';
 	import { flip } from 'svelte/animate';
 	import { onMount } from 'svelte';
+	import InView from '$lib/components/InView.svelte';
 
 	let testimonials;
 	let postCount: Number;
+	let visible;
 	let stopCar = true;
 
 	// onMount(async () => {
@@ -50,83 +52,101 @@
 	}
 </script>
 
-<div
-	class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem]  "
->
-	<!-- arrow left -->
-	<button on:click={prevCard}>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-[26px] w-[26px] justify-center stroke-primaryBright stroke-[3px]"
-			fill="none"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-		</svg>
-	</button>
-
-	<!-- this w-full makes this a central box that takes up the whole center, while the arrows are still pushed to either side with justify-between -->
-	<!-- {#key testimonials[currentCard]} -->
-	<div class="  pseudoQuote  flex w-full   ">
-		{#each [testimonials[currentCard]] as testimonial, index (testimonial.id)}
-			<div
-				in:fly={{
-					delay: 0,
-					duration: direction === 'right' ? 500 : 500,
-					x: direction === 'right' ? 100 : -100,
-					easing: sineIn
-				}}
-				out:fly={{
-					duration: 600,
-					x: direction === 'right' ? -100 : 100,
-					easing: sineOut
-				}}
-				animate:flip={{
-					delay: 0,
-					easing: quintOut
-				}}
-				class="flex flex-col items-center gap-[0.4rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
+<InView let:isVisible={visible}>
+	<div
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem]  {visible
+			? 'blurIn delay100 visible'
+			: 'blurIn'}  "
+	>
+		<!-- arrow left -->
+		<button on:click={prevCard}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-[26px] w-[26px] justify-center stroke-primaryBright stroke-[3px]"
+				fill="none"
+				viewBox="0 0 24 24"
 			>
-				<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
+				<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+			</svg>
+		</button>
 
+		<!-- this w-full makes this a central box that takes up the whole center, while the arrows are still pushed to either side with justify-between -->
+		<!-- {#key testimonials[currentCard]} -->
+		<div class="  pseudoQuote  flex w-full   ">
+			{#each [testimonials[currentCard]] as testimonial, index (testimonial.id)}
 				<div
-					in:blur={{ duration: 600 }}
-					class=" -mt-6 -ml-12 flex min-w-[13.5rem] shrink-0 gap-1 self-start md:justify-start md:self-center"
+					in:fly={{
+						delay: 0,
+						duration: direction === 'right' ? 500 : 500,
+						x: direction === 'right' ? 100 : -100,
+						easing: sineIn
+					}}
+					out:fly={{
+						duration: 600,
+						x: direction === 'right' ? -100 : 100,
+						easing: sineOut
+					}}
+					animate:flip={{
+						delay: 0,
+						easing: quintOut
+					}}
+					class="flex flex-col items-center gap-[0.4rem] bg-opacity-30  p-2  md:flex-row md:gap-5 "
 				>
-					<img
-						class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] "
-						src="/testimonials/{testimonial.image}"
-						alt="carousel images of students"
-					/>
+					<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
+
 					<div
-						class=" flex shrink-0 self-end font-Caveat text-sm font-semibold text-primaryBright md:text-xl "
+						in:blur={{ duration: 600 }}
+						class=" -mt-6 -ml-12 flex min-w-[13.5rem] shrink-0 gap-1 self-start md:justify-start md:self-center"
 					>
-						- {testimonial.name}
+						<img
+							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] "
+							src="/testimonials/{testimonial.image}"
+							alt="carousel images of students"
+						/>
+						<div
+							class=" flex shrink-0 self-end font-Caveat text-sm font-semibold text-primaryBright md:text-xl "
+						>
+							- {testimonial.name}
+						</div>
+					</div>
+
+					<div
+						class=" relative -mt-1 flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]"
+					>
+						{testimonial.quote}
 					</div>
 				</div>
+			{/each}
+		</div>
+		<!-- {/key} -->
 
-				<div class=" relative -mt-1 flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]">
-					{testimonial.quote}
-				</div>
-			</div>
-		{/each}
+		<!-- arrow right -->
+		<button on:click={nextCard}>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-[26px] w-[26px] justify-center stroke-primaryBright stroke-[3px]"
+				fill="none"
+				viewBox="0 0 24 24"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+			</svg>
+		</button>
 	</div>
-	<!-- {/key} -->
-
-	<!-- arrow right -->
-	<button on:click={nextCard}>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-[26px] w-[26px] justify-center stroke-primaryBright stroke-[3px]"
-			fill="none"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-		</svg>
-	</button>
-</div>
+</InView>
 
 <style>
+	.blurIn {
+		opacity: 0.3;
+		filter: blur(5px);
+		transition: all 1s;
+	}
+
+	.visible {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+
 	.test {
 		background-color: green;
 	}

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	let phrase1 = 'Build confidence.';
 	let typedChars = '';
 	let index = 0;
@@ -8,24 +9,30 @@
 	let index2 = 0;
 	let pause = true;
 	let noTypeDiv = false;
+
 	setTimeout(() => {
 		pause = false;
 		noTypeDiv = true;
 	}, 2000);
+
 	const addChars = () => {
 		if (index < phrase1.length) typedChars += phrase1[index];
 		index++;
 	};
+
 	const addChars2 = () => {
 		if (index2 < phrase2.length) typedChars2 += phrase2[index2];
 		index2++;
 	};
+
 	const typing = () => setInterval(addChars, 100);
+
 	const typing2 = () => {
 		setTimeout(() => {
 			setInterval(addChars2, 100);
 		}, 2500);
 	};
+
 	typing();
 	typing2();
 </script>
@@ -38,11 +45,11 @@
 			{typedChars}
 		</div>
 		<div>
-			<div class="text-4xl opacity-0 md:text-5xl">{phrase2}</div>
+			<div class="text-4xl opacity-0 lg:text-5xl">{phrase2}</div>
 		</div>
 	{/if}
 	{#if noTypeDiv}
-		<div class="gradientText text-4xl md:text-5xl ">
+		<div class="gradientText text-4xl lg:text-5xl ">
 			{typedChars}
 		</div>
 

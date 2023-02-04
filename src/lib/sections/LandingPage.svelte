@@ -23,25 +23,25 @@
 
 	<div class="layeredWave waveStyle absolute bottom-0 h-[32rem] w-full" />
 
-	<div class="  flex min-h-screen flex-col gap-[15vh]  px-[7%] ">
+	<div class="  flex min-h-screen flex-col gap-[12vh] px-[7%] sm:gap-5 landscape:h602:gap-[8vh] ">
 		<div class="flex w-full flex-row place-self-start">
 			<Menu />
 		</div>
 
-		<div class=" flex flex-col gap-4">
-			<div class="gradient relative z-50 bg-clip-text font-extrabold  ">
+		<div class=" flex flex-col gap-4 landscape:h602:grid landscape:h602:grid-cols-4">
+			<div class="gradient relative z-50 bg-clip-text font-extrabold landscape:h602:col-span-4 ">
 				<TypingAnimation />
 			</div>
 
 			<img
-				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end "
+				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end landscape:h602:col-span-2 landscape:h602:col-start-3 landscape:h602:mt-[-8rem] landscape:h602:w-[20rem] "
 				src="other/tutor-graphic-1.svg"
 				alt="Student working at computer"
 			/>
 			{#if mountLandingAnimation}
 				<div
 					transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-					class=" text-xl text-primary"
+					class=" text-xl text-primary landscape:h602:col-span-2 landscape:h602:col-start-1 landscape:h602:row-start-2"
 				>
 					Personalized high school and middle school tutoring for a range of subjects.
 				</div>
@@ -49,7 +49,7 @@
 					href={'#section2'}
 					on:click|preventDefault={scrollIntoView}
 					transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-					class="  buttonUnderline bg-clip relative z-40 inline-block pt-2 text-4xl font-bold text-primaryBright   "
+					class="  buttonUnderline bg-clip relative z-40 inline-block pt-2 text-4xl font-bold text-primaryBright landscape:h602:col-span-4 landscape:h602:mt-[-4vh]   "
 				>
 					See services
 				</a>

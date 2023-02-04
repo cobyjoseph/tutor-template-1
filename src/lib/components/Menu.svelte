@@ -30,7 +30,7 @@
 		</div>
 		<div class="  flex    gap-14  ">
 			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
-			<div class="hidden md:flex">
+			<div class="hidden lg:flex">
 				<a
 					href={'#section2'}
 					class=" customUnderline  font-semibold"

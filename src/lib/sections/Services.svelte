@@ -4,7 +4,7 @@
 	import { fly } from 'svelte/transition';
 	import { sineIn, backIn, backOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
-	
+	import InView from '$lib/components/InView.svelte';
 
 	let visible;
 	console.log('visible', visible);
@@ -28,116 +28,119 @@
 
 	<!-- This flex-col below contains the page title and all it's content -->
 	<!-- landscape:h719:gap-1  -->
-	<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary sm:gap-2 xl:gap-4 ">
-		<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
-		<div
-			class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
-			use:OnPage
-			on:customOnKeyword={({ detail }) => {
-				visible = detail;
-			}}
-		>
-			Services
-		</div>
 
-		<!-- landscape:h719:gap-8  -->
-		<div
-			class=" flex  flex-col  gap-3 sm:gap-5  md:grid landscape:md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
-		>
-			<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
-			<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
+	<InView let:isVisible={visible}>
+		<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary sm:gap-2 xl:gap-4 ">
+			<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 			<div
-				class="  flex flex-col gap-3   text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl xl:gap-10 landscape:h602:gap-3 landscape:h602:text-xl "
+				class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
+			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
+				use:OnPage
+				on:customOnKeyword={({ detail }) => {
+					visible = detail;
+				}}
 			>
-				<div class=" {visible ? 'blurIn delay300 visible' : 'blurIn'} ">
-					<div class=" bulletPseudo flex ">Middle school and high school courses.</div>
+				Services
+			</div>
+
+			<!-- landscape:h719:gap-8  -->
+			<div
+				class=" flex  flex-col  gap-3 sm:gap-5  md:grid landscape:md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
+			>
+				<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
+				<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
+				<div
+					class="  flex flex-col gap-3   text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl xl:gap-10 landscape:h602:gap-3 landscape:h602:text-xl "
+				>
+					<div class=" {visible ? 'blurIn delay300 visible' : 'blurIn'} ">
+						<div class=" bulletPseudo flex ">Middle school and high school courses.</div>
+					</div>
+
+					<div class="  {visible ? 'blurIn delay500 visible' : 'blurIn'} ">
+						<div class=" bulletPseudo flex ">
+							Private, in person sessions in the Kansas City area, or online sessions for students
+							anywhere.
+						</div>
+					</div>
 				</div>
 
-				<div class="  {visible ? 'blurIn delay500 visible' : 'blurIn'} ">
-					<div class=" bulletPseudo flex ">
-						Private, in person sessions in the Kansas City area, or online sessions for students
-						anywhere.
+				<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
+
+				<!-- change these margins on each grid element on differnet sized screens -->
+
+				<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
+				<div
+					class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]  landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
+				>
+					<div
+						class=" math col-span-2 row-span-2 row-start-1 {visible
+							? 'hiddenPreTransition delay700 visible'
+							: 'hiddenPreTransition'}"
+					>
+						<img
+							class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+							src="subjects/math.svg"
+							alt="Student studying math"
+						/>
+					</div>
+
+					<div
+						class="  economics col-span-2 col-start-4 row-span-2 row-start-2   {visible
+							? 'hiddenPreTransition delay900 visible'
+							: 'hiddenPreTransition'}"
+					>
+						<img
+							class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+							src="subjects/economics.svg"
+							alt="Student studying economics"
+						/>
+					</div>
+
+					<div
+						class=" history col-span-2 row-span-2 row-start-3 {visible
+							? 'hiddenPreTransition delay1100 visible'
+							: 'hiddenPreTransition'}"
+					>
+						<img
+							class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+							src="subjects/history.svg"
+							alt="Student studying history"
+						/>
+					</div>
+					<div
+						class=" english col-span-2 col-start-4 row-span-2 row-start-4   {visible
+							? 'hiddenPreTransition delay1300 visible'
+							: 'hiddenPreTransition'}"
+					>
+						<img
+							class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+							src="subjects/english.svg"
+							alt="Student studying english"
+						/>
+					</div>
+					<div
+						class=" science col-span-2 row-span-2 row-start-5 {visible
+							? 'hiddenPreTransition delay1500 visible'
+							: 'hiddenPreTransition'}"
+					>
+						<img
+							class="h-[100px] w-[100px] sm:h-[18vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
+							src="subjects/science.svg"
+							alt="Student studying science"
+						/>
+					</div>
+					<!-- landscape:text-2xl  -->
+					<div
+						class="col-span-2 col-start-3 row-start-6  m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl lg:pl-6 {visible
+							? 'hiddenPreTransition delay1700 visible'
+							: 'hiddenPreTransition'}"
+					>
+						...and more
 					</div>
 				</div>
 			</div>
-
-			<!-- SUBJECT ICONS ------------------------------------------------------------------ -->
-
-			<!-- change these margins on each grid element on differnet sized screens -->
-
-			<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
-			<div
-				class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]  landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
-			>
-				<div
-					class=" math col-span-2 row-span-2 row-start-1 {visible
-						? 'hiddenPreTransition delay700 visible'
-						: 'hiddenPreTransition'}"
-				>
-					<img
-						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
-						src="subjects/math.svg"
-						alt="Student studying math"
-					/>
-				</div>
-
-				<div
-					class="  economics col-span-2 col-start-4 row-span-2 row-start-2   {visible
-						? 'hiddenPreTransition delay900 visible'
-						: 'hiddenPreTransition'}"
-				>
-					<img
-						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
-						src="subjects/economics.svg"
-						alt="Student studying economics"
-					/>
-				</div>
-
-				<div
-					class=" history col-span-2 row-span-2 row-start-3 {visible
-						? 'hiddenPreTransition delay1100 visible'
-						: 'hiddenPreTransition'}"
-				>
-					<img
-						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
-						src="subjects/history.svg"
-						alt="Student studying history"
-					/>
-				</div>
-				<div
-					class=" english col-span-2 col-start-4 row-span-2 row-start-4   {visible
-						? 'hiddenPreTransition delay1300 visible'
-						: 'hiddenPreTransition'}"
-				>
-					<img
-						class="h-[100px] w-[100px] sm:h-[22vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
-						src="subjects/english.svg"
-						alt="Student studying english"
-					/>
-				</div>
-				<div
-					class=" science col-span-2 row-span-2 row-start-5 {visible
-						? 'hiddenPreTransition delay1500 visible'
-						: 'hiddenPreTransition'}"
-				>
-					<img
-						class="h-[100px] w-[100px] sm:h-[18vh] sm:w-[190px] landscape:h602:h-[100px] landscape:h602:w-[100px]  "
-						src="subjects/science.svg"
-						alt="Student studying science"
-					/>
-				</div>
-				<!-- landscape:text-2xl  -->
-				<div
-					class="col-span-2 col-start-3 row-start-6  m-auto font-Caveat text-4xl text-primaryBright sm:text-5xl lg:pl-6 {visible
-						? 'hiddenPreTransition delay1700 visible'
-						: 'hiddenPreTransition'}"
-				>
-					...and more
-				</div>
-			</div>
 		</div>
-	</div>
+	</InView>
 </section>
 
 <!-- style --------------------------------------------------------------------- -->
