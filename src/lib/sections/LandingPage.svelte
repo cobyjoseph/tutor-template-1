@@ -68,7 +68,7 @@
 <style>
 	section {
 		background-image: url(/waves/central-wave.svg);
-		background-position: 3%;
+		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		display: block;
