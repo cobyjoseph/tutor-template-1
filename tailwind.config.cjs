@@ -4,8 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			screens: {
-				
 				'3xl': '1749px',
+				'w799': '799px',
+				'minh820': { 'raw': '(min-height: 820px)' },
 				'h415': { 'raw': '(max-height: 415px)' },
 				'h602': { 'raw': '(max-height: 602px)' },
 				'h769': { 'raw': '(max-height: 769px)' },

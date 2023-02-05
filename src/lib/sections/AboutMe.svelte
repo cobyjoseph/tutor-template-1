@@ -48,7 +48,7 @@
 			/>
 
 			<div
-				class=" mt-[-5.9rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5  lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem] landscape:lg:h415:mt-[-6.5rem]  "
+				class=" mt-[-5.9rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh]  xl:min-h-[80vh] minh820:gap-10 minh820:pt-3 landscape:h415:mt-[-7rem] landscape:lg:h415:mt-[-6.5rem]  "
 			>
 				<div
 					class=" z-20 flex max-w-[42rem] md:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
@@ -59,14 +59,16 @@
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>
-						<div class=" float-right flex h-[4rem] w-[7rem] rounded-full lg:hidden " />
+						<div
+							class=" float-right flex h-[4rem] w-[7rem] rounded-full lg:hidden h415:h-[4.5rem] "
+						/>
 
 						My name is<span class="lg:spanClass">Charlie Smith</span>, and I am a dedicated and
 						experienced private tutor specializing in a range of middle and high school courses. I
 						am passionate about education and am committed to helping students achieve their full
-						potential.<span class=" hidden sm:inline landscape:h415:hidden">
-							With my personalized approach and a focus on building strong foundations, I have a
-							proven track record of helping students improve their grades and reach their goals.</span
+						potential.<span class=" inline minh820:inline landscape:h415:hidden">
+							With my focus on building strong foundations, I have a proven track record of helping
+							students reach their goals.</span
 						>
 					</div>
 				</div>
