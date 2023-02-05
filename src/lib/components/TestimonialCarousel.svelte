@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between p-2 gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
@@ -97,10 +97,10 @@
 					<!-- the negative ml below pushes it to the side of the box, which looks better, but can't be too big a neg ml or it will overlap with the left arrow. -->
 					<div
 						in:blur={{ duration: 600 }}
-						class=" -mt-6  -ml-8 flex  min-w-[13.5rem] shrink-0 items-center gap-1 self-start md:mt-0 md:justify-center md:self-center  landscape:h415:mt-[-1.5rem] landscape:h415:justify-start  landscape:h415:self-start "
+						class=" -mt-6  -ml-8 flex  min-w-[13.5rem] shrink-0 items-center gap-1 self-start md:mt-0 md:justify-center md:self-center  landscape:h415:mt-[-1rem] landscape:h415:justify-start  landscape:h415:self-start "
 					>
 						<img
-							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] landscape:h415:h-[40px] landscape:h415:w-[40px] "
+							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] landscape:h415:mt-[-1rem] landscape:h415:h-[40px] landscape:h415:w-[40px] "
 							src="/testimonials/{testimonial.image}"
 							alt="carousel images of students"
 						/>
@@ -112,7 +112,7 @@
 					</div>
 
 					<div
-						class=" relative flex text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]  landscape:h415:text-[0.92rem]"
+						class=" relative flex text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem] minh820:text-[1.2rem]  landscape:h415:text-[0.92rem]"
 					>
 						{testimonial.quote}
 					</div>
