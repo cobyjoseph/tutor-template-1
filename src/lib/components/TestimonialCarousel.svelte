@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem]  {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 px-[0.1rem] md:gap-3 md:px-3 xl:min-h-[10rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
@@ -90,17 +90,17 @@
 						delay: 0,
 						easing: quintOut
 					}}
-					class="flex flex-col items-center gap-[0.4rem] bg-opacity-30  p-2 md:flex-row md:gap-5"
+					class="flex flex-col items-center gap-[0.4rem] bg-opacity-30 p-2 md:flex-row md:gap-5 landscape:h415:flex-col landscape:h415:gap-[0.4rem]"
 				>
 					<!-- this extra div around the image and name divs is so I can apply shirnk-0 to that whole container around these items, so they don't decrease their width based on the quote. then then the quote is a separate flex item that wraps itself. -->
 
-					<!-- the negative ml below pushes it to the side of the box, which looks better, but can't be too big a neg ml or it will overlap with the left arrow -->
+					<!-- the negative ml below pushes it to the side of the box, which looks better, but can't be too big a neg ml or it will overlap with the left arrow. I ALSO NEED THE NEGATIVE ML for when its small screen and I want it to move outside the box -->
 					<div
 						in:blur={{ duration: 600 }}
-						class=" -mt-6 -ml-8 flex min-w-[13.5rem] shrink-0 items-center gap-1 self-start outline outline-blue-500 md:mt-0 md:justify-center md:place-self-center md:self-center "
+						class=" -mt-6  -ml-8 flex  min-w-[13.5rem] shrink-0 items-center gap-1 self-start md:mt-0  md:justify-center md:place-self-center md:self-center landscape:h415:mt-[-1.5rem]  landscape:h415:self-start "
 					>
 						<img
-							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] "
+							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover md:h-[90px] md:w-[90px] landscape:h415:h-[40px] landscape:h415:w-[40px] "
 							src="/testimonials/{testimonial.image}"
 							alt="carousel images of students"
 						/>
@@ -148,9 +148,6 @@
 		transform: translateX(0);
 	}
 
-	.test {
-		background-color: green;
-	}
 	/* From https://css.glass */
 	.frostedBox {
 		background: rgba(255, 255, 255, 0.45);

@@ -48,7 +48,7 @@
 			/>
 
 			<div
-				class=" mt-[-5.9rem] flex  min-h-[70dvh] min-h-[70vh] flex-col justify-between gap-5 pb-5 outline outline-green-400 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem] landscape:lg:h415:mt-[-6.5rem]  "
+				class=" mt-[-5.9rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5  lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem] landscape:lg:h415:mt-[-6.5rem]  "
 			>
 				<div
 					class=" z-20 flex max-w-[42rem] md:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
