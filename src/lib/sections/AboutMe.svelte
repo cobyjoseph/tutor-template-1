@@ -21,7 +21,7 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
-		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem] "
+		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem] landscape:h602:-left-4 landscape:h602:-top-[1rem] landscape:h602:text-[4.5rem]"
 	>
 		ABOUT ME
 	</div>
@@ -32,8 +32,7 @@
 		<div class="relative flex flex-col px-[8%] text-primary">
 			<div
 				class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem]   "
-				style="transition-delay: 100ms;"
+			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
 				use:OnPage
 				on:customOnKeyword={({ detail }) => {
 					visible = detail;
@@ -59,14 +58,17 @@
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>
-						<div class=" float-right h-[4rem] w-[7rem] rounded-full " />
+						<div class=" float-right flex h-[4rem] w-[7rem] rounded-full " />
 
 						My name is<span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
 						experienced private tutor specializing in a range of middle and high school courses. I
 						am passionate about education and am committed to helping students achieve their full
-						potential. With my personalized approach and a focus on building strong foundations, I
-						have a proven track record of helping students improve their grades and reach their
-						goals.
+						potential.
+
+						<div class="xs:flex hidden landscape:h415:hidden">
+							With my personalized approach and a focus on building strong foundations, I have a
+							proven track record of helping students improve their grades and reach their goals.
+						</div>
 					</div>
 				</div>
 
@@ -192,12 +194,17 @@
 		}
 	}
 
-	@media (min-width: 640px) {
+	@media (orientation: portrait) and (min-width: 640px) {
 		.titlePseudo::after {
-			width: 17.4rem;
+			width: 17.5rem;
 		}
 	}
 
+	@media (orientation: landscape) and (min-width: 640px) and (min-height: 602px) {
+		.titlePseudo::after {
+			width: 17.5rem;
+		}
+	}
 	/* WHY ISN'T THIS ONE INCLUSIVE????? */
 	@media (min-width: 640px) {
 		.picContainer {
