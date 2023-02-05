@@ -37,7 +37,7 @@
 	typing2();
 </script>
 
-<div class="text-4xl sm:text-5xl landscape:h602:sm:text-4xl ">
+<div class="text-4xl sm:text-5xl xl:text-6xl 2xl:text-[4.5rem] landscape:h602:sm:text-4xl ">
 	{#if pause}
 		<div
 			class="gradientText  after:pl-1 after:after:font-bold after:text-[#544E4E] after:content-['|'] "
@@ -68,16 +68,16 @@
 		/* Create the gradient. */
 		background-image: linear-gradient(
 			45deg,
-			#2a2aac 16.666%,
-			#cc3232 16.666%,
-			#cc3232 33.333%,
-			#f6991b 33.333%,
-			#f6991b 50%,
-			#f6895a 50%,
-			#f6895a 66.666%,
-			#c8c0b2 66.666%,
-			#c8c0b2 83.333%,
-			#c8c0b2 83.333%
+			#2a2aac 13%,
+			#cc3232 13%,
+			#cc3232 26%,
+			#f6991b 26%,
+			#f6991b 39%,
+			#f6895a 39%,
+			#f6895a 52%,
+			#c8c0b2 52%,
+			#c8c0b2 65%,
+			#c8c0b2 65%
 		);
 
 		/* 

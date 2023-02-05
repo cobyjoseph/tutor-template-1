@@ -17,20 +17,20 @@
 	}
 </script>
 
-<div class="  mt-6 w-full items-start justify-center  ">
+<div class="  mt-6 w-full items-start justify-center lg:mt-10  ">
 	<div
-		class=" flex w-full items-center justify-between rounded-lg font-Heebo  text-xl text-primaryBright "
+		class=" flex w-full items-center justify-between rounded-lg font-Heebo  text-xl text-primaryBright  xl:text-4xl "
 	>
 		<div class="flex items-center gap-4">
 			<img class="w-7 sm:w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
 
-			<div class=" relative font-Caveat text-2xl font-bold text-secondary md:text-4xl  ">
+			<div class=" relative font-Caveat text-2xl font-bold text-secondary md:text-5xl   ">
 				Rise tutoring
 			</div>
 		</div>
-		<div class="  flex    gap-14  ">
+		<div class="  flex  gap-20  ">
 			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
-			<div class="hidden gap-8 lg:flex landscape:h1025:md:hidden">
+			<div class="landscape:h769::md:hidden hidden gap-14 md:flex">
 				<a
 					href={'#section2'}
 					class=" customUnderline   font-semibold"
@@ -42,11 +42,7 @@
 					class=" customUnderline  font-semibold"
 					on:click|preventDefault={scrollIntoView}>About me</a
 				>
-				<a
-					href={'#section4'}
-					class=" customUnderline  font-semibold"
-					on:click|preventDefault={scrollIntoView}>Schedule</a
-				>
+
 				<a
 					href={'#section5'}
 					class=" customUnderline  font-semibold"
@@ -54,7 +50,7 @@
 				>
 			</div>
 
-			<div class="lg:hidden  landscape:h1025:lg:block">
+			<div class="landscape:h769::md:flex flex gap-8 md:hidden">
 				{#if !showMenu}
 					<button on:click={handleMenu} in:blur>
 						<svg
@@ -105,12 +101,7 @@
 								on:click|preventDefault={scrollIntoView}
 								>About me
 							</a>
-							<a
-								href={'#section4'}
-								class=" underlineMenu  font-semibold"
-								on:click|preventDefault={scrollIntoView}
-								>Schedule
-							</a>
+
 							<a
 								href={'#section5'}
 								class=" underlineMenu  font-semibold"

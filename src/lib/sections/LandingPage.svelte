@@ -24,29 +24,27 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[32rem] w-full" />
 
 	<div
-		class="  flex min-h-screen flex-col gap-[12vh] px-[7%] sm:gap-[10vh] landscape:h1025:gap-[8vh] landscape:lg:h1025:gap-[18vh] "
+		class="  flex min-h-screen flex-col gap-[12vh] px-[7%] sm:gap-[10vh] landscape:gap-[8vh] landscape:lg:gap-[18vh] "
 	>
 		<div class="relative z-[300] flex w-full flex-row place-self-start">
 			<Menu />
 		</div>
 
-		<div class=" flex flex-col gap-4 landscape:h1025:grid landscape:h1025:grid-cols-4">
-			<div class=" relative z-50 bg-clip-text font-extrabold landscape:h1025:col-span-4 ">
+		<div class=" flex flex-col gap-4 landscape:grid landscape:grid-cols-4">
+			<div class=" relative z-50 bg-clip-text font-extrabold landscape:col-span-4 ">
 				<TypingAnimation />
 			</div>
 
 			<img
-				class=" relative z-20  flex max-w-[100%] -scale-x-100 self-end  landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:left-1/2 landscape:h415:h-[13rem] landscape:h415:w-[13rem] landscape:h415:-translate-x-[12rem] landscape:h1025:col-span-2 landscape:h1025:col-start-3 landscape:h1025:mt-[-5rem] landscape:h1025:w-full "
+				class=" landscape::w-full relative  z-20 flex max-w-[100%] -scale-x-100  self-end landscape:col-span-2 landscape:col-start-3 landscape:mt-[-5rem] landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:left-1/2 landscape:h415:h-[13rem] landscape:h415:w-[13rem] landscape:h415:-translate-x-[12rem] "
 				src="other/tutor-graphic-1.svg"
 				alt="Student working at computer"
 			/>
 			{#if mountLandingAnimation}
-				<div
-					class=" pt-2 landscape:h1025:col-span-2 landscape:h1025:col-start-1 landscape:h1025:row-start-2"
-				>
+				<div class=" pt-2 landscape:col-span-2 landscape:col-start-1 landscape:row-start-2">
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-						class=" text-xl text-primary md:text-2xl landscape:h769:md:text-lg "
+						class=" landscape:h602::md:text-lg text-xl text-primary md:text-2xl lg:text-3xl xl:text-4xl "
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
@@ -54,7 +52,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  buttonUnderline bg-clip relative z-40 inline-block pt-3 text-4xl font-bold text-primaryBright sm:pt-6 md:text-5xl md:text-5xl landscape:h415:md:text-xl landscape:h769:md:text-3xl    "
+						class="  buttonUnderline bg-clip relative z-40 inline-block pt-3 text-4xl font-bold text-primaryBright sm:pt-6 md:pt-[3rem] md:text-5xl md:text-5xl lg:text-6xl landscape:h415:md:text-xl landscape:h602:md:text-3xl    "
 					>
 						See services
 					</a>
@@ -78,31 +76,6 @@
 		background-image: linear-gradient(120deg, #cc3232, #f6991b 100%);
 	}
 
-	.gradientText {
-		background-color: #ca4246;
-
-		/* Create the gradient. */
-		background-image: linear-gradient(
-			45deg,
-			#2a2aac 16.666%,
-			#cc3232 16.666%,
-			#cc3232 33.333%,
-			#f6991b 33.333%,
-			#f6991b 50%,
-			#f6895a 50%,
-			#f6895a 66.666%,
-			#c8c0b2 66.666%,
-			#c8c0b2 83.333%,
-			#c8c0b2 83.333%
-		);
-
-		background-size: 100%;
-		background-repeat: repeat;
-
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-
 	.buttonUnderline {
 		position: relative;
 		z-index: 50;
@@ -114,16 +87,16 @@
 		/* Create the gradient. */
 		background-image: linear-gradient(
 			45deg,
-			#2a2aac 5%,
-			#cc3232 5%,
-			#cc3232 10%,
-			#f6991b 10%,
-			#f6991b 20%,
-			#f6895a 20%,
-			#f6895a 30%,
-			#c8c0b2 30%,
-			#c8c0b2 40%,
-			#c8c0b2 40%
+			#2a2aac 15%,
+			#cc3232 15%,
+			#cc3232 30%,
+			#f6991b 30%,
+			#f6991b 45%,
+			#f6895a 45%,
+			#f6895a 60%,
+			#c8c0b2 60%,
+			#c8c0b2 75%,
+			#c8c0b2 75%
 		);
 
 		background-size: 100%;
@@ -159,10 +132,10 @@
 			#cc3232 16%,
 			#cc3232 33%,
 			#f6991b 33%,
-			#f6991b 70%,
-			#f6895a 70%,
-			#f6895a 96%,
-			#c8c0b2 96%,
+			#f6991b 67%,
+			#f6895a 67%,
+			#f6895a 80%,
+			#c8c0b2 80%,
 			#c8c0b2 98%,
 			#c8c0b2 98%
 		);
