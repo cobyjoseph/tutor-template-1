@@ -294,11 +294,11 @@
 	}
 
 	.delay1500 {
-		transition-delay: 1300ms;
+		transition-delay: 1500ms;
 	}
 
 	.delay1700 {
-		transition-delay: 1300ms;
+		transition-delay: 1700ms;
 	}
 
 	/* MEDIA QUERIES ------------------------------------------------ */

@@ -24,13 +24,18 @@
 		<div class="flex items-center gap-4">
 			<img class="w-7 sm:w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
 
-			<div class=" relative font-Caveat text-2xl font-bold text-secondary md:text-5xl   ">
+			<div
+				class=" relative font-Caveat text-2xl font-bold text-secondary md:text-5xl landscape:h415:text-2xl  "
+			>
 				Rise tutoring
 			</div>
 		</div>
-		<div class="  flex  gap-20  ">
+
+		<!-- THIS IS FULL MENU-->
+
+		<div class="  flex  gap-20   ">
 			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
-			<div class="landscape:h769::md:hidden hidden gap-14 md:flex">
+			<div class="hidden gap-14 lg:flex ">
 				<a
 					href={'#section2'}
 					class=" customUnderline   font-semibold"
@@ -50,7 +55,8 @@
 				>
 			</div>
 
-			<div class="landscape:h769::md:flex flex gap-8 md:hidden">
+			<!-- THIS IS MENU ICON -->
+			<div class="flex gap-8  lg:hidden ">
 				{#if !showMenu}
 					<button on:click={handleMenu} in:blur>
 						<svg

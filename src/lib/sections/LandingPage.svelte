@@ -36,15 +36,17 @@
 			</div>
 
 			<img
-				class=" landscape::w-full relative  z-20 flex max-w-[100%] -scale-x-100  self-end landscape:col-span-2 landscape:col-start-3 landscape:mt-[-5rem] landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:right-[5rem] landscape:h415:h-[13rem] landscape:h415:w-[15rem]  "
+				class=" landscape::w-full relative  z-20 flex max-w-[100%] -scale-x-100  self-end landscape:col-span-2 landscape:col-start-3 landscape:mt-[-5rem] landscape:h415:absolute landscape:h415:top-1/2 landscape:h415:right-[4rem] landscape:h415:h-[13rem] landscape:h415:w-[15rem] landscape:h415:sm:w-[20rem]  "
 				src="other/tutor-graphic-1.svg"
 				alt="Student working at computer"
 			/>
 			{#if mountLandingAnimation}
-				<div class=" pt-2 landscape:col-span-2 landscape:col-start-1 landscape:row-start-2">
+				<div
+					class=" pt-4 landscape:col-span-2  landscape:col-start-1 landscape:row-start-2 landscape:h415:pt-2"
+				>
 					<div
 						transition:fly={{ duration: 400, delay: 3500, easing: sineIn, x: -30 }}
-						class=" landscape:h602::md:text-lg text-xl text-primary md:text-2xl lg:text-3xl xl:text-4xl landscape:h415:text-sm "
+						class=" text-xl text-primary md:text-2xl lg:text-3xl xl:text-4xl landscape:h415:text-sm landscape:h602:md:text-lg "
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
 					</div>
@@ -52,7 +54,7 @@
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
 						transition:fly={{ duration: 200, delay: 4200, easing: sineIn, y: 30 }}
-						class="  buttonUnderline bg-clip relative z-40 inline-block pt-3 text-4xl font-bold text-primaryBright sm:pt-6 md:pt-[3rem] md:text-5xl  lg:text-6xl landscape:h415:text-2xl landscape:h602:md:text-3xl    "
+						class="  buttonUnderline bg-clip relative z-40 inline-block pt-7 text-4xl font-bold text-primaryBright sm:pt-6 md:pt-[3rem] md:text-5xl  lg:text-6xl landscape:h415:pt-3 landscape:h415:text-2xl landscape:h602:md:text-3xl    "
 					>
 						See services
 					</a>
