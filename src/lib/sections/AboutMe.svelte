@@ -12,7 +12,7 @@
 	<AboutMeBlobs />
 
 	<!-- container for profile picture background -->
-	<div class="picContainer invisible md:visible " />
+	<div class="picContainer invisible lg:visible " />
 
 	<!-- EVERYTHING BELOW IS ABSOLUTE -------------------------------------------------------------------------------------->
 	<div
@@ -21,7 +21,7 @@
 	<div class="layeredWave waveStyle absolute bottom-0 h-[28rem] w-full lg:h-[25rem] xl:h-[32rem]" />
 
 	<div
-		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] md:text-[10rem] landscape:h602:-left-4 landscape:h602:-top-[1rem] landscape:h602:text-[4.5rem]"
+		class="font-caveat z-5 absolute -left-4 -top-[1rem]  text-[4.5rem] font-bold text-shading sm:-left-9 sm:-top-[2.5rem] sm:text-[8rem] lg:text-[10rem] landscape:h602:-left-4 landscape:h602:-top-[1rem] landscape:h602:text-[4.5rem]"
 	>
 		ABOUT ME
 	</div>
@@ -29,10 +29,10 @@
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
 	<InView let:isVisible={visible}>
-		<div class="relative flex flex-col px-[8%] text-primary">
+		<div class="relative flex flex-col px-[8%] text-primary sm:gap-2 xl:gap-4 ">
 			<div
 				class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
-			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl md:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
+			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl lg:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
 				use:OnPage
 				on:customOnKeyword={({ detail }) => {
 					visible = detail;
@@ -42,33 +42,32 @@
 			</div>
 
 			<img
-				class="z-40 -mt-[5rem] flex aspect-auto w-[8rem] self-end  md:hidden"
+				class="z-40 -mt-[5.3rem] flex aspect-auto w-[8rem] self-end  lg:hidden"
 				src="other/headshot-cut.png"
 				alt="tutor headshot"
 			/>
 
 			<div
-				class="  -mt-[6.5rem]  flex min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem]  "
+				class=" mt-[-5.9rem] flex  min-h-[70dvh] min-h-[70vh] flex-col justify-between gap-5 pb-5 outline outline-green-400 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem] landscape:lg:h415:mt-[-6.5rem]  "
 			>
 				<div
-					class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
+					class=" z-20 flex max-w-[42rem] md:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 				>
+					<!-- don't put flex on the container below. It messes up the span elements in it -->
 					<div
-						class="lessFrostedBox z-1 relative px-[1.5rem] py-[0.9rem] text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem]  2xl:text-[1.6rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.92rem] {visible
+						class=" lessFrostedBox z-1 relative  px-[1.5rem] py-[0.9rem] text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem]  2xl:text-[1.6rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.92rem] {visible
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>
-						<div class=" float-right flex h-[4rem] w-[7rem] rounded-full " />
+						<div class=" float-right flex h-[4rem] w-[7rem] rounded-full lg:hidden " />
 
-						My name is<span class="md:spanClass">Charlie Smith</span>, and I am a dedicated and
+						My name is<span class="lg:spanClass">Charlie Smith</span>, and I am a dedicated and
 						experienced private tutor specializing in a range of middle and high school courses. I
 						am passionate about education and am committed to helping students achieve their full
-						potential.
-
-						<div class="xs:flex hidden landscape:h415:hidden">
+						potential.<span class=" hidden sm:inline landscape:h415:hidden">
 							With my personalized approach and a focus on building strong foundations, I have a
-							proven track record of helping students improve their grades and reach their goals.
-						</div>
+							proven track record of helping students improve their grades and reach their goals.</span
+						>
 					</div>
 				</div>
 

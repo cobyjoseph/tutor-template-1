@@ -43,12 +43,12 @@
 				Services
 			</div>
 
-			<!-- landscape:h719:gap-8  -->
+		
 			<div
 				class=" flex  flex-col  gap-3 sm:gap-5  md:grid landscape:md:grid-cols-2 landscape:h602:flex landscape:h602:gap-8  "
 			>
 				<!-- I put the gap at this level below because that contains the two bullet points, and I want the gap between them -->
-				<!-- landscape:h719:gap-3 landscape:h719:text-xl -->
+				
 				<div
 					class="  flex flex-col gap-3   text-xl font-semibold text-primary sm:gap-6 sm:text-3xl lg:text-4xl xl:gap-10 landscape:h602:gap-3 landscape:h602:text-xl "
 				>
