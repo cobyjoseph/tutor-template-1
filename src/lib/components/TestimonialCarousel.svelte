@@ -111,7 +111,7 @@
 					</div>
 
 					<div
-						class=" relative -mt-1 flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]"
+						class=" relative -mt-1 flex pt-2 text-[1rem] italic md:pt-0 md:pr-5  xl:text-[1.3rem]  landscape:h415:text-[0.92rem]"
 					>
 						{testimonial.quote}
 					</div>

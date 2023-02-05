@@ -10,7 +10,7 @@
 
 	onMount(() => {
 		const root = null;
-		const rootMargin = `0px 0px -100px 0px`;
+		const rootMargin = `0px 0px -10px 0px`;
 		const options = { root, rootMargin };
 
 		const observer = new IntersectionObserver(handleIntersect, options);

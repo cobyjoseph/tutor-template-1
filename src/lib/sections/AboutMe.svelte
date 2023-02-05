@@ -48,13 +48,13 @@
 			/>
 
 			<div
-				class="  -mt-[6.5rem] flex min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh]  "
+				class="  -mt-[6.5rem]  flex min-h-[70dvh] min-h-[70vh] flex-col gap-5 pt-5 lg:min-h-[76dvh] lg:min-h-[76vh] xl:min-h-[80dvh] xl:min-h-[80vh] landscape:h415:mt-[-7rem]  "
 			>
 				<div
 					class=" z-20 max-w-[42rem] lg:max-w-full  xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 				>
 					<div
-						class="lessFrostedBox z-1 relative text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem] {visible
+						class="lessFrostedBox z-1 relative px-[1.5rem] py-[0.9rem] text-[1rem] lg:text-[1.4rem] xl:text-[1.4rem]  2xl:text-[1.6rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.92rem] {visible
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>
@@ -133,10 +133,6 @@
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border: 0.05rem solid rgba(255, 255, 255, 0.2);
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-		padding-top: 0.9rem;
-		padding-bottom: 0.9rem;
 	}
 
 	.blurIn {
@@ -179,10 +175,7 @@
 	@media (min-width: 640px) {
 		.lessFrostedBox {
 			background: rgba(255, 255, 255, 0.4);
-			padding-left: 2rem;
-			padding-right: 2rem;
-			padding-top: 1rem;
-			padding-bottom: 1rem;
+
 			backdrop-filter: blur(10px);
 			-webkit-backdrop-filter: blur(10px);
 		}
