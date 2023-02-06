@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-5 landscape:h415:gap-1 landscape:h415:px-[0.3rem] {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-5 landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
@@ -107,7 +107,7 @@
 					</div>
 
 					<div
-						class=" relative  mr-0  flex text-[1rem] italic lg:mr-[-2.5rem] lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:pt-0 xl:text-[1.3rem]  md:minh600:text-[1.2rem] minh820:text-[1.13rem]  minh962:text-[1.55rem] minh962:xl:text-[1.6rem] landscape:h415:text-[0.92rem]"
+						class=" relative  mr-0  flex text-[1rem] italic lg:mr-[-2.5rem] lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:pt-0 xl:text-[1.3rem]  md:minh600:text-[1.2rem] minh820:text-[1.13rem] minh820:2xl:text-[1.6rem]  minh962:text-[1.55rem] minh962:xl:text-[1.6rem] landscape:h415:text-[0.92rem]"
 					>
 						{testimonial.quote}
 					</div>
