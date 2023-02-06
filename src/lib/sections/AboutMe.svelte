@@ -29,7 +29,7 @@
 	<!-- EVERYTHING ABOVE IS ABSOLUTE -------------------------------------------------------------------------------------->
 
 	<InView let:isVisible={visible}>
-		<div class="relative flex flex-col px-[8%] text-primary sm:gap-2 xl:gap-4 ">
+		<div class="relative flex flex-col px-[8%] text-primary sm:gap-2 xl:gap-4  ">
 			<div
 				class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
 			titlePseudo z-30 pt-[2rem] text-3xl font-bold text-primaryBright sm:text-6xl lg:pt-[3.6rem] landscape:h602:pt-[2rem] landscape:h602:text-3xl  "
@@ -48,10 +48,10 @@
 			/>
 
 			<div
-				class=" mt-[-5.6rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh]  xl:min-h-[80vh] minh820:gap-10  minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem]  "
+				class=" mt-[-5.6rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5 lg:mt-1 lg:min-h-[82dvh]  lg:min-h-[82vh] xl:min-h-[80dvh]  xl:min-h-[80vh] minh820:gap-10  minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem] outline-green-400 outline  "
 			>
 				<div
-					class=" z-20 flex max-w-[42rem] md:max-w-full lg:max-w-[33rem] xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
+					class=" z-20 flex max-w-[42rem] md:max-w-full lg:max-w-[29rem] xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 				>
 					<!-- don't put flex on the container below. It messes up the span elements in it -->
 					<div
@@ -208,7 +208,7 @@
 
 	@media (min-width: 1024px) {
 		.picContainer {
-			width: 50%;
+			width: 60%;
 		}
 	}
 
