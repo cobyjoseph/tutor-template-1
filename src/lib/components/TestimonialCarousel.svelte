@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-5 landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1  px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-[0.8rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
@@ -95,7 +95,7 @@
 						class="  -mt-6 -ml-4  flex min-w-[13.5rem] shrink-0 items-center gap-1 self-start  lg:mt-0 lg:justify-center lg:self-center  landscape:h415:mt-[-1rem] landscape:h415:justify-start  landscape:h415:self-start  "
 					>
 						<img
-							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover lg:h-[90px] lg:w-[90px] minh820:mt-[-2rem] minh820:h-[60px] minh820:w-[60px] minh820:lg:h-[75px] minh820:lg:w-[75px]  minh820:xl:h-[90px] minh820:xl:w-[90px] landscape:h415:mt-[-1rem] landscape:h415:h-[40px]  landscape:h415:w-[40px] "
+							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover lg:h-[90px] lg:w-[90px] minh820:mt-[-2rem] minh820:h-[60px] minh820:w-[60px] minh820:lg:h-[75px] minh820:lg:w-[75px]  minh820:xl:h-[90px] minh820:xl:w-[90px] landscape:h415:mt-[-0.7rem] landscape:h415:h-[40px]  landscape:h415:w-[40px] "
 							src="/testimonials/{testimonial.image}"
 							alt="carousel images of students"
 						/>

@@ -61,7 +61,7 @@
 							class=" float-right flex h-[4.6rem] w-[7rem] rounded-full lg:h-[7rem] lg:w-[14rem] 2xl:hidden h415:h-[4.5rem] "
 						/>
 
-						My name is<span class="lg:spanClass"> Charlie Smith</span>, and I am a dedicated and
+						My name is <span class="lg:spanClass"> Charlie Smith</span>, and I am a dedicated and
 						experienced private tutor specializing in a range of middle and high school courses. I
 						am passionate about education and am committed to helping students achieve their full
 						potential.
