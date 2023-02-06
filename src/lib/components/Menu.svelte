@@ -49,7 +49,7 @@
 				>
 
 				<a
-					href={'#section5'}
+					href={'#section4'}
 					class=" customUnderline  font-semibold"
 					on:click|preventDefault={scrollIntoView}>Contact</a
 				>
@@ -109,7 +109,7 @@
 							</a>
 
 							<a
-								href={'#section5'}
+								href={'#section4'}
 								class=" underlineMenu  font-semibold"
 								on:click|preventDefault={scrollIntoView}
 								>Contact

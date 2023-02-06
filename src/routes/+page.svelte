@@ -2,9 +2,9 @@
 	import Services from '$lib/sections/Services.svelte';
 	import AboutMe from '$lib/sections/AboutMe.svelte';
 	import LandingPage from '$lib/sections/LandingPage.svelte';
-	import Schedule from '$lib/sections/Schedule.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import { onMount } from 'svelte';
+	import Contact from '$lib/sections/Contact.svelte';
 
 	let mountPassThrough = false;
 
@@ -16,7 +16,7 @@
 <div class="snap-container">
 	<div class="snap-item">
 		<LandingPage mountLandingAnimation={mountPassThrough} />
-	</div> 
+	</div>
 	<div id="section2" class="snap-item">
 		<Services />
 	</div>
@@ -24,7 +24,7 @@
 		<AboutMe />
 	</div>
 	<div id="section4" class="snap-item">
-		<Schedule />
+		<Contact />
 	</div>
 </div>
 
