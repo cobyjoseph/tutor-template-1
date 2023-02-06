@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] lg:gap-3 lg:px-3 xl:min-h-[10rem] minh820:p-5 landscape:h415:gap-1 landscape:h415:px-[0.3rem] {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1 p-2 px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-5 landscape:h415:gap-1 landscape:h415:px-[0.3rem] {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
@@ -92,10 +92,10 @@
 					<!-- the negative ml below pushes it to the side of the box, which looks better, but can't be too big a neg ml or it will overlap with the left arrow. -->
 					<div
 						in:blur={{ duration: 600 }}
-						class=" outline-blue  -mt-6 -ml-4  flex min-w-[13.5rem] shrink-0 items-center gap-1 self-start outline lg:mt-0 lg:justify-center lg:self-center  landscape:h415:mt-[-1rem] landscape:h415:justify-start  landscape:h415:self-start  "
+						class="  -mt-6 -ml-4  flex min-w-[13.5rem] shrink-0 items-center gap-1 self-start  lg:mt-0 lg:justify-center lg:self-center  landscape:h415:mt-[-1rem] landscape:h415:justify-start  landscape:h415:self-start  "
 					>
 						<img
-							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover lg:h-[90px] lg:w-[90px] minh820:mt-[-2rem] minh820:h-[60px] minh820:w-[60px] landscape:h415:mt-[-1rem] landscape:h415:h-[40px]  landscape:h415:w-[40px] "
+							class="h-[40px] w-[40px]   shrink-0 overflow-hidden rounded-full object-cover lg:h-[90px] lg:w-[90px] minh820:mt-[-2rem] minh820:h-[60px] minh820:w-[60px] minh820:lg:h-[75px] minh820:lg:w-[75px]  minh820:xl:h-[90px] minh820:xl:w-[90px] landscape:h415:mt-[-1rem] landscape:h415:h-[40px]  landscape:h415:w-[40px] "
 							src="/testimonials/{testimonial.image}"
 							alt="carousel images of students"
 						/>
@@ -107,7 +107,7 @@
 					</div>
 
 					<div
-						class=" relative -mr-10 flex text-[1rem] italic lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:text-[1.3rem]  minh820:text-[1.13rem] minh950:text-[1.6rem] landscape:h415:text-[0.92rem]"
+						class=" relative  mr-0  flex text-[1rem] italic lg:mr-[-2.5rem] lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:pt-0 xl:text-[1.3rem]  md:minh600:text-[1.2rem] minh820:text-[1.13rem]  minh962:text-[1.55rem] minh962:xl:text-[1.6rem] landscape:h415:text-[0.92rem]"
 					>
 						{testimonial.quote}
 					</div>
@@ -198,7 +198,7 @@
 		.pseudoQuote::before {
 			font-size: 5rem;
 			top: -1rem;
-			left: 15rem;
+			left: 13.5rem;
 		}
 	}
 

@@ -5,9 +5,12 @@ module.exports = {
 		extend: {
 			screens: {
 				'3xl': '1749px',
+				'w590': '590px',
 				'w799': '799px',
+				'minh600': { 'raw': '(min-height: 600px)' },
 				'minh820': { 'raw': '(min-height: 820px)' },
-				'minh950': { 'raw': '(min-height: 950px)' },
+				'minh962': { 'raw': '(min-height: 962px)' },
+				'minh1079': { 'raw': '(min-height: 1079px)' },
 				'h415': { 'raw': '(max-height: 415px)' },
 				'h602': { 'raw': '(max-height: 602px)' },
 				'h769': { 'raw': '(max-height: 769px)' },
