@@ -54,7 +54,7 @@
 
 <InView let:isVisible={visible}>
 	<div
-		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between gap-1  px-[0.1rem] lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-[0.8rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
+		class="frostedBox relative z-10 mt-auto flex min-h-[7rem] justify-between  gap-1 px-[0.1rem]  lg:gap-1 lg:px-3 xl:min-h-[10rem] minh820:p-[0.8rem] landscape:h415:min-h-[2rem] landscape:h415:gap-1 landscape:h415:px-[0.3rem]  {visible
 			? 'blurIn delay100 visible'
 			: 'blurIn'}  "
 	>
