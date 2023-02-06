@@ -7,6 +7,7 @@ module.exports = {
 				'3xl': '1749px',
 				'w799': '799px',
 				'minh820': { 'raw': '(min-height: 820px)' },
+				'minh950': { 'raw': '(min-height: 950px)' },
 				'h415': { 'raw': '(max-height: 415px)' },
 				'h602': { 'raw': '(max-height: 602px)' },
 				'h769': { 'raw': '(max-height: 769px)' },

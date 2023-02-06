@@ -48,14 +48,14 @@
 			/>
 
 			<div
-				class=" mt-[-5.6rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh]  xl:min-h-[80vh] minh820:gap-10 minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem]  "
+				class=" mt-[-5.6rem] flex  min-h-[70dvh] min-h-[70vh]  flex-col justify-between gap-5 pb-5 lg:mt-1 lg:min-h-[76dvh]  lg:min-h-[76vh] xl:min-h-[80dvh]  xl:min-h-[80vh] minh820:gap-10  minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem]  "
 			>
 				<div
 					class=" z-20 flex max-w-[42rem] md:max-w-full lg:max-w-[33rem] xl:max-w-[42.5rem] 2xl:max-w-[46rem]  3xl:max-w-[50rem] "
 				>
 					<!-- don't put flex on the container below. It messes up the span elements in it -->
 					<div
-						class=" lessFrostedBox z-1 relative px-[1.5rem] py-[0.5rem] text-[1rem]   lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem] minh820:py-[0.9rem]  minh820:text-[1.13rem] landscape:py-[0.9rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.88rem] landscape:h415:w799:px-[1.4rem] landscape:h415:w799:text-[1.2rem] {visible
+						class=" lessFrostedBox z-1 relative px-[1.5rem] py-[0.5rem] text-[1rem]   lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem] minh820:py-[0.9rem] minh820:text-[1.13rem] minh950:text-[1.6rem] landscape:py-[0.9rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.88rem] landscape:h415:w799:px-[1.4rem] landscape:h415:w799:text-[1.2rem] {visible
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>
