@@ -22,7 +22,7 @@
 	<!-- landscape:h719:gap-1  -->
 
 	<InView let:isVisible={visible}>
-		<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary sm:gap-2 xl:gap-4 ">
+		<div class=" relative flex flex-col gap-1 pl-[8%] pr-[6%] text-primary ">
 			<!-- only two things at this top level, the page title and a div that holds the bullet points and the graphic -->
 			<div
 				class="{visible ? 'blurIn delay100 visible' : 'blurIn'} 
@@ -34,6 +34,54 @@
 			>
 				Contact
 			</div>
+
+			<div class="pt-3 text-lg">
+				Get in touch using the form below or reach me at <a
+					href="mailto:coby.joseph@gmail.com"
+					class="text-primaryBright">coby.joseph@gmail.com</a
+				>.
+			</div>
+
+			<form
+				class="mr-8 flex max-w-[25rem] flex-col mt-4 flex-nowrap gap-4 text-lg text-primary "
+				method="POST"
+				action="?/contactAction"
+			>
+				<div class="flex flex-col">
+					<div class="text-xl font-semibold text-primaryBright">Name</div>
+					<input
+						class="rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
+						type="text"
+						name="name"
+						placeholder="Full name"
+						required
+					/>
+				</div>
+				<div class="flex flex-col">
+					<div class="text-xl font-semibold text-primaryBright">Email</div>
+					<input
+						class="rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
+						type="email"
+						name="email"
+						placeholder="Email"
+						required
+					/>
+				</div>
+				<div class="flex flex-col">
+					<div class="text-xl font-semibold text-primaryBright">Message</div>
+					<textarea
+						name="message"
+						rows="5"
+						class="rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
+						placeholder="Send me more information - or just let me know you'd like to chat."
+					/>
+					<button
+						type="submit"
+						class="mt-5 flex shrink-0 justify-center rounded-lg bg-primaryBright p-3 font-semibold text-white"
+						>Send</button
+					>
+				</div>
+			</form>
 		</div>
 	</InView>
 </section>
