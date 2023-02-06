@@ -11,13 +11,13 @@
 	let visible;
 	let stopCar = true;
 
-	// onMount(async () => {
-	// 	if (stopCar) {
-	// 		setInterval(autoScroll, 8000);
-	// 	} else if (!stopCar) {
-	// 		clearInterval(autoScroll);
-	// 	}
-	// });
+	onMount(async () => {
+		if (stopCar) {
+			setInterval(autoScroll, 8000);
+		} else if (!stopCar) {
+			clearInterval(autoScroll);
+		}
+	});
 
 	// have a variable that settimeout in addition to interval, and after every interval set back the initial state and reset
 
@@ -107,7 +107,7 @@
 					</div>
 
 					<div
-						class=" relative  mr-0  flex text-[1rem] italic lg:mr-[-2.5rem] lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:pt-0 xl:text-[1.3rem]  md:minh600:text-[1.2rem] minh820:text-[1.13rem] minh820:2xl:text-[1.6rem]  minh962:text-[1.55rem] minh962:xl:text-[1.6rem] landscape:h415:text-[0.92rem]"
+						class=" relative  mr-0  flex text-[1rem] italic lg:mr-[-2.5rem] lg:pt-0 lg:pr-5 lg:text-[1.2rem] xl:pt-0 xl:text-[1.3rem]  md:minh600:text-[1.2rem] minh820:text-[1.13rem] minh820:2xl:text-[1.6rem]  minh962:text-[1.55rem] minh962:xl:text-[1.6rem] landscape:h415:text-[0.72rem]"
 					>
 						{testimonial.quote}
 					</div>

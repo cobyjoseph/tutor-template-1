@@ -35,7 +35,7 @@
 				Contact
 			</div>
 
-			<div class="pt-3 text-lg">
+			<div class="pt-3 text-lg lg:pt-6 landscape:h415:text-base">
 				Get in touch using the form below or reach me at <a
 					href="mailto:coby.joseph@gmail.com"
 					class="text-primaryBright">coby.joseph@gmail.com</a
@@ -43,11 +43,11 @@
 			</div>
 
 			<form
-				class="mr-8 flex max-w-[25rem] flex-col mt-4 flex-nowrap gap-4 text-lg text-primary "
+				class="mr-8 mt-4 flex max-w-[25rem] flex-col flex-nowrap gap-4 text-primary landscape:h415:grid landscape:h415:max-w-[45rem] landscape:h415:grid-cols-2 landscape:h415:gap-2 landscape:h415:text-base "
 				method="POST"
 				action="?/contactAction"
 			>
-				<div class="flex flex-col">
+				<div class="flex flex-col landscape:h415:w-full">
 					<div class="text-xl font-semibold text-primaryBright">Name</div>
 					<input
 						class="rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
@@ -67,20 +67,24 @@
 						required
 					/>
 				</div>
-				<div class="flex flex-col">
-					<div class="text-xl font-semibold text-primaryBright">Message</div>
-					<textarea
-						name="message"
-						rows="5"
-						class="rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
-						placeholder="Send me more information - or just let me know you'd like to chat."
-					/>
-					<button
-						type="submit"
-						class="mt-5 flex shrink-0 justify-center rounded-lg bg-primaryBright p-3 font-semibold text-white"
-						>Send</button
-					>
+				<div class="flex w-full flex-col ">
+					<div class="">
+						<div class="text-xl font-semibold text-primaryBright landscape:h415:w-full">
+							Message
+						</div>
+						<textarea
+							name="message"
+							rows="3"
+							class="min-w-full rounded-lg border border-primaryBright bg-white bg-opacity-30 p-2"
+							placeholder="Send me more information - or just let me know you'd like to chat."
+						/>
+					</div>
 				</div>
+				<button
+					type="submit"
+					class="mt-2 flex w-full  justify-center rounded-lg bg-primaryBright p-1 text-lg  font-semibold text-white landscape:h415:mt-auto"
+					>Send</button
+				>
 			</form>
 		</div>
 	</InView>
