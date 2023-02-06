@@ -8,9 +8,16 @@
 
 	let mountPassThrough = false;
 
-	onMount(async () => {
-		mountPassThrough = true;
-	});
+	// onMount(async () => {
+	// 	mountPassThrough = true;
+	// });
+
+	function delayAnimation() {
+		setTimeout(() => {
+			mountPassThrough = true;
+		}, 1000);
+	}
+	delayAnimation();
 </script>
 
 <div class="snap-container">
@@ -34,8 +41,8 @@
 <style>
 	/* Add scroll snap styles */
 	.snap-container {
-		height: 100vh;
 		height: 100dvh;
+		height: 100vh;
 		overflow-y: scroll;
 		scroll-snap-type: y mandatory; /* enable vertical snap scrolling and make it mandatory */
 	}
