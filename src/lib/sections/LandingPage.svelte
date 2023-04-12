@@ -46,7 +46,7 @@
 					class=" pt-4 landscape:col-span-2  landscape:col-start-1 landscape:row-start-2 landscape:h415:pt-2"
 				>
 					<div
-						transition:fly={{ duration: 400, delay: 2000, easing: sineIn, x: -30 }}
+						transition:fly={{ duration: 400, delay: 3000, easing: sineIn, x: -30 }}
 						class=" text-xl text-primary md:text-2xl lg:text-3xl xl:text-4xl landscape:h415:text-sm landscape:h602:md:text-lg "
 					>
 						Personalized high school and middle school tutoring for a range of subjects.
@@ -54,7 +54,7 @@
 					<a
 						href={'#section2'}
 						on:click|preventDefault={scrollIntoView}
-						transition:fly={{ duration: 200, delay: 2500, easing: sineIn, y: 30 }}
+						transition:fly={{ duration: 200, delay: 3500, easing: sineIn, y: 30 }}
 						class="  buttonUnderline bg-clip relative z-40 inline-block pt-7 text-4xl font-bold text-primaryBright sm:pt-6 md:pt-[3rem] md:text-5xl  lg:text-6xl landscape:h415:pt-3 landscape:h415:text-2xl landscape:h602:md:text-3xl    "
 					>
 						See services

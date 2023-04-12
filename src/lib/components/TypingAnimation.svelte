@@ -25,12 +25,12 @@
 		index2++;
 	};
 
-	const typing = () => setInterval(addChars, 70);
+	const typing = () => setInterval(addChars, 90);
 
 	const typing2 = () => {
 		setTimeout(() => {
-			setInterval(addChars2, 70);
-		}, 1800);
+			setInterval(addChars2, 90);
+		}, 2300);
 	};
 
 	typing();
