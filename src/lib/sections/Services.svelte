@@ -70,7 +70,7 @@
 
 				<!--landscape:h415:gap-[6%]  landscape:h719:flex landscape:h719:flex-wrap landscape:h719:items-center  landscape:h719:justify-center landscape:h719:gap-[10%]  -->
 				<div
-					class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]  landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[5%]  "
+					class=" grid w-full grid-cols-4 gap-y-[6vh] sm:gap-y-[4.5vh]  landscape:md:gap-y-[3.8vh] landscape:h602:flex landscape:h602:gap-[8%] landscape:h602:mt-3  "
 				>
 					<div
 						class=" math col-span-2 row-span-2 row-start-1 {visible
@@ -322,7 +322,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1280px) and (max-height: 602px) {
 		.bulletPseudo::before {
 			left: -1.4rem;
 			top: 0.8rem;
@@ -427,7 +427,7 @@
 	}
 
 	/* ----------------- */
-	@media (min-width: 1280px) or (min-height: 1300px) {
+	@media (min-width: 1280px) and (max-height: 602px) or (min-height: 1300px) {
 		.math::before {
 			font-size: 2.5rem;
 			top: 6rem;
@@ -435,7 +435,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) or (min-height: 1300px) {
+	@media (min-width: 1280px) and (max-height: 602px) or (min-height: 1300px) {
 		.economics::before {
 			font-size: 2.5rem;
 			top: 6rem;
@@ -443,7 +443,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) or (min-height: 1300px) {
+	@media (min-width: 1280px) and (max-height: 602px) or (min-height: 1300px) {
 		.history::before {
 			font-size: 2.5rem;
 			top: 6rem;
@@ -451,7 +451,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) or (min-height: 1300px) {
+	@media (min-width: 1280px) and (max-height: 602px) or (min-height: 1300px) {
 		.english::before {
 			font-size: 2.5rem;
 			top: 6rem;
@@ -459,7 +459,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) or (min-height: 1300px) {
+	@media (min-width: 1280px) and (max-height: 602px) or (min-height: 1300px) {
 		.science::before {
 			font-size: 2.5rem;
 			top: 6rem;

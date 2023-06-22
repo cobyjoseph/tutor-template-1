@@ -42,18 +42,18 @@
 			</div>
 
 			<img
-				class="z-40 -mt-[5.3rem] flex aspect-auto w-[8rem] self-end lg:mt-[-10rem] lg:w-[15rem] 2xl:hidden"
+				class="z-40 -mt-[5.3rem] flex aspect-auto w-[8rem] self-end lg:mt-[-6rem] lg:w-[13rem] 2xl:hidden"
 				src="other/headshot-cut.png"
 				alt="tutor headshot"
 			/>
 
 			<div
-				class=" mt-[-5.6rem] flex min-h-[70dvh]  min-h-[70vh] flex-col  2xl:justify-between gap-5 pb-5 lg:mt-[-11rem] lg:min-h-[82dvh] lg:min-h-[82vh]  xl:min-h-[80dvh] xl:min-h-[80vh]  2xl:mt-1 minh820:gap-10  minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem]  "
+				class=" mt-[-5.6rem] flex min-h-[70dvh]   flex-col  2xl:justify-between gap-5 pb-5 lg:mt-[-11rem]  lg:min-h-[82vh]  xl:min-h-[80vh]  2xl:mt-1 minh820:gap-10  minh820:pt-3 landscape:h415:mt-[-6.5rem] landscape:lg:h415:mt-[-6.5rem]  "
 			>
 				<div class=" z-20 flex max-w-[42rem] md:max-w-full  2xl:max-w-[46rem]  3xl:max-w-[50rem] ">
 					<!-- don't put flex on the container below. It messes up the span elements in it -->
 					<div
-						class="  lessFrostedBox z-1 relative px-[1.5rem] py-[0.5rem] text-[1rem]   lg:text-[1.4rem] xl:text-[1.4rem] 2xl:text-[1.6rem] md:minh600:text-[1.5rem] minh820:py-[0.9rem] minh820:text-[1.13rem] minh820:lg:text-[1.5rem] minh820:2xl:text-[1.8rem] minh962:text-[1.6rem] minh962:lg:text-[1.9rem] minh1079:p-7 minh1079:text-[1.9rem] minh1079:2xl:p-[3rem] minh1079:2xl:text-[2rem] landscape:py-[0.9rem] landscape:lg:py-[1rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.88rem] landscape:h415:w799:px-[1.4rem] landscape:h415:w799:text-[1.2rem] {visible
+						class="  lessFrostedBox z-1 relative px-[1.5rem] py-[0.5rem] text-[1rem]   lg:text-[1.3rem] xl:text-[1.3rem] 2xl:text-[1.5rem] md:minh600:text-[1.5rem] minh820:py-[0.9rem] minh820:text-[1.13rem] minh820:lg:text-[1.5rem] minh820:2xl:text-[1.8rem] minh962:text-[1.6rem] minh962:lg:text-[1.9rem] minh1079:p-7 minh1079:text-[1.9rem] minh1079:2xl:p-[3rem] minh1079:2xl:text-[2rem] landscape:py-[0.9rem] landscape:lg:py-[1rem]  landscape:h415:px-[0.9rem] landscape:h415:text-[0.88rem] landscape:h415:w799:px-[1.4rem] landscape:h415:w799:text-[1.2rem] {visible
 							? 'blurIn delay100 visible'
 							: 'blurIn'} "
 					>

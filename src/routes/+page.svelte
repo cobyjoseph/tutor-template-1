@@ -15,12 +15,12 @@
 	function delayAnimation() {
 		setTimeout(() => {
 			mountPassThrough = true;
-		}, 1000);
+		}, 1200);
 	}
 	delayAnimation();
 </script>
 
-<div class="snap-container">
+<div class="snap-container">z
 	<div class="snap-item">
 		<LandingPage mountLandingAnimation={mountPassThrough} />
 	</div>

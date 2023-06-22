@@ -19,7 +19,7 @@
 
 <div class="  mt-6 w-full items-start justify-center lg:mt-10  ">
 	<div
-		class=" flex w-full items-center justify-between rounded-lg font-Heebo  text-xl text-primaryBright  xl:text-4xl "
+		class=" flex w-full items-center justify-between rounded-lg font-Heebo  text-xl text-primaryBright  xl:text-2xl 2xl:text-3xl "
 	>
 		<div class="flex items-center gap-4">
 			<img class="w-7 sm:w-12" src="other/book-logo.svg" alt="rise tutoring logo" />
@@ -33,9 +33,9 @@
 
 		<!-- THIS IS FULL MENU-->
 
-		<div class="  flex  gap-20   ">
+		<div class="  flex  gap-20 2xl:gap-26  ">
 			<!-- this extra div is so that I can put the menu svg and the menu names in the same div that makes the justify-between work. But then they also need to be in separate divs so the titles can be hidden on small -->
-			<div class="hidden gap-14 lg:flex ">
+			<div class="hidden gap-14 2xl:gap-20 lg:flex ">
 				<a
 					href={'#section2'}
 					class=" customUnderline   font-semibold"
